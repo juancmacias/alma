@@ -1,8 +1,4 @@
-.App {
-  text-align: center;
-  background-color: rgb(60, 59, 59);
-  color: #3db3ea;
-}
+
 button{
   border-radius: 15px;
   border: none;
@@ -69,7 +65,7 @@ img{
   cursor: pointer;
 }
 footer{
-  height: 7vh;
+  height: 8vh;
   font-size: 1.5rem ;
   background-color: forestgreen;
   color: black;
@@ -78,15 +74,22 @@ footer{
   align-items: center;
   justify-content: center;
 }
+@media (prefers-color-scheme: light ) {
+  .App {
+    background-color: #011233;
+    color: rgb(231, 228, 228);
+    
+    text-align: center;
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
 @media (prefers-color-scheme: dark) {
   .App {
     background-color: rgb(60, 59, 59);
     color: #3db3ea;
-    
     text-align: center;
   }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
