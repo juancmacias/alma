@@ -47,7 +47,7 @@ function App() {
             <button onClick={() => seleccionar('frame')}  className='entrar'>Entrar</button>
         </main>
         <footer>
-            Comprometidos con la sostenibilidad
+            Comprometidos con la sostenibilidad - Saber más
         </footer>
     </div>
   );
