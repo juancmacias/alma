@@ -14,7 +14,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" data-hovercard-type="achievement" width="64" alt="CSS" data-view-component="true" class="achievement-badge-sidebar">
 <p>Recuerda que tras clonar el repositorio, debes escribir en el directorio del proyecto</p>
 <p>npm install</p>
-<p>Así podreas reproducirlo de forma local.</p>
+<p>Así podras reproducirlo de forma local.</p>
 <h2>Equipo</h2>
 <a href="https://github.com/chiaravigi" class="position-relative"><img src="https://avatars.githubusercontent.com/u/126780221?v=4" data-hovercard-type="achievement" width="64" alt="chiaravigi" data-view-component="true" class="achievement-badge-sidebar"></a>
 <a href="https://github.com/fran-eliot" class="position-relative"><img src="https://avatars.githubusercontent.com/u/5796681?v=4" data-hovercard-type="achievement" width="64" alt="Fran Ramírez" data-view-component="true" class="achievement-badge-sidebar"></a>
