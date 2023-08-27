@@ -80,7 +80,7 @@ footer{
     color: rgb(231, 228, 228);
     
     text-align: center;
-    filter: invert(1) hue-rotate(180deg);
+    *filter: invert(1) hue-rotate(180deg);
   }
 }
 @media (prefers-color-scheme: dark) {
