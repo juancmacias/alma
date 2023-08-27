@@ -16,20 +16,37 @@ import molinillo from '../obj/plantas/molinillo.glb'
 
 function Frame() {
   
+  const cargarArboles = (tipo, cantidad, p) =>{
+    console.log("tipo "+tipo + " cantidad "+cantidad)
+    let arboles = []
+    for(let x = 0; x <= cantidad; x++){
+      console.log("tipo "+tipo)
+      let rot = 180/x+5
+      let scala = `1.`+Math.floor(Math.random() * 4)
+      let posicion = p + Math.random()
+      arboles.push(<Entity static-body id={`arbol_5${x}`} gltf-model={tipo} position={`${posicion} ${p} ${x}`} rotation={`0 ${rot}) 0`} scale={`1 ${scala} 1`}></Entity>)
+    }
+    return(arboles)
+
+ }
   const cargarCamara = (
     <Entity camera kinematic-body="radius:2"  look-controls universal-controls position="0 1.6 0">
       <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity>
     </Entity>
   );
     return (
-      <Scene debug="false" physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+      <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
         {/* recursos */}
        <a-assets>
           <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
-
       </a-assets>
       <Entity id="muro_1" position="-15 0 0" rotation="0 0 0">
-        {/* Arboles del perimetro */}
+        {
+          /* Arboles del perimetro */
+          cargarArboles(arbol, 10, 0)
+          
+        }
+
         <a-entity static-body id="arbol_11" gltf-model={arbol} position="0.5 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
         <a-entity static-body id="arbol_12" gltf-model={arbol} position="0.7 0 4.6" rotation="0 80 0" scale="1.0 1.0 1.0"></a-entity>
         <a-entity static-body id="arbol_13" gltf-model={arbol} position="0.4 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-entity>
@@ -84,6 +101,7 @@ function Frame() {
         {/* muro  */}
         <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
       </Entity>
+
       <Entity id="muro_3" position="0 0 -15" rotation="0 90 0">
         {/* Arboles del perimetro */}
         <a-entity static-body id="arbol_31" type="model" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
