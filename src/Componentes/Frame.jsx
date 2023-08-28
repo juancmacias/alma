@@ -13,7 +13,9 @@ import maple_hojas from '../obj/plantas/maple_hojas.glb'
 import molinillo from '../obj/plantas/molinillo.glb'
 import hojasverdes from '../obj/plantas/hojasverdes.glb'
 import plantdandeli from '../obj/plantas/plants-dandelion.glb'
-
+import buda from '../obj/construccion/garden_buddha.glb'
+import nomo from '../obj/construccion/mesh_garden_gnome.glb'
+import tresBandas from '../obj/construccion/farola_2.glb'
 
 function Frame() {
   
@@ -137,7 +139,14 @@ function Frame() {
         {/* muro  */}
         <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
       </Entity>
-
+        {/* cosas varias */}
+      <a-entity id="buda" gltf-model={buda} position="-0.5 -0.25 -14" rotation="0 29 0" scale="1 1 1"></a-entity>
+      <a-entity static-body id="nomo" gltf-model={nomo} position="-14 0.01 -14" rotation="0 29 0" scale="1.2 1.2 1.2"></a-entity>
+      <a-entity static-body id="nomo" gltf-model={nomo} position="14 0.01 14" rotation="0 -100 0" scale="1.2 1.2 1.2"></a-entity>
+      <a-entity static-body id="nomo" gltf-model={nomo} position="-14 0.01 14.5" rotation="0 100 0" scale="1.2 1.2 1.2"></a-entity>
+      <a-entity static-body id="nomo" gltf-model={nomo} position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-entity>
+      <a-entity static-body id="farola" gltf-model={tresBandas} position="-6 0.01 10" rotation="0 29 0" scale="1 1 1"></a-entity>
+      <a-entity static-body id="farola" gltf-model={tresBandas} position="-10 0.01 -06" rotation="0 29 0" scale="1 1 1"></a-entity>
       {/* suelo */}
       <a-plane static-body position="0 0 0"  rotation="-90 0 0" width="30" height="30" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
       {/* cielo */}
