@@ -8,6 +8,8 @@ import useSound from 'use-sound';
 import bamboo from '../obj/plantas/bamboo.glb'
 import arbol from '../obj/plantas/tronco.glb'
 import hojas from '../obj/plantas/hojas.glb'
+import maple_tronco from '../obj/plantas/maple_tronco.glb'
+import maple_hojas from '../obj/plantas/maple_hojas.glb'
 import molinillo from '../obj/plantas/molinillo.glb'
 import hojasverdes from '../obj/plantas/hojasverdes.glb'
 import plantdandeli from '../obj/plantas/plants-dandelion.glb'
@@ -15,20 +17,21 @@ import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 
 function Frame() {
   
-  const cargarObjetos = (tipo, cantidad, p, max, min, x,y,z) =>{
-    console.log("tipo "+tipo + " cantidad "+cantidad)
-    let arboles = []
-    for(let i = 0; i <= cantidad; i++){
-      console.log("tipo "+tipo)
+  const cargarObjetos = (tipo1,tipo2, cantidad, p, max, min, x,y,z, escala) =>{
+    console.log("tipo "+tipo1 + " cantidad "+cantidad)
+    let objetos = []
+    for(let i = 1; i <= cantidad; i++){
+      
       let rot = 180/i+5
-      let scala = `1.`+Math.floor(Math.random() * 4)
+      let scala = escala+Math.random() 
+      console.log("escala "+escala+Math.random() )
       let XX = x + Math.random()
       let ZZ = 1 + Math.floor(Math.random() * (max - min + 1) + min);
 
-      arboles.push(<Entity static-body id={`arbol_5${i}`} gltf-model={tipo} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></Entity>)
-      arboles.push(<a-entity id={`hoja_5${i}`}  gltf-model={hojas} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></a-entity>)
+      objetos.push(<Entity static-body id={`arbol_5${i}`} gltf-model={tipo1} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></Entity>)
+      objetos.push(<a-entity id={`hoja_5${i}`}  gltf-model={tipo2} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></a-entity>)
     }
-    return(arboles)
+    return(objetos)
 
  }
   const cargarCamara = (
@@ -37,10 +40,12 @@ function Frame() {
     </Entity>
   );
     return (
-      <Scene physics="debug: true" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+      <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
         {/* recursos */}
        <a-assets>
           <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
+          <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
+          <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
       </a-assets>
       <Entity id="muro_1" position="-15 0 0" rotation="0 0 0">
         {
@@ -48,10 +53,14 @@ function Frame() {
            Arboles del perimetro
            objeto, cantidad, posicion, maximo, minimo, x, y, z
           */
-          cargarObjetos(arbol, 6, 0, 14, -14, 0,0,-14)
+          cargarObjetos(arbol,hojas, 6, 0, 14, -14, 0,0,-14, 1)
+          
           
         }
-
+        {
+          cargarObjetos(maple_tronco,maple_hojas, 4, 0, 14, -14, 0,0,-14, -0.1)
+        }
+         
         {/* bambu */}
         <a-entity id="bambu_11" gltf-model={bamboo} position="0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
         <a-entity id="bambu_12" gltf-model={bamboo} position="0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
@@ -130,9 +139,9 @@ function Frame() {
       </Entity>
 
       {/* suelo */}
-      <a-plane static-body position="0 0 0"  rotation="-90 0 0" width="30" height="30" color="#7BC8A4"></a-plane>
+      <a-plane static-body position="0 0 0"  rotation="-90 0 0" width="30" height="30" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
       {/* cielo */}
-      <a-sky color="#ECECEC"></a-sky>
+      <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
       {/* cámara */}
       {cargarCamara}
     </Scene>
