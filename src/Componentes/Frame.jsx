@@ -6,25 +6,27 @@ import useSound from 'use-sound';
 
 /* precargar los objetos en 3d */
 import bamboo from '../obj/plantas/bamboo.glb'
-import arbol from '../obj/plantas/stylized_tree.glb'
+import arbol from '../obj/plantas/tronco.glb'
+import hojas from '../obj/plantas/hojas.glb'
 import molinillo from '../obj/plantas/molinillo.glb'
-
-
-
-
+import hojasverdes from '../obj/plantas/hojasverdes.glb'
+import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 
 
 function Frame() {
   
-  const cargarArboles = (tipo, cantidad, p) =>{
+  const cargarObjetos = (tipo, cantidad, p, max, min, x,y,z) =>{
     console.log("tipo "+tipo + " cantidad "+cantidad)
     let arboles = []
-    for(let x = 0; x <= cantidad; x++){
+    for(let i = 0; i <= cantidad; i++){
       console.log("tipo "+tipo)
-      let rot = 180/x+5
+      let rot = 180/i+5
       let scala = `1.`+Math.floor(Math.random() * 4)
-      let posicion = p + Math.random()
-      arboles.push(<Entity static-body id={`arbol_5${x}`} gltf-model={tipo} position={`${posicion} ${p} ${x}`} rotation={`0 ${rot}) 0`} scale={`1 ${scala} 1`}></Entity>)
+      let XX = x + Math.random()
+      let ZZ = 1 + Math.floor(Math.random() * (max - min + 1) + min);
+
+      arboles.push(<Entity static-body id={`arbol_5${i}`} gltf-model={tipo} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></Entity>)
+      arboles.push(<a-entity id={`hoja_5${i}`}  gltf-model={hojas} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></a-entity>)
     }
     return(arboles)
 
@@ -35,27 +37,21 @@ function Frame() {
     </Entity>
   );
     return (
-      <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+      <Scene physics="debug: true" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
         {/* recursos */}
        <a-assets>
           <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
       </a-assets>
       <Entity id="muro_1" position="-15 0 0" rotation="0 0 0">
         {
-          /* Arboles del perimetro */
-          cargarArboles(arbol, 10, 0)
+          /*
+           Arboles del perimetro
+           objeto, cantidad, posicion, maximo, minimo, x, y, z
+          */
+          cargarObjetos(arbol, 6, 0, 14, -14, 0,0,-14)
           
         }
 
-        <a-entity static-body id="arbol_11" gltf-model={arbol} position="0.5 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
-        <a-entity static-body id="arbol_12" gltf-model={arbol} position="0.7 0 4.6" rotation="0 80 0" scale="1.0 1.0 1.0"></a-entity>
-        <a-entity static-body id="arbol_13" gltf-model={arbol} position="0.4 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-entity>
-        <a-entity static-body id="arbol_14" gltf-model={arbol} position="0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
-        <a-entity static-body id="arbol_15" gltf-model={arbol} position="0.6 -0.0 10.4" rotation="0 119 0" scale="1.4 1.4 1.4 "></a-entity>
-        <a-entity static-body id="arbol_16" gltf-model={arbol} position="0.5 -0.2 14.4" rotation="0 101 0" scale="1.7 1.7 1.7"></a-entity>
-        <a-entity static-body id="arbol_17" gltf-model={arbol} position="0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
-        <a-entity static-body id="arbol_18" gltf-model={arbol} position="1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
-        <a-entity static-body id="arbol_19" gltf-model={arbol} position="1.2 -0.05 -14.5" rotation="0 151 0" scale="1.2 1.2 1.2"></a-entity>
         {/* bambu */}
         <a-entity id="bambu_11" gltf-model={bamboo} position="0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
         <a-entity id="bambu_12" gltf-model={bamboo} position="0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
@@ -74,13 +70,15 @@ function Frame() {
         <a-entity id="varios_16" gltf-model={molinillo} position="0.81 0.0 -1.5" rotation="0 153 0" scale="1 1.1 1.1"></a-entity>
         <a-entity id="varios_17" gltf-model={molinillo} position="0.92 0.0 -1.7" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
         <a-entity id="varios_18" gltf-model={molinillo} position="0.62 0.0 -1.55" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
+        <a-entity id="varios_19" gltf-model={hojasverdes} position="0.62 0.0 -1.55" rotation="0 80 0" scale="0.1 0.1 0.1"></a-entity>
         {/* muro  */}
         <a-box id="wall_11" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
       </Entity>
 
       <Entity id="muro_2" position="15 0 0" rotation="0 0 0">
-        {/* Arboles del perimetro */}
-        <a-entity static-body id="arbol_21" type="model" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
+        {/* Arboles del perimetro  "dynamic-body="mass: 5"*/}
+        <a-entity static-body id="arbol_21"  gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
+        <a-entity static-body id="hojas_21"  gltf-model={hojas} position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
         <a-entity static-body id="arbol_22" type="model" gltf-model={arbol} position="-0.7 0 4.6" rotation="0 80 0" scale="1.0 1.0 1.0"></a-entity>
         <a-entity static-body id="arbol_23" type="model" gltf-model={arbol} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-entity>
         <a-entity static-body id="arbol_24" type="model" gltf-model={arbol} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
@@ -89,6 +87,8 @@ function Frame() {
         <a-entity static-body id="arbol_27" type="model" gltf-model={arbol} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
         <a-entity static-body id="arbol_28" type="model" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
         <a-entity static-body id="arbol_29" type="model" gltf-model={arbol} position="-1.2 -0.05 -14.5" rotation="0 151 0" scale="1.2 1.2 1.2"></a-entity>
+       
+
         {/* bambu */}
         <a-entity id="bambu_21" gltf-model={bamboo} position="-0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
         <a-entity id="bambu_22" gltf-model={bamboo} position="-0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
@@ -98,6 +98,8 @@ function Frame() {
         <a-entity id="bambu_26" gltf-model={bamboo} position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
         <a-entity id="bambu_27" gltf-model={bamboo} position="-0.7 0.0 -7.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
         <a-entity id="bambu_28" gltf-model={bamboo} position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
+        {/* varias plantas */}
+        <a-entity id="varios_21" gltf-model={plantdandeli} position="-6.5 1.7 2.5" rotation="0 152 0" scale="6 6 6" ></a-entity>
         {/* muro  */}
         <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
       </Entity>
@@ -113,6 +115,7 @@ function Frame() {
         <a-entity static-body id="arbol_37" type="model" gltf-model={arbol} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
         <a-entity static-body id="arbol_38" type="model" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
         <a-entity static-body id="arbol_39" type="model" gltf-model={arbol} position="-1.2 -0.05 -14.5" rotation="0 151 0" scale="1.2 1.2 1.2"></a-entity>
+       
         {/* bambu */}
         <a-entity id="bambu_31" gltf-model={bamboo} position="-0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
         <a-entity id="bambu_32" gltf-model={bamboo} position="-0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
