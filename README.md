@@ -5,7 +5,7 @@
 <h2>Propuesta</h2>
 <p>La empresa Thinking With You quiere transmitir sus valores a la sociedad de una manera moderna y actual. La idea es emular el Libro blanco de Thinking With You con experiencias inmersiva, nesitan también un formulario de contacto y zona de administración para actualizar la información de la presentación.
 <ul>
-  <li>El usuario deber ser capaz de:</li>
+  <li>El usuario deber ser capaz de.:</li>
   <li>Desplazarse por la experiencia inmersiva</li>
   <li>Interactuar con la experiencia inmersiva </li>
 </ul>
