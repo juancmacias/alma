@@ -64,7 +64,12 @@ function Inicial() {
                         );
                   default:
                         return(
-                              <Link to="/hubs">Entrar</Link>
+                              <div className='fondo'>
+                                    <div className='botonEntrar'>
+                                        <Link to="/hubs">Entrar</Link>  
+                                    </div>
+                                    
+                              </div>
                         );
                 }
             })()}

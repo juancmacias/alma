@@ -4,6 +4,8 @@ button{
   border: none;
   margin-right: 5px;
 }
+.dark a{ color:white}
+.light a{color: black;}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,11 +17,39 @@ button{
 
 main{
   min-height: 86vh;
+  
+  font-size: calc(10px + 2vmin);
+}
+.fondo{
+  height: 86vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url("../src/resources/fondo.PNG"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.botonEntrar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  padding: 40px;
+  background-color: azure;
+  border-radius: 40px;
+  -webkit-box-shadow: -1px 2px 18px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 18px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 18px 0px rgba(0,0,0,0.75);
+  transition: transform .4s;
+}
+.botonEntrar:hover{
+  transform: scale(1.2);
 }
 .App-header {
   font-size: calc(10px + 2vmin);
@@ -88,6 +118,15 @@ footer{
   }
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(230, 173, 180);
+  }
+  footer{
+    height: 6vh;
+    font-size: 1rem ;
 
+  }
+}
 
 
