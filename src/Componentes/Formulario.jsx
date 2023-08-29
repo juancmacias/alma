@@ -6,7 +6,7 @@ function Formulario() {
   const [ email, setEmail] = useState('');
   const [ nombre, setNombre] = useState('');
   const [ texto, setTexto ] = useState('');
-
+  const [ maximo, setMaximo ] = useState(250);
   const [botonState, changeBotonState] = useState(true);
   const [ isLoading, setIsLoading] = useState(false);
 
@@ -24,6 +24,7 @@ function Formulario() {
     
   };
   const handleNombreChange = (e) => {
+
     if (e.target.value.length < 2) {
       console.log("Error nombre");
 
@@ -35,6 +36,7 @@ function Formulario() {
     
   };
   const handleTextoChange = (e) => {
+    setMaximo(250 - e.target.value.length)
     if (e.target.value.length < 2) {
       console.log("Error texto");
 
@@ -101,8 +103,8 @@ function Formulario() {
             <input type="email" id="email" onChange={handleEmailChange}  class="form-control"  aria-describedby="emailHelp" placeholder="Tu correo electrónico" required />
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Déjame tu consulta</label>
-            <textarea name="texto" id='texto' onChange={handleTextoChange} class="form-control" placeholder='Déja tu consulta' rows={4} cols={43} required />
+            <label for="exampleInputPassword1">Déjame tu consulta, máximo {maximo} caracteres</label>
+            <textarea name="texto" id='texto' onChange={handleTextoChange} class="form-control" maxlength="250" placeholder='Déja tu consulta' rows={4} cols={43} required />
             
 
           </div>
