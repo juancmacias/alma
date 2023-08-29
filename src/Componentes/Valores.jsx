@@ -10,23 +10,21 @@ const Valores = () => {
   return (
 
 
-
-
-      <Scene >
-
+  <Scene hysics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+      
+      <a-assets>
           <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
           <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
           <img id="sky" src={require('../resources/sky.jpg')} alt='' /> 
           <img id="grava" src={require('../resources/grava.jpg')} alt='' /> 
+      </a-assets>
 
-
-    <Entity camera kinematic-body="radius:2"  look-controls universal-controls  position="0 1.6 0">
-     <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" 
-     material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity> 
-     </Entity>
+    <Entity camera kinematic-body="radius:2"  look-controls universal-controls position="0 1.6 0">
+    <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity>
+    </Entity>
      
-      <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="180 180 180"></a-sky>
-      <a-plane static-body="" position="0 0 0" rotation="-90 0 0" width="15" height="15" material="src: #cesped; repeat: 100 100" radius="10" geometry=""></a-plane>
+    <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
+    <a-plane static-body="sphereRadius:NaN" position="0 0 -4.957" rotation="-90.01166961505233 0 0" width="30" height="30" material="src:#cesped" radius="10" geometry=""></a-plane>
     
 
 
@@ -43,12 +41,11 @@ const Valores = () => {
 
 
 
-
-<a-entity position="-2.9545 -0.10728 6.9" shader="standard" scale="3 3 3"  gltf-model= {treerose}> </a-entity>
-<a-entity position="-0.486 -0.38978 5.924"shader="standard" scale="0.33 0.44 0.25"  gltf-model={treerose}> </a-entity>
-<a-entity position="2.912 -0.082 6.14935" shader="standard" scale="0.51 0.35 -0.14"  gltf-model={treerose}> </a-entity>
-<a-entity position="-3.48449 0.01283 9.25271" shader="standard" scale="0.23 0.38 0.25"gltf-model={treerose}> </a-entity>
-<a-entity position="2.73802 -0.01518 9.188" shader="standard" scale="0.25 0.38 0.21"gltf-model={treerose}> </a-entity>
+<a-entity position="-2.391 -0.311 -0.316"  scale="0.33 0.38999999999999985 0.45" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb" mixin="null"> </a-entity>
+<a-entity position="-0.486 -0.38978 5.924" scale="0.33 0.44 0.25"  gltf-model={treerose}> </a-entity>
+<a-entity position="2.912 -0.082 6.14935" scale="0.51 0.35 -0.14"  gltf-model={treerose}> </a-entity>
+<a-entity position="-3.48449 0.01283 9.25271"  scale="0.23 0.38 0.25"gltf-model={treerose}> </a-entity>
+<a-entity position="2.73802 -0.01518 9.188"  scale="0.25 0.38 0.21"gltf-model={treerose}> </a-entity>
 <a-entity position="0.03061 0.05444 12.67491" scale="1.45 2.79 0.08" rotation="-94.3 90 -256.04" gltf-model="img/path/way_path_blocks.glb"> </a-entity>
 
 
