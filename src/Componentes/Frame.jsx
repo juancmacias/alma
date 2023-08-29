@@ -16,6 +16,7 @@ import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 import buda from '../obj/construccion/garden_buddha.glb'
 import nomo from '../obj/construccion/mesh_garden_gnome.glb'
 import tresBandas from '../obj/construccion/farola_2.glb'
+import tori from '../obj/construccion/japanese_tori_gate.glb'
 
 function Frame() {
   
@@ -36,9 +37,10 @@ function Frame() {
     return(objetos)
 
  }
+ 
   const cargarCamara = (
-    <Entity camera kinematic-body="radius:2"  look-controls universal-controls position="0 1.6 0">
-      <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity>
+    <Entity camera kinematic-body="radius:1"  look-controls universal-controls position="0 1.6 20" rotation="22 0 0">
+      <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5" raycaster ></Entity>
     </Entity>
   );
     return (
@@ -147,8 +149,15 @@ function Frame() {
       <a-entity static-body id="nomo" gltf-model={nomo} position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-entity>
       <a-entity static-body id="farola" gltf-model={tresBandas} position="-6 0.01 10" rotation="0 29 0" scale="1 1 1"></a-entity>
       <a-entity static-body id="farola" gltf-model={tresBandas} position="-10 0.01 -06" rotation="0 29 0" scale="1 1 1"></a-entity>
+      {/* ENTRADA */}
+      <a-box id="wall_seguro_1" width="30" height="3" depth="0.1" position="0 0 20" material="opacity:0.1" static-body rotation="0 180 0" ></a-box>
+      <a-box id="wall_seguro_2" width="10" height="3" depth="0.1" position="14 0 14" material="opacity:0.1" static-body rotation="0 90 0" ></a-box>
+      <a-box id="wall_seguro_3" width="10" height="3" depth="0.1" position="-14 0 -14" material="opacity:0.1" static-body rotation="0 -90 0" ></a-box>
+      <a-box id="wall_tory_1" color="grey" width="13.1" height="3" depth="0.5" position="9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
+      <a-box id="wall_tory_2" color="grey" width="13.1" height="3" depth="0.5" position="-9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
+      <a-entity id="tori" gltf-model={tori} position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-entity>
       {/* suelo */}
-      <a-plane static-body position="0 0 0"  rotation="-90 0 0" width="30" height="30" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
+      <a-plane static-body position="0 0 0"  rotation="-90 0 0" width="30" height="40" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
       {/* cielo */}
       <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
       {/* cámara */}
