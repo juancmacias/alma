@@ -41,10 +41,10 @@ function Inicial() {
                                     title='Activar modo claro'>
                                           <img src={oscuro}  alt="Modo oscuro" />                              
                               </button>
-                              <button type='button' onClick={() => verListado('formulario')} title='Contactar con Thinking With You'>
+                              <button type='button' className='show' onClick={() => verListado('formulario')} title='Contactar con Thinking With You'>
                                     <img src={contacto}  alt="Contactar" /> 
                               </button>
-                              <button type='button' onClick={event =>  window.location.href='https://thinkingwithyou.com/'} title='Thinking With You'>
+                              <button type='button' className='show' onClick={event =>  window.location.href='https://thinkingwithyou.com/'} title='Thinking With You'>
                                     <img src={home}  alt="Ir a Thinking With You" /> 
                               </button>
                               
