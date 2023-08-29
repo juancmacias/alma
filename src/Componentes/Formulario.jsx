@@ -2,7 +2,7 @@ function Formulario() {
 
     return (
       <div>
-        contacto
+        contacto/formulario
       </div>
   
     );
