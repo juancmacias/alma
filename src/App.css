@@ -27,7 +27,7 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../src/resources/fondo.PNG"); /* The image used */
+  background-image: url("../src/resources/fondo.jpg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
   
   background-position: center; /* Center the image */
