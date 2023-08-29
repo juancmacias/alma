@@ -2,7 +2,7 @@ import './App.css';
 import Frame from './Componentes/Frame';
 import Inicial from './Componentes/Inicial';
 import { useState } from 'react';
-
+import Section1 from './Componentes/Section1;'
 
 function App() {
 
@@ -44,6 +44,7 @@ function App() {
         </header>
         <main>
             <Inicial/>
+            <Section1/>
             <button onClick={() => seleccionar('frame')}  className='entrar'>Entrar</button>
         </main>
         <footer>
