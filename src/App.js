@@ -1,8 +1,9 @@
-import './App.css';
+
 import Frame from './Componentes/Frame';
 import Inicial from './Componentes/Inicial';
-import { useState } from 'react';
-import Section1 from './Componentes/Section1;'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
 
 function App() {
 
@@ -44,7 +45,6 @@ function App() {
         </header>
         <main>
             <Inicial/>
-            <Section1/>
             <button onClick={() => seleccionar('frame')}  className='entrar'>Entrar</button>
         </main>
         <footer>
@@ -53,27 +53,11 @@ function App() {
     </div>
   );
   return (
-    <div className={`${theme}`}>
-      
-        {(function () {
-                switch (eleccion) {
-                    case 'frame':
-                        return (
-                          <Frame />
-                        );
-
-                    default:
-                      return(
-                        mostrarInicial
-                      );
-                }
-            })()}
-          
-
-       
-
-      
-
+    <div>
+        <Routes>
+          <Route exact path="/" element={<Inicial/>} />
+          <Route path="/hubs" element={<Frame/>} />
+        </Routes>
     </div>
   );
 }
