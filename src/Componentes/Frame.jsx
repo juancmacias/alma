@@ -156,11 +156,6 @@ function Frame() {
     </Scene>
 
 
-
-
-
-
-
     );
   }
   
