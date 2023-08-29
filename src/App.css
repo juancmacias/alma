@@ -29,7 +29,7 @@ main{
 .App-link {
   color: #3db3ea;
 }
-.dark-mode {
+.dark {
   
   filter: invert(1) hue-rotate(180deg);
   text-align: center;
@@ -75,16 +75,16 @@ footer{
   justify-content: center;
 }
 @media (prefers-color-scheme: light ) {
-  .App {
+  .light {
     background-color: #011233;
     color: rgb(231, 228, 228);
     
     text-align: center;
-    /*filter: invert(1) hue-rotate(180deg);*/
+    filter: invert(1) hue-rotate(180deg);
   }
 }
 @media (prefers-color-scheme: dark) {
-  .App {
+  .light {
     background-color: rgb(60, 59, 59);
     color: #3db3ea;
     text-align: center;
