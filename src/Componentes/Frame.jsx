@@ -15,19 +15,16 @@ import hojasverdes from '../obj/plantas/hojasverdes.glb'
 import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 import buda from '../obj/construccion/garden_buddha.glb'
 import nomo from '../obj/construccion/mesh_garden_gnome.glb'
-import tresBandas from '../obj/construccion/farola_2.glb'
 import tori from '../obj/construccion/japanese_tori_gate.glb'
+import camino from '../obj/construccion/floortile.glb'
 
 function Frame() {
   
   const cargarObjetos = (tipo1,tipo2, cantidad, p, max, min, x,y,z, escala) =>{
-    console.log("tipo "+tipo1 + " cantidad "+cantidad)
     let objetos = []
-    for(let i = 1; i <= cantidad; i++){
-      
+    for(let i = 1; i <= cantidad; i++){     
       let rot = 180/i+5
       let scala = escala+Math.random() 
-      console.log("escala "+escala+Math.random() )
       let XX = x + Math.random()
       let ZZ = 1 + Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -44,12 +41,13 @@ function Frame() {
     </Entity>
   );
     return (
-      <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+      <Scene xrextras-loading physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
         {/* recursos */}
        <a-assets>
           <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
           <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
           <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
+          <img id="camino_piedra" src={require('../resources/piedra_suelo.jpg')} alt='' />
       </a-assets>
       <Entity id="muro_1" position="-15 0 0" rotation="0 0 0">
         {
@@ -141,14 +139,14 @@ function Frame() {
         {/* muro  */}
         <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
       </Entity>
-        {/* cosas varias */}
+      {/* cosas varias */}
+
       <a-entity id="buda" gltf-model={buda} position="-0.5 -0.25 -14" rotation="0 29 0" scale="1 1 1"></a-entity>
       <a-entity static-body id="nomo" gltf-model={nomo} position="-14 0.01 -14" rotation="0 29 0" scale="1.2 1.2 1.2"></a-entity>
       <a-entity static-body id="nomo" gltf-model={nomo} position="14 0.01 14" rotation="0 -100 0" scale="1.2 1.2 1.2"></a-entity>
       <a-entity static-body id="nomo" gltf-model={nomo} position="-14 0.01 14.5" rotation="0 100 0" scale="1.2 1.2 1.2"></a-entity>
       <a-entity static-body id="nomo" gltf-model={nomo} position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-entity>
-      <a-entity static-body id="farola" gltf-model={tresBandas} position="-6 0.01 10" rotation="0 29 0" scale="1 1 1"></a-entity>
-      <a-entity static-body id="farola" gltf-model={tresBandas} position="-10 0.01 -06" rotation="0 29 0" scale="1 1 1"></a-entity>
+
       {/* ENTRADA */}
       <a-box id="wall_seguro_1" width="30" height="3" depth="0.1" position="0 0 20" material="opacity:0.1" static-body rotation="0 180 0" ></a-box>
       <a-box id="wall_seguro_2" width="10" height="3" depth="0.1" position="14 0 14" material="opacity:0.1" static-body rotation="0 90 0" ></a-box>
@@ -156,8 +154,24 @@ function Frame() {
       <a-box id="wall_tory_1" color="grey" width="13.1" height="3" depth="0.5" position="9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
       <a-box id="wall_tory_2" color="grey" width="13.1" height="3" depth="0.5" position="-9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
       <a-entity id="tori" gltf-model={tori} position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-entity>
+      {/* camino */}
+      <a-box id="camino_1" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="0 -0.2 14.5" rotation="90 0 0" scale="1 1 1"></a-box>
+      <a-box id="camino_2" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="0.64 -0.2 13" rotation="90 -34.3 0" scale="1 1 1"></a-box>
+      <a-box id="camino_3" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="0.8 -0.2 11.66" rotation="90 -32 0" scale="1 1 1"></a-box>
+      <a-entity id="camino_4" gltf-model={camino} position="-0.85 -0.05 11.3" rotation="0 -52 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_5" gltf-model={camino} position="3.3 -0.05 9" rotation="0 -52 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_6" gltf-model={camino} position="-2.1 -0.05 10.1" rotation="0 -42 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_7" gltf-model={camino} position="4.6 -0.05 7.9" rotation="0 -52 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_8" gltf-model={camino} position="1.8 -0.05 10.3" rotation="0 -52 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_9" gltf-model={camino} position="-3.4 -0.05 9" rotation="0 -34 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_10" gltf-model={camino} position="-4.6 -0.05 7.9" rotation="0 -46 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_11" gltf-model={camino} position="-5.8 -0.05 4.88" rotation="0 -78 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_12" gltf-model={camino} position="-5.4 -0.05 6.6" rotation="0 -69 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_13" gltf-model={camino} position="-6.1 -0.05 3.13" rotation="0 -90 0" scale="1 1 1"></a-entity>
+      <a-entity id="camino_14" gltf-model={camino} position="5.9 -0.05 6.8" rotation="0 -52 0" scale="1 1 1"></a-entity>
       {/* suelo */}
       <a-plane static-body position="0 0 0"  rotation="-90 0 0" width="30" height="40" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
+      <a-plane static-body position="0 -0.5 0"  rotation="-90 0 0" width="300" height="400" color="green" radius="10"></a-plane>
       {/* cielo */}
       <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
       {/* cámara */}

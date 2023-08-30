@@ -141,13 +141,25 @@ main {
   body {
     background-color: rgb(230, 173, 180);
   }
+  main{
+    min-height: 84vh;
+  }
   footer{
     height: 6vh;
     font-size: 1rem ;
 
   }
-  .card{
-    width: 360px !important ;
+  .card, .card_dos{
+    width: 360px  ;
+    margin: 10px auto;
+  }
+  .light .card, .card_dos{
+    color: black ;
+    background-color:#fff ;
+  }
+  .dark .card, .card_dos{
+    color: #fff ;
+    background-color:#011233 ;
   }
   
 }
@@ -157,6 +169,20 @@ main {
   margin: 100px auto;
   z-index: 1000 !important;
   width: 550px ;
+  -webkit-box-shadow: 0px 7px 22px 1px rgba(112, 110, 110, 0.51);
+  -moz-box-shadow: 0px 7px 22px 1px rgba(113, 111, 111, 0.51);
+  box-shadow: 0px 7px 22px 1px rgba(146, 146, 146, 0.51);
+}
+.card_dos{
+  background-color:#fff;
+  color: black;
+  font-size: 0.6em;
+  text-align: left;
+  margin: 100px auto;
+  padding: 15px;
+  border-radius: 0.375rem;;
+  z-index: 1000 !important;
+  width: 70vw ;
   -webkit-box-shadow: 0px 7px 22px 1px rgba(112, 110, 110, 0.51);
   -moz-box-shadow: 0px 7px 22px 1px rgba(113, 111, 111, 0.51);
   box-shadow: 0px 7px 22px 1px rgba(146, 146, 146, 0.51);
