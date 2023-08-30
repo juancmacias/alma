@@ -1,5 +1,4 @@
-import './App.css';
-import Formulario from './Componentes/Formulario';
+
 import Frame from './Componentes/Frame';
 import Inicial from './Componentes/Inicial';
 import React from 'react';
@@ -8,7 +7,6 @@ import Valores from './Componentes/Valores';
 
 
 function App() {
-
   return (
     <div>
       <Routes>
@@ -18,7 +16,6 @@ function App() {
         <Route path="valores/" element={<Valores/>} />
       </Routes>
     </div>
-
   );
 }
 
