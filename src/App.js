@@ -3,7 +3,7 @@ import Frame from './Componentes/Frame';
 import Inicial from './Componentes/Inicial';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
+import Section1 from './Componentes/Section1';
 
 function App() {
 
@@ -57,6 +57,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Inicial/>} />
           <Route path="/hubs" element={<Frame/>} />
+          <Route path="/hubs" element={<Section1/>} />
         </Routes>
     </div>
   );
