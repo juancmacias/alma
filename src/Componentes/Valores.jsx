@@ -9,6 +9,8 @@ import zennor from '../obj/construccion/zennor.glb'
 import bamboo from '../obj/plantas/bamboo.glb'
 import portal from '../obj/construccion/gate_wood.glb'
 import vines from '../obj/plantas/vines.glb'
+import rocar from '../obj/rocas/rocar.glb'
+import roca from '../obj/rocas/roca.glb'
 
 
 
@@ -54,7 +56,7 @@ const Valores = () => {
 <a-entity static-body  width="30" height="3" depth="1" position="0.213 0.379 16.522" rotation="0 180 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1; src:#imagen-pared"></a-entity>
 <a-entity  static-body width="30" height="3" depth="1" position="0.213 0.379 1.87" rotation="0 180 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1; src:#imagen-pared"></a-entity>  */}
 
-      <a-entity position="-2.9545 -0.10728 6.9"scale="0.3 0.4 -0.14"  gltf-model= {treerose}> </a-entity>
+      {/* <a-entity position="-2.9545 -0.10728 6.9"scale="0.3 0.4 -0.14"  gltf-model= {treerose}> </a-entity>
       <a-entity position="-0.486 -0.38978 5.924"shader="standard" scale="0.33 0.44 0.19"  gltf-model={treerose}> </a-entity>
       <a-entity position="2.912 -0.082 6.14935" shader="standard" scale="0.51 0.35 -0.14" gltf-model={treerose}> </a-entity>
       <a-entity position="-3.48449 0.01283 9.25271" shader="standard" scale="0.23 0.38 0.25"  gltf-model={treerose}> </a-entity>
@@ -62,7 +64,7 @@ const Valores = () => {
 
       <a-entity position="5.979 -0.037 9.188" shader="standard" scale="0.25 0.38 0.21" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
       <a-entity position="5.156 -0.39 11.517" shader="standard" scale="0.33 0.44 0.25" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
-      <a-entity position="-6.89 0.013 19.498" shader="standard" scale="0.23 0.38 0.25" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>         
+      <a-entity position="-6.89 0.013 19.498" shader="standard" scale="0.23 0.38 0.25" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>          */}
 
 
 
@@ -73,7 +75,7 @@ const Valores = () => {
        {/* <!-- agua --> */}
        <a-entity position="0.119 0.17 11.776" radius="0.9" height="1.9" color="#FFC65D" geometry="radius:0.69;height:0;primitive:cylinder" material="alphaTest:0.11;color:#4f6987"></a-entity>
         
-      <a-entity position="-1 0.5 14.405" rotation="0 45 0"  gltf-model= {2}></a-entity>
+      <a-entity position="-1 0.5 14.405" rotation="0 45 0"  gltf-model= {rocar}></a-entity>
        <a-entity position="-0.37 0.393 13.529" rotation="0 45 0" gltf-model="/static/media/flower.1af5d3271728ad9dd386.glb"></a-entity>
        <a-entity position="-1.959 0.269 12.566" rotation="0 45 0" gltf-model="/static/media/flower.1af5d3271728ad9dd386.glb"></a-entity>
        <a-entity position="-1.938 0.366 12.39" rotation="0 45 0"  gltf-model="/static/media/flower.1af5d3271728ad9dd386.glb"></a-entity>
@@ -81,10 +83,11 @@ const Valores = () => {
        <a-entity position="-1.366 0.269 12.566" rotation="0 45 0"   gltf-model="/static/media/flower.1af5d3271728ad9dd386.glb"></a-entity>
        <a-entity position="-1.597 0.033 12.566" rotation="0 45 0"   gltf-model="/static/media/flower.1af5d3271728ad9dd386.glb"></a-entity>
 
-       
-       <a-entity position="4.728 1.607 0.344" rotation="1.15 147.5 3.5100000000000002" color="#4CC3D9" material="alphaTest:1;color:#dcc1c1" gltf-model="/static/media/zennor.9450829016a1781102cb.glb" scale="0.69 0.8300000000000001 0.83"></a-entity>
-       
-         
+       {/* piedra */}
+       <a-entity position="4.483 1.362 -0.138" rotation="1.15 147.5 3.5100000000000002" color="#4CC3D9" material="alphaTest:1;color:#dcc1c1" gltf-model="/static/media/zennor.9450829016a1781102cb.glb" scale="0.9099999999999999 1.01 0.96"></a-entity>
+       <a-entity position="1.021 -0.766 0.176" rotation="-17.647 62.051 5.672" gltf-model="/static/media/roca.b37671f5496622e34327.glb" scale="0.324 0.547 0.44"></a-entity>
+       <a-entity position="-1.504 -0.096 -0.018" rotation="0 45 0" gltf-model="/static/media/rocar.71ca2437ebd4e5e1bebf.glb" scale="0.12 0.17 0.12"></a-entity>
+        
         {/* arboles mural  */}
         <a-entity position="-9.051 -0.119 14.405" rotation="0 45 0"  m gltf-model={bamboo} scale="5.75 4.21 2.82"></a-entity>
         <a-entity position="-9.051 -0.192 15.837" rotation="0 45 0" gltf-model={bamboo} scale="6.1 5.19 2.82"></a-entity>
@@ -114,12 +117,12 @@ const Valores = () => {
         
    
     {/* portal */}
-    <a-entity position="-1.186 0.008 16.666" rotation="1.27 90 -2.19" gltf-model="/static/media/gate_wood.649a512bd84ee73e11bd.glb" scale="0.59 0.41 0.4"></a-entity>
+   {/* <a-entity position="-1.186 0.008 16.666" rotation="1.27 90 -2.19" gltf-model="/static/media/gate_wood.649a512bd84ee73e11bd.glb" scale="0.59 0.41 0.4"></a-entity> */}
     <a-entity position="-1.564 0.38 16.693" rotation="0 40 0" gltf-model= {flower} scale="0.71 0.7000000000000001 0.9800000000000001"></a-entity>
     <a-entity position="0.925 0.363 16.899" rotation="0 45 0" gltf-model= {flower} scale="0.85 0.72 0.83"></a-entity>
     
-    <a-entity position="-1 1.956 16.711" rotation="0 45 0" gltf-model={vines}scale="0.61 0.48 0.71"></a-entity>
-    <a-entity position="-1 1.955 16.59" rotation="0 45 0" gltf-model={vines}scale="0.61 0.48 0.71"></a-entity>
+    {/* <a-entity position="-1 1.956 16.711" rotation="0 45 0" gltf-model={vines}scale="0.61 0.48 0.71"></a-entity>
+    <a-entity position="-1 1.955 16.59" rotation="0 45 0" gltf-model={vines}scale="0.61 0.48 0.71"></a-entity> */}
       {/* camino */}
 
 
@@ -128,40 +131,18 @@ const Valores = () => {
       <a-entity position="-1.186 0.008 16.666" rotation="1.27 90 -2.19" gltf-model="{flower}"></a-entity>
 
 
+      <a-entity position="-6.469 -0.496 16.389" shader="standard" scale="0.23 0.38 0.25" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
+      <a-entity position="-2.986 -0.135 16.575" shader="standard" scale="0.31 0.39 0.24" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
+      <a-entity position="-7.527 -0.107 2.839" scale="0.3 0.48000000000000004 -0.48" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
+      <a-entity position="-7.527 -0.107 2.839" scale="0.3 0.4 -0.39" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
+      <a-entity position="-7.527 -0.261 6.751" scale="0.41 0.47000000000000003 -0.39" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
+      <a-entity position="-7.713 -0.261 10.698" scale="0.41 0.41 -0.37" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
+      
+    <a-entity position="-3.992 -0.276 2.135" shader="standard" scale="0.45 0.48 0.39" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <a-entity position="-3.967 -0.261 7.096" scale="0.41 0.41 -0.37" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
+     
+    <a-entity position="1.886 -0.276 2.135" shader="standard" scale="0.64 0.48 0.6799999999999999" gltf-model="/static/media/tree_rose.9a136464fa8a3b9d8663.glb"> </a-entity>
 </Entity>
 
 
