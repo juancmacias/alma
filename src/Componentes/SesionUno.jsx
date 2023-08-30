@@ -7,7 +7,7 @@
       import Flora_Rose from'../obj/construccion/Section1/Flora_Rose.gltf';
       import Flora_Tulip from'../obj/construccion/Section1/Flora_Tulip.gltf';
       import Arbustos from'../obj/construccion/Section1/Arbustos.gltf';
-      function Sesion1() {
+      function SesionUno() {
         return (
           
             <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
@@ -97,4 +97,4 @@
           );
         }
         
-        export default Section1;
+        export default SesionUno;

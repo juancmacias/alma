@@ -1,11 +1,18 @@
-
+a{text-decoration: none !important;}
 button{
-  border-radius: 15px;
-  border: none;
-  margin-right: 5px;
+  border-radius: 15px !important;
+  border: none !important;
+  margin-right: 5px !important;
+
+  padding: 10px;
 }
-.dark a{ color:white}
+.show{
+  font-size: 0.1em !important;
+}
+.dark a{ color:white;}
+.dark .botonEntrar a{ color: black;}
 .light a{color: black;}
+.light .botonEntrar a{color: #3db3ea;}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,11 +22,7 @@ button{
   font-size: 2em;
 }
 
-main{
-  min-height: 86vh;
-  
-  font-size: calc(10px + 2vmin);
-}
+
 .fondo{
   height: 86vh;
   width: 100vw;
@@ -27,7 +30,7 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../src/resources/fondo.PNG"); /* The image used */
+  background-image: url("../src/resources/fondo.jpg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
   
   background-position: center; /* Center the image */
@@ -111,7 +114,23 @@ footer{
   align-items: center;
   justify-content: center;
 }
+/* formulario */
+main {
+  color: #36A0FF;
+  
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  flex-direction: column; 
+  justify-content: space-between;
+  min-height: 86vh;
+  font-size: calc(10px + 2vmin);
+  }
 
+.bigicon {
+  font-size: 35px;
+  color: #36A0FF;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -127,6 +146,28 @@ footer{
     font-size: 1rem ;
 
   }
+  .card{
+    width: 360px !important ;
+  }
+  
 }
 
+
+.card{
+  margin: 100px auto;
+  z-index: 1000 !important;
+  width: 550px ;
+  -webkit-box-shadow: 0px 7px 22px 1px rgba(112, 110, 110, 0.51);
+  -moz-box-shadow: 0px 7px 22px 1px rgba(113, 111, 111, 0.51);
+  box-shadow: 0px 7px 22px 1px rgba(146, 146, 146, 0.51);
+}
+.form-group, .form-check{
+  font-size: calc(10px + 1.4vmin);
+  text-align: left;
+  color: #36A0FF;
+  
+}
+.form-check{
+  margin-bottom: 2rem !important;
+}
 
