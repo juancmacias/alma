@@ -112,7 +112,11 @@ const Valores = () => {
         
    
     {/* portal */}
+
     {/* <a-entity position="-1.186 0.008 16.666" rotation="1.27 90 -2.19" gltf-model="/static/media/gate_wood.649a512bd84ee73e11bd.glb" scale="0.59 0.41 0.4"></a-entity> */} 
+
+    <a-entity id="portal" position="-1.186 0.008 16.666" rotation="1.27 90 -2.19" gltf-model={portal} scale="0.59 0.41 0.4"></a-entity>
+
     <a-entity position="-1.564 0.38 16.693" rotation="0 40 0" gltf-model= {flower} scale="0.71 0.7000000000000001 0.9800000000000001"></a-entity>
     <a-entity position="0.925 0.363 16.899" rotation="0 45 0" gltf-model= {flower} scale="0.85 0.72 0.83"></a-entity>
     
