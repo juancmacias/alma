@@ -1,9 +1,18 @@
-
+a{text-decoration: none !important;}
 button{
-  border-radius: 15px;
-  border: none;
-  margin-right: 5px;
+  border-radius: 15px !important;
+  border: none !important;
+  margin-right: 5px !important;
+
+  padding: 10px;
 }
+.show{
+  font-size: 0.1em !important;
+}
+.dark a{ color:white;}
+.dark .botonEntrar a{ color: black;}
+.light a{color: black;}
+.light .botonEntrar a{color: #3db3ea;}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,13 +22,37 @@ button{
   font-size: 2em;
 }
 
-main{
-  min-height: 86vh;
+
+.fondo{
+  height: 86vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url("../src/resources/fondo.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.botonEntrar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  padding: 30px;
+  background-color: azure;
+  border-radius: 40px;
+  -webkit-box-shadow: -1px 2px 18px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 18px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 18px 0px rgba(0,0,0,0.75);
+  transition: transform .4s;
+}
+.botonEntrar:hover{
+  transform: scale(1.2);
 }
 .App-header {
   font-size: calc(10px + 2vmin);
@@ -29,13 +62,18 @@ main{
 .App-link {
   color: #3db3ea;
 }
-.dark-mode {
+.dark {
   
-  filter: invert(1) hue-rotate(180deg);
+  /*filter: invert(1) hue-rotate(180deg);*/
   text-align: center;
   background-color: #011233;
   color: rgb(231, 228, 228);
 
+}
+.light {
+  background-color: #dcd8d857;
+  color: #3db3ea;
+  text-align: center;
 }
 .hidden {
   display: none;
@@ -55,8 +93,10 @@ img{
   box-shadow: 0px 7px 22px 1px rgba(146, 146, 146, 0.51);
 }
 .botons{
-  width: 100px;
   display: flex;
+}
+button:hover{
+  cursor: pointer;
 }
 .presentacion{
     background: linear-gradient(blue, pink);
@@ -74,21 +114,22 @@ footer{
   align-items: center;
   justify-content: center;
 }
-@media (prefers-color-scheme: light ) {
-  .App {
-    background-color: #011233;
-    color: rgb(231, 228, 228);
-    
-    text-align: center;
-    /*filter: invert(1) hue-rotate(180deg);*/
+/* formulario */
+main {
+  color: #36A0FF;
+  
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  flex-direction: column; 
+  justify-content: space-between;
+  min-height: 86vh;
+  font-size: calc(10px + 2vmin);
   }
-}
-@media (prefers-color-scheme: dark) {
-  .App {
-    background-color: rgb(60, 59, 59);
-    color: #3db3ea;
-    text-align: center;
-  }
+
+.bigicon {
+  font-size: 35px;
+  color: #36A0FF;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -96,6 +137,63 @@ footer{
   }
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(230, 173, 180);
+  }
+  main{
+    min-height: 84vh;
+  }
+  footer{
+    height: 6vh;
+    font-size: 1rem ;
+
+  }
+  .card, .card_dos{
+    width: 360px  ;
+    margin: 10px auto;
+  }
+  .light .card, .card_dos{
+    color: black ;
+    background-color:#fff ;
+  }
+  .dark .card, .card_dos{
+    color: #fff ;
+    background-color:#011233 ;
+  }
+  
+}
 
 
+.card{
+  margin: 100px auto;
+  z-index: 1000 !important;
+  width: 550px ;
+  -webkit-box-shadow: 0px 7px 22px 1px rgba(112, 110, 110, 0.51);
+  -moz-box-shadow: 0px 7px 22px 1px rgba(113, 111, 111, 0.51);
+  box-shadow: 0px 7px 22px 1px rgba(146, 146, 146, 0.51);
+}
+.card_dos{
+  background-color:#fff;
+  color: black;
+  font-size: 0.6em;
+  text-align: left;
+  margin: 100px auto;
+  padding: 15px;
+  border-radius: 0.375rem;;
+  z-index: 1000 !important;
+  width: 70vw ;
+  -webkit-box-shadow: 0px 7px 22px 1px rgba(112, 110, 110, 0.51);
+  -moz-box-shadow: 0px 7px 22px 1px rgba(113, 111, 111, 0.51);
+  box-shadow: 0px 7px 22px 1px rgba(146, 146, 146, 0.51);
+}
+.form-group, .form-check{
+  font-size: calc(10px + 1.4vmin);
+  text-align: left;
+  color: #36A0FF;
+  
+}
+.form-check{
+  margin-bottom: 2rem !important;
+}
 
