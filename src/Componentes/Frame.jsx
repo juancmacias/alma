@@ -18,6 +18,7 @@ import buda from '../obj/construccion/garden_buddha.glb'
 import nomo from '../obj/construccion/mesh_garden_gnome.glb'
 import tori from '../obj/construccion/japanese_tori_gate.glb'
 import nubecumulo from '../obj/nubes/CumulusClouds.glb'
+import portalValores from '../obj/construccion/gate_wood.glb'
 
 function Frame() {
   
@@ -34,6 +35,10 @@ function Frame() {
     }
     return(objetos)
 
+ }
+ const portalSeleccion = (ir) => {
+  console.log("Hecho " + ir)
+  window.location.href=ir;
  }
  
   const cargarCamara = (
@@ -157,6 +162,22 @@ function Frame() {
         {/* muro  */}
         <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:10 2;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
       </Entity>
+      {/* PORTALES */}
+      <a-entity id="portalvalores" gltf-model={portalValores} position="8.6 -0.25 -12" rotation="0 88 0" scale="0.5 0.5 0.5">
+      
+      </a-entity>
+      <Entity
+                  primitive="a-entity"
+                  reset="true"
+                  position="9.3 1.6 -12"
+                  rotation="0 134 0"
+                  geometry="primitive: box; height: 1; width: 1; depth:0"
+                  material="shader: flat; color: black"
+                  events={{
+                    click: ()=> portalSeleccion('valores') ,
+                  }}
+                  text={"value:Valores;width: 16;letterSpacing:10px;yOffset:25;color:white"} 
+              />
       {/* cosas varias */}
 
       <a-entity id="buda" gltf-model={buda} position="-0.5 -0.25 -14" rotation="0 29 0" scale="1 1 1"></a-entity>
