@@ -43,12 +43,12 @@ function Frame() {
  }
  
   const cargarCamara = (
-    <Entity camera  kinematic-body="radius:1" look-controls universal-controls position="0 1.6 19.5" rotation="16.6 0 0">
+    <Entity camera  kinematic-body="radius:1" universal-controls position="0 1.6 19.5" rotation="16.6 0 0">
       <Entity  cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
     </Entity>
   );
     return (
-      <Scene xrextras-loading  physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+      <Scene physics="debug: true" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
         {/*
         <a-entity id="mano_left" hand-controls="left"></a-entity>
         <a-entity id="mano_right" hand-controls="right"></a-entity>
@@ -64,7 +64,7 @@ function Frame() {
 
         </a-assets>
         
-        <Entity geometry="height: 3;segmentsHeight: 20; segmentsRadial: 30; primitive: cylinder;" color="black" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="3 1 7"/>
+        <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder;" color="black" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"/>
         <Entity id="muro_1" position="-15 0 0" rotation="0 0 0">
           {
             /* 
