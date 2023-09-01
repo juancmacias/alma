@@ -70,8 +70,8 @@ const Valores = () => {
        {/* <!-- agua --> */}
        <a-entity position="-0.111 0.114 10.982" radius="0.9" height="1.9" color="#FFC65D" geometry="radius:0.44;height:0;primitive:cylinder" material="alphaTest:0.11;color:#4f6987"></a-entity> 
        {/* <!-- farola --> */} 
-       <a-entity position="-3.033 -0.142 3.184" scale="0.51 0.45 0.6" gltf-model="/static/media/lamp.f60234136ee2c363ba10.glb" scale="0.001 0.001 0"></a-entity>
-       <a-entity position="-7.259 -0.142 4.491" scale="0.51 0.45 0.6" gltf-model="/static/media/lamp.f60234136ee2c363ba10.glb" scale="0.001 0.001 0"></a-entity>
+       <a-entity position="-3.033 -0.142 3.184" scale="0.51 0.45 0.6" gltf-model="/static/media/lamp.f60234136ee2c363ba10.glb"></a-entity>
+       <a-entity position="-7.259 -0.142 4.491" scale="0.51 0.45 0.6" gltf-model="/static/media/lamp.f60234136ee2c363ba10.glb"></a-entity>
       {/* bancos */}
       <a-entity position="-2.771 -0.005 3.418" scale="0.018 0.018 0.018" gltf-model="/static/media/free_parkchair.d69367be751f1375fa0f.glb"> </a-entity>
       <a-entity position="-7.989 -0.005 3.667" scale="0.018 0.018 0.018" gltf-model="/static/media/free_parkchair.d69367be751f1375fa0f.glb" rotation="0 90 0"> </a-entity>
