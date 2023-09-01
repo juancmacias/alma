@@ -4,8 +4,7 @@ import Inicial from './Componentes/Inicial';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Valores from './Componentes/Valores';
-import formulario from './Componentes/Formulario';
-import Formulario from './Componentes/Formulario';
+
 
 
 function App() {
