@@ -3,15 +3,19 @@ import Frame from './Componentes/Frame';
 import Inicial from './Componentes/Inicial';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Valores from './Componentes/Valores';
+import formulario from './Componentes/Formulario';
+import Formulario from './Componentes/Formulario';
 
 
 function App() {
   return (
     <div>
-        <Routes>
-          <Route exact path="/" element={<Inicial/>} />
-          <Route path="/hubs" element={<Frame/>} />
-        </Routes>
+      <Routes>
+        <Route exact path="/" element={<Inicial/>} />
+        <Route path="/hubs" element={<Frame/>} />
+        <Route path="/valores" element={<Valores/>} />
+      </Routes>
     </div>
   );
 }
