@@ -36,15 +36,16 @@ const Valores = () => {
         </a-assets>
         {/* CAMARA */}
         
+        <a-entity position="0 1.608 10.005" camera="active:false;userHeight:1.6" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
         
-        
-        <Entity  camera kinematic-body="radius:2"  look-controls universal-controls  position="0 1.6 9.7">
+         <Entity  camera kinematic-body="radius:2"  look-controls universal-controls  position="0 1.6 9.7">
           <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" 
               material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity> 
-        </Entity>
+        </Entity> 
         {/* VARIOS */}
         <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="180 180 180"></a-sky>
-        <a-plane static-body="" position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#BCAAA4"  radius="10" geometry=""></a-plane>
+        <a-plane static-body="" position="0 0 0" rotation="-90 0 0" width="20" height="20
+        " color="#BCAAA4"  radius="10" geometry=""></a-plane>
         
         
         

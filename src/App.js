@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/" element={<Inicial/>} />
         <Route path="/hubs" element={<Frame/>} />
         <Route path="/valores" element={<Valores/>} />
-
+        <Route path="/sesiontres" element={<SesionTres/>} />
       </Routes>
     </div>
   );
