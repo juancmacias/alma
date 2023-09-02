@@ -2,6 +2,9 @@
  <p align="left">
   <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
 </p>
+<img src="https://raw.githubusercontent.com/juancmacias/alma-thinking-with-you/main/public/portal_readme.PNG" alt="Thinking With You inmersiva">
+
+
 <h2>Propuesta</h2>
 <p>La empresa Thinking With You quiere transmitir sus valores a la sociedad de una manera moderna y actual. La idea es emular el Libro blanco de Thinking With You con experiencias inmersiva, nesitan también un formulario de contacto y zona de administración para actualizar la información de la presentación.
 <ul>
