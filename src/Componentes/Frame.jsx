@@ -82,7 +82,8 @@ const keyPress = (e)=>{
     </Entity>
   );
     return (
-      <Scene onKeyPress={(e) => keyPress(e)} physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
+      <>
+      <Scene key="Scene_1" onKeyPress={(e) => keyPress(e)} physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
         {/*
         <a-entity id="mano_left" hand-controls="left"></a-entity>
         <a-entity id="mano_right" hand-controls="right"></a-entity>
@@ -106,12 +107,12 @@ const keyPress = (e)=>{
              Arboles del perimetro
              objeto, cantidad, posicion, maximo, minimo, x, y, z
             */
-            cargarObjetos(arbol, hojas, 6, 0, 14, -14, 0, 0, -14, 1)
+            cargarObjetos(arbol, hojas, 4, 0, 14, -14, 0, 0, -14, 1)
 
 
           }
           {
-            cargarObjetos(maple_tronco, maple_hojas, 4, 0, 14, -14, 0, 0, -14, -0.1)
+            cargarObjetos(maple_tronco, maple_hojas, 2, 0, 14, -14, 0, 0, -14, -0.1)
           }
 
           {/* bambu */}
@@ -147,16 +148,14 @@ const keyPress = (e)=>{
           <a-entity id="hojas_23" gltf-model={hojas} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-entity>
           <a-entity static-body="true" id="arbol_24" gltf-model={arbol} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
           <a-entity id="hojas_24" gltf-model={hojas} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity static-body="true" id="arbol_25" gltf-model={arbol} position="-0.6 -0.0 10.4" rotation="0 119 0" scale="1.4 1.4 1.4 "></a-entity>
-          <a-entity id="hojas_25" gltf-model={hojas} position="-0.6 -0.0 10.4" rotation="0 119 0" scale="1.4 1.4 1.4 "></a-entity>
+        
           <a-entity static-body="true" id="arbol_26" gltf-model={arbol} position="-0.5 -0.2 14.4" rotation="0 101 0" scale="1.7 1.7 1.7"></a-entity>
           <a-entity id="hojas_26" gltf-model={hojas} position="-0.5 -0.2 14.4" rotation="0 101 0" scale="1.7 1.7 1.7"></a-entity>
           <a-entity static-body="true" id="arbol_27" gltf-model={arbol} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity id="hojas_27" gltf-model={hojas} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity static-body="true" id="arbol_28" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
           <a-entity id="hojas_28" gltf-model={hojas} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity static-body="true" id="arbol_29" gltf-model={arbol} position="-1.2 -0.05 -14.5" rotation="0 151 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity id="hojas_29" gltf-model={hojas} position="-1.2 -0.05 -14.5" rotation="0 151 0" scale="1.2 1.2 1.2"></a-entity>
+
 
 
           {/* bambu */}
@@ -166,7 +165,7 @@ const keyPress = (e)=>{
           <a-entity id="bambu_24" gltf-model={bamboo} position="-1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           <a-entity id="bambu_25" gltf-model={bamboo} position="-0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
           <a-entity id="bambu_26" gltf-model={bamboo} position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-          <a-entity id="bambu_27" gltf-model={bamboo} position="-0.7 0.0 -7.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
+
           <a-entity id="bambu_28" gltf-model={bamboo} position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           {/* varias plantas */}
           <a-entity id="varios_21" gltf-model={plantdandeli} position="-5.8 1.7 2.5" rotation="0 152 0" scale="6 6 6" ></a-entity>
@@ -178,8 +177,7 @@ const keyPress = (e)=>{
           {/* Arboles del perimetro */}
           <a-entity static-body="true" id="arbol_31" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
           <a-entity id="hojas_31" gltf-model={hojas} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
-          <a-entity static-body="true" id="arbol_32" gltf-model={arbol} position="-0.7 0 4.6" rotation="0 80 0" scale="1 1 1"></a-entity>
-          <a-entity id="hojas_32" gltf-model={hojas} position="-0.7 0 4.6" rotation="0 80 0" scale="1 1 1"></a-entity>
+
           <a-entity static-body="true" id="arbol_33" gltf-model={arbol} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-entity>
           <a-entity id="hojas_33" gltf-model={hojas} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-entity>
           <a-entity static-body="true" id="arbol_34" gltf-model={arbol} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
@@ -192,17 +190,16 @@ const keyPress = (e)=>{
           <a-entity id="hojas_37" gltf-model={hojas} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity static-body="true" id="arbol_38" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
           <a-entity id="hojas_38" gltf-model={hojas} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity static-body="true" id="arbol_39" gltf-model={arbol} position="-1.2 -0.05 -14.5" rotation="0 151 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity id="hojas_39" gltf-model={hojas} position="-1.2 -0.05 -14.5" rotation="0 151 0" scale="1.2 1.2 1.2"></a-entity>
+
 
           {/* bambu */}
           <a-entity id="bambu_31" gltf-model={bamboo} position="-0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
-          <a-entity id="bambu_32" gltf-model={bamboo} position="-0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
+
           <a-entity id="bambu_33" gltf-model={bamboo} position="-0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
           <a-entity id="bambu_34" gltf-model={bamboo} position="-1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           <a-entity id="bambu_35" gltf-model={bamboo} position="-0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
           <a-entity id="bambu_36" gltf-model={bamboo} position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-          <a-entity id="bambu_37" gltf-model={bamboo} position="-0.7 0.0 -7.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
+
           <a-entity id="bambu_38" gltf-model={bamboo} position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           {/* muro  */}
           <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:10 2;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
@@ -257,7 +254,7 @@ const keyPress = (e)=>{
         <a-entity id="buda" gltf-model={buda} position="-0.5 -0.25 -14" rotation="0 29 0" scale="1 1 1"></a-entity>
         <a-entity id="nomo_1" gltf-model={nomo} position="-14 0.01 -14" rotation="0 29 0" scale="1.2 1.2 1.2"></a-entity>
         <a-entity id="nomo_2" gltf-model={nomo} position="14 0.01 14" rotation="0 -100 0" scale="1.2 1.2 1.2"></a-entity>
-        <a-entity id="nomo_3" gltf-model={nomo} position="-14 0.01 14.5" rotation="0 100 0" scale="1.2 1.2 1.2"></a-entity>
+
         <a-entity id="nomo_4" gltf-model={nomo} position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-entity>
 
         {/* ENTRADA */}
@@ -313,7 +310,7 @@ const keyPress = (e)=>{
         {/* cámara */}
         {cargarCamara}
     </Scene>
-
+    </>
 
     );
   }
