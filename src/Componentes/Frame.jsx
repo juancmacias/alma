@@ -60,7 +60,7 @@ const keyPress = (e)=>{
       let ZZ = 1 + Math.floor(Math.random() * (max - min + 1) + min);
 
       objetos.push(<Entity static-body="true" id={`arbol_5${i}`} gltf-model={tipo1} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></Entity>)
-      objetos.push(<a-gltf-model id={`hoja_5${i}`}  src={tipo2} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></a-gltf-model>)
+      objetos.push(<Entity id={`hoja_5${i}`}  gltf-model={tipo2} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></Entity>)
     }
     return(objetos)
 
@@ -77,12 +77,12 @@ const keyPress = (e)=>{
  }
  
   const cargarCamara = (
-    <Entity id="camera" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
-      <Entity  cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
+    <Entity  onKeyDown={keyPress} id="camera" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
+      <Entity onKeyPress={(e) => keyPress(e)}  cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
     </Entity>
   );
     return (
-      <Scene  onKeyDown={keyPress} physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
+      <Scene onKeyPress={(e) => keyPress(e)} physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
         {/*
         <a-entity id="mano_left" hand-controls="left"></a-entity>
         <a-entity id="mano_right" hand-controls="right"></a-entity>
@@ -99,7 +99,7 @@ const keyPress = (e)=>{
 
         </a-assets>
 
-        <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder;" color="black" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"/>
+        <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder;" color="black" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"></Entity>
         <Entity  id="muro_1" position="-15 0 0" rotation="0 0 0">
           {
             /* 
@@ -212,6 +212,7 @@ const keyPress = (e)=>{
 
         </Entity>
         <Entity
+ 
           id="valores_cartel"
           events={{
             click: () => portalSeleccion('valores')
@@ -221,7 +222,7 @@ const keyPress = (e)=>{
           width="2"
           height="2"
 
-          material="color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; width: 2; height: 0.6;"
+          material="color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 2; height: 0.6;"
           text={`value:Valorés;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         <Entity
           id="titulo_cartel"
