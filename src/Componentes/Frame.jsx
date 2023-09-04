@@ -1,10 +1,7 @@
-
-
 import {Entity, Scene} from 'aframe-react';
 import React, {useState, useEffect, useRef} from 'react';
-import ReactDOM from 'react-dom';
-import useSound from 'use-sound';
-import forest from '../sound/jardin.mp3';
+
+
 
 /* precargar los objetos en 3d */
 import bamboo from '../obj/plantas/bamboo.glb'
@@ -13,43 +10,41 @@ import hojas from '../obj/plantas/hojas.glb'
 import maple_tronco from '../obj/plantas/maple_tronco.glb'
 import maple_hojas from '../obj/plantas/maple_hojas.glb'
 import molinillo from '../obj/plantas/molinillo.glb'
-import hojasverdes from '../obj/plantas/hojasverdes.glb'
+
 import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 import buda from '../obj/construccion/garden_buddha.glb'
 import nomo from '../obj/construccion/mesh_garden_gnome.glb'
 import tori from '../obj/construccion/japanese_tori_gate.glb'
 import nubecumulo from '../obj/nubes/CumulusClouds.glb'
 import portalValores from '../obj/construccion/gate_wood.glb'
-import { keyboard } from '@testing-library/user-event/dist/keyboard';
-
+//import useSound from 'use-sound';
+//import forest from '../sound/jardin.mp3';
 
 function Frame() {
-const audio = new Audio(forest);
-audio.loop = true;
-//const [play, setPlay] = useState('');
-const [sonido, setSonido] = useState(localStorage.getItem('sonido'));
-const start = ()  => {
-   /* carga de sonido */
-   
-  if(sonido === "on"){
-    audio.play();
-    //setPlay("src:#forest; autoplay:true; loop:true; volume:0.05")
-    console.log("sonido on" + localStorage.getItem('sonido')+ " ll")
-    
-  }else{
-    //setPlay('');
-    console.log("sonido off "+ localStorage.getItem('sonido')+ " ll")
+  const [sonido] = useState(localStorage.getItem('sonido'));
+  
+  //const [playP, { stopP }] = useSound(forest);
+  const start = ()  => {
+    /* carga de sonido */
+
+    if(sonido === "on"){
+      //playP()
+    }
+
   }
-  console.log(document.querySelector('a-assets').fileLoader);
 
-}
+  useEffect(()=> {
 
-useEffect(()=> {
-  start();
-})
-const keyPress = (e)=>{
-    console.log("pulsas tecla "+e.keyCode)
-}
+    caches.keys().then((names) => {
+      names.forEach((name) => {
+        caches.delete(name);
+      });
+    });
+    
+    start();
+  })
+
+
 
   const cargarObjetos = (tipo1,tipo2, cantidad, p, max, min, x,y,z, escala) => {
     let objetos = []
@@ -59,8 +54,8 @@ const keyPress = (e)=>{
       let XX = x + Math.random()
       let ZZ = 1 + Math.floor(Math.random() * (max - min + 1) + min);
 
-      objetos.push(<Entity static-body="true" id={`arbol_5${i}`} gltf-model={tipo1} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></Entity>)
-      objetos.push(<Entity id={`hoja_5${i}`}  gltf-model={tipo2} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></Entity>)
+      objetos.push(<a-gltf-model static-body id={`arbol_5${i}`} src={tipo1} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot} 0`} scale={`${scala} ${scala} ${scala}`}></a-gltf-model>)
+      objetos.push(<a-gltf-model id={`hoja_5${i}`}  src={tipo2} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></a-gltf-model>)
     }
     return(objetos)
 
@@ -72,27 +67,25 @@ const keyPress = (e)=>{
   console.log("Hecho " + pos.y)
   var position = pos.x+ ' '+ pos.y+ ' '+pos.z 
   localStorage.setItem("position", position);
-
+  //stopP();
   window.location.href=ir;
  }
  
-  const cargarCamara = (
-    <Entity  onKeyDown={keyPress} id="camera" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
-      <Entity onKeyPress={(e) => keyPress(e)}  cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
-    </Entity>
-  );
+
     return (
-      <>
-      <Scene key="Scene_1" onKeyPress={(e) => keyPress(e)} physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
+      
+      <Scene id="Scene_1" physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
         {/*
         <a-entity id="mano_left" hand-controls="left"></a-entity>
         <a-entity id="mano_right" hand-controls="right"></a-entity>
         */}
+        
+
 
 
         {/* recursos xrextras-loading */}
         <a-assets>
-
+          <audio id="jardin" crossorigin="anonymous" src="sound/jardin.ogg"  preload='auto'></audio>
           <img id="imagen-pared" src={require('../resources/piedra_muro_1.jpg')} alt='' />
           <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
           <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
@@ -101,18 +94,16 @@ const keyPress = (e)=>{
         </a-assets>
 
         <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder;" color="black" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"></Entity>
-        <Entity  id="muro_1" position="-15 0 0" rotation="0 0 0">
+        <Entity key="muro_1" position="-15 0 0" rotation="0 0 0">
           {
             /* 
              Arboles del perimetro
              objeto, cantidad, posicion, maximo, minimo, x, y, z
             */
-            cargarObjetos(arbol, hojas, 4, 0, 14, -14, 0, 0, -14, 1)
-
-
+            cargarObjetos(arbol, hojas, 3, 0, 14, -14, 0, 0, -14, 1)
           }
           {
-            cargarObjetos(maple_tronco, maple_hojas, 2, 0, 14, -14, 0, 0, -14, -0.1)
+            cargarObjetos(maple_tronco, maple_hojas, 1, 0, 14, -14, 0, 0, -14, -0.1)
           }
 
           {/* bambu */}
@@ -120,7 +111,6 @@ const keyPress = (e)=>{
           <a-entity id="bambu_12" gltf-model={bamboo} position="0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
           <a-entity id="bambu_13" gltf-model={bamboo} position="0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
           <a-entity id="bambu_14" gltf-model={bamboo} position="1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="bambu_15" gltf-model={bamboo} position="0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
           <a-entity id="bambu_16" gltf-model={bamboo} position="0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
           <a-entity id="bambu_17" gltf-model={bamboo} position="0.7 0.0 -7.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
           <a-entity id="bambu_18" gltf-model={bamboo} position="0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
@@ -133,12 +123,11 @@ const keyPress = (e)=>{
           <a-entity id="varios_16" gltf-model={molinillo} position="0.81 0.0 -1.5" rotation="0 153 0" scale="1 1.1 1.1"></a-entity>
           <a-entity id="varios_17" gltf-model={molinillo} position="0.92 0.0 -1.7" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           <a-entity id="varios_18" gltf-model={molinillo} position="0.62 0.0 -1.55" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="varios_19" gltf-model={hojasverdes} position="0.62 0.0 -1.55" rotation="0 80 0" scale="0.1 0.1 0.1"></a-entity>
           {/* muro  */}
           <a-box id="wall_11" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
-
-        <Entity onLoaded={() => { console.log('carga.....'); }} id="muro_2" position="15 0 0" rotation="0 0 0">
+{/* */}
+        <Entity id="muro_2" position="15 0 0" rotation="0 0 0">
           {/* Arboles del perimetro  "dynamic-body="mass: 5"*/}
           <a-entity static-body="true" id="arbol_21" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
           <a-entity id="hojas_21" gltf-model={hojas} position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
@@ -148,9 +137,6 @@ const keyPress = (e)=>{
           <a-entity id="hojas_23" gltf-model={hojas} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-entity>
           <a-entity static-body="true" id="arbol_24" gltf-model={arbol} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
           <a-entity id="hojas_24" gltf-model={hojas} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
-        
-          <a-entity static-body="true" id="arbol_26" gltf-model={arbol} position="-0.5 -0.2 14.4" rotation="0 101 0" scale="1.7 1.7 1.7"></a-entity>
-          <a-entity id="hojas_26" gltf-model={hojas} position="-0.5 -0.2 14.4" rotation="0 101 0" scale="1.7 1.7 1.7"></a-entity>
           <a-entity static-body="true" id="arbol_27" gltf-model={arbol} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity id="hojas_27" gltf-model={hojas} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity static-body="true" id="arbol_28" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
@@ -165,27 +151,20 @@ const keyPress = (e)=>{
           <a-entity id="bambu_24" gltf-model={bamboo} position="-1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           <a-entity id="bambu_25" gltf-model={bamboo} position="-0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
           <a-entity id="bambu_26" gltf-model={bamboo} position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-
           <a-entity id="bambu_28" gltf-model={bamboo} position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           {/* varias plantas */}
           <a-entity id="varios_21" gltf-model={plantdandeli} position="-5.8 1.7 2.5" rotation="0 152 0" scale="6 6 6" ></a-entity>
           {/* muro  */}
           <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
-
         <Entity id="muro_3" position="0 0 -15" rotation="0 90 0">
           {/* Arboles del perimetro */}
           <a-entity static-body="true" id="arbol_31" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
           <a-entity id="hojas_31" gltf-model={hojas} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
-
           <a-entity static-body="true" id="arbol_33" gltf-model={arbol} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-entity>
           <a-entity id="hojas_33" gltf-model={hojas} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-entity>
-          <a-entity static-body="true" id="arbol_34" gltf-model={arbol} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity id="hojas_34" gltf-model={hojas} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
           <a-entity static-body="true" id="arbol_35" gltf-model={arbol} position="-0.6 -0.0 10.4" rotation="0 119 0" scale="1.4 1.4 1.4"></a-entity>
           <a-entity id="hojas_35" gltf-model={hojas} position="-0.6 -0.0 10.4" rotation="0 119 0" scale="1.4 1.4 1.4"></a-entity>
-          <a-entity static-body="true" id="arbol_36" gltf-model={arbol} position="-0.5 -0.2 14.4" rotation="0 101 0" scale="1.7 1.7 1.7"></a-entity>
-          <a-entity id="hojas_36" gltf-model={hojas} position="-0.5 -0.2 14.4" rotation="0 101 0" scale="1.7 1.7 1.7"></a-entity>
           <a-entity static-body id="arbol_37" gltf-model={arbol} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity id="hojas_37" gltf-model={hojas} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity static-body="true" id="arbol_38" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
@@ -194,23 +173,21 @@ const keyPress = (e)=>{
 
           {/* bambu */}
           <a-entity id="bambu_31" gltf-model={bamboo} position="-0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
-
           <a-entity id="bambu_33" gltf-model={bamboo} position="-0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
           <a-entity id="bambu_34" gltf-model={bamboo} position="-1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           <a-entity id="bambu_35" gltf-model={bamboo} position="-0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
           <a-entity id="bambu_36" gltf-model={bamboo} position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-
           <a-entity id="bambu_38" gltf-model={bamboo} position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
           {/* muro  */}
           <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:10 2;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
-        {/* PORTALES */}
-        <Entity id="portalvalores" gltf-model={portalValores} position="8.3 -0.25 -11.6" rotation="0 88 0" scale="0.5 0.5 0.5">
 
-        </Entity>
+
+        {/* PORTALES */}
+        <a-entity id="portalvalores" gltf-model={portalValores} position="8.3 -0.25 -11.6" rotation="0 88 0" scale="0.5 0.5 0.5"></a-entity>
         <Entity
- 
-          id="valores_cartel"
+          visible="true"
+          id="portalvalores"
           events={{
             click: () => portalSeleccion('valores')
           }}
@@ -221,6 +198,19 @@ const keyPress = (e)=>{
 
           material="color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 2; height: 0.6;"
           text={`value:Valorés;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        
+        {/* CARTELES */}
+        <Entity
+          id="bienvenida"
+          sound="src:#jardin; on:click; loop:true; volume:0.75"
+          position="0.5 2.9 14.2"
+          rotation="-16 0 0"
+          width="2"
+          height="2"
+          material="color:#c6c6c6;opacity: 0.6;" geometry="primitive:plane; radius:0.4; width: 2; height: 2.1;"
+          text={`value:¡Hola! Te doy la bienvenida a este viaje que te propongo. Me gustaría que te
+          sintieras como en casa. ¡Abre tus sentidos y disfruta de la experiencia!;wrapCount:20;width: 2;yOffset:-4;color:black;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/normal/normal-msdf.json; align: center`} />
+        
         <Entity
           id="titulo_cartel"
           position="-0.37 5.3 15.17"
@@ -263,7 +253,7 @@ const keyPress = (e)=>{
         <a-box id="wall_seguro_3" width="10" height="3" depth="0.01" position="-15 0 15" material="opacity:0.1" static-body="true" rotation="0 -90 0" ></a-box>
         <a-box id="wall_tory_1" color="grey" width="13.1" height="3" depth="0.5" position="9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
         <a-box id="wall_tory_2" color="grey" width="13.1" height="3" depth="0.5" position="-9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
-        <a-entity id="tori" gltf-model={tori} position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-entity>
+        <a-entity id="tori" gltf-model={tori}  position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-entity>
         {/* camino */}
         <a-box id="camino_1" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="0 -0.244 15" rotation="90 0 0"></a-box>
         <a-box id="camino_2" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="0.64 -0.244 13" rotation="90 -34.3 0"></a-box>
@@ -287,7 +277,7 @@ const keyPress = (e)=>{
         <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_20" position="9.4 -0.2 8.5" rotation="90 -141 0"></a-box>
         <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_21" position="-5.9 -0.2 -0.6" rotation="90 4.4 0"></a-box>
         <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_22" position="-5.3 -0.2 -5.6" rotation="90 -31.8 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_23" position="-2.7-0.2 -8.5" rotation="90 -52 0"></a-box>
+        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_23" position="-2.7 -0.2 -8.5" rotation="90 -52 0"></a-box>
         <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_24" position="9.47 -0.2 -7.5" rotation="90 1.14 0"></a-box>
         <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_25" position="-6.0 -0.2 -3.4" rotation="90 -1.4 0"></a-box>
         <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_26" position="6.03 -0.2 -10.7" rotation="90 -113 0"></a-box>
@@ -299,18 +289,26 @@ const keyPress = (e)=>{
         <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_32" position="-8.36 -0.2 -3" rotation="90 86.2 0"></a-box>
         {/* suelo */}
         <a-plane id="plano_1" static-body="true" position="0 0 0" rotation="-90 0 0" width="30" height="40" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
-        <a-plane id="plano_2"  position="0 -0.5 0" rotation="-90 0 0" width="300" height="400" color="green" radius="10"></a-plane>
+        <a-plane id="plano_2" position="0 -0.5 0" rotation="-90 0 0" width="300" height="400" color="green" radius="10"></a-plane>
         {/* cielo */}
-        <a-sky id="cielo" color="#87CEEB" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
+        <a-sky id="cielo" sound="src:#jardin; on:click; loop:true; volume:0.75" color="#87CEEB" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
         {/* nubes */}
-        <a-entity id="nube_1" type="model" gltf-model={nubecumulo} position="-1.2 50 100.5" rotation="0 151 0" scale="6 6 6">
+        <a-entity id="nube_1" gltf-model={nubecumulo} position="-1.2 50 100.5" rotation="0 151 0" scale="6 6 6">
           <a-animation id="animacion_1" attribute="position" dur="300000" from="-1.2 50 100.5" to="-1.2 50 -200.0" repeat="indefinite">
           </a-animation>
         </a-entity>
+        <a-entity id="nube_2" gltf-model={nubecumulo} position="-1.2 50 399.5" rotation="0 76 0" scale="10 10 10">
+          <a-animation id="animacion_2" attribute="position" dur="300800" from="70 50 399.5" to="40 50 -500.0" repeat="indefinite">
+          </a-animation>
+        </a-entity>
         {/* cámara */}
-        {cargarCamara}
+        {/*cargarCamara*/}
+        <Entity id="camera"  camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
+          <Entity cursor  position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
+
+        </Entity>
     </Scene>
-    </>
+
 
     );
   }
