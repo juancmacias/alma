@@ -18,9 +18,15 @@ function Inicial() {
       const [sonido, setSonido] = useState(localStorage.getItem('sonido')=== null?'off':localStorage.getItem('sonido'));
       localStorage.removeItem("position")
       localStorage.setItem("sonido", sonido);
+      
 
       console.log("Seleccion color "+ prefersColorScheme);
       const verListado = (select) => {
+            caches.keys().then((names) => {
+                  names.forEach((name) => {
+                    caches.delete(name);
+                  });
+                });
             setSeleccion(select);
           }
     return (
