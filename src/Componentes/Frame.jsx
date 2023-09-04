@@ -126,7 +126,7 @@ function Frame() {
           {/* muro  */}
           <a-box id="wall_11" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
-{/* */}
+
         <Entity id="muro_2" position="15 0 0" rotation="0 0 0">
           {/* Arboles del perimetro  "dynamic-body="mass: 5"*/}
           <a-entity static-body="true" id="arbol_21" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
@@ -184,21 +184,34 @@ function Frame() {
 
 
         {/* PORTALES */}
-        <a-entity id="portalvalores" gltf-model={portalValores} position="8.3 -0.25 -11.6" rotation="0 88 0" scale="0.5 0.5 0.5"></a-entity>
+        <a-entity id="portalvalores" gltf-model={portalValores} position="8.3 -0.25 -11.6" rotation="0 88 0" scale="0.5 0.5 0.5">
         <Entity
           visible="true"
-          id="portalvalores"
+          id="portalvalores_texto"
           events={{
             click: () => portalSeleccion('valores')
           }}
-          position="9.5 2 -11.5"
-          rotation="0 -2.9 0"
+          position="0 3 2.5"
+          rotation="0 -85 0"
           width="2"
           height="2"
-
-          material="color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 2; height: 0.6;"
-          text={`value:Valorés;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
-        
+          material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 3.7; height: 0.6;"
+          text={`value:Valores y Principios;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        </a-entity>
+        <a-entity id="origenmisionvision" gltf-model={portalValores} position="11.03 -0.25 8.6" rotation="0 -48 0" scale="0.5 0.5 0.5">
+        <Entity
+          visible="true"
+          id="origenmisionvision_texto"
+          events={{
+            click: () => portalSeleccion('origen')
+          }}
+          position="0 3 2.5"
+          rotation="0 -85 0"
+          width="2"
+          height="2"
+          material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.1; height: 0.6;"
+          text={`value:Origen, Misión y Visión;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        </a-entity>
         {/* CARTELES */}
         <Entity
           id="bienvenida"
@@ -210,6 +223,17 @@ function Frame() {
           material="color:#c6c6c6;opacity: 0.6;" geometry="primitive:plane; radius:0.4; width: 2; height: 2.1;"
           text={`value:¡Hola! Te doy la bienvenida a este viaje que te propongo. Me gustaría que te
           sintieras como en casa. ¡Abre tus sentidos y disfruta de la experiencia!;wrapCount:20;width: 2;yOffset:-4;color:black;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/normal/normal-msdf.json; align: center`} />
+        <Entity
+          id="despedida"
+          sound="src:#jardin; on:click; loop:true; volume:0.75"
+          position="0.5 1.6 14.2"
+          rotation="4 180 0"
+          width="2"
+          height="2"
+          material="color:#c6c6c6;opacity: 0.6;" geometry="primitive:plane; radius:0.4; width: 3; height: 1.7;"
+          text={`value:¡Gracias por tu generosidad! Para terminar, te lanzo estas preguntas para que reflexiones\n
+          - ¿Qué te llevas de este viaje?\n
+          - ¿Qué mejorarías?;wrapCount:30;width:1.9;yOffset:-4;color:black;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/normal/normal-msdf.json; align: center`} />
         
         <Entity
           id="titulo_cartel"
