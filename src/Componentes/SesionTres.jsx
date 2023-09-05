@@ -16,19 +16,32 @@ import alfombra from '../obj/sesion3/alfombra2.glb'
 
 
 const SesionTres = () => {
- 
+  const portalSeleccion = (ir) => {
+    window.location.href=ir;
+   }
    
   return (
        
     <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
     
     <a-entity position="0 1.608 10.005" camera="active:false;userHeight:1.6" wasd-controls cursor-controls collision="objects: .colisionables" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
-     <Entity  camera kinematic-body="radius:2"  look-controls universal-controls  position="0 2 14.15">
+     <Entity  camera kinematic-body="radius:1"  look-controls universal-controls  position="0 2 13.15">
      <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" 
-        material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity> 
+        material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5" raycaster ></Entity> 
     </Entity> 
-
-
+    {/* CARTEL SALIDA */}
+    <Entity
+          id="salida_cartel"
+          events={{
+            click: () => portalSeleccion('/hubs')
+          }}
+          position="-1.6 1.1 14.8"
+          rotation="0 -180 0"
+          width="2"
+          height="2"
+          material="color:#14B76E;opacity: 0.5;" geometry="primitive:plane; radius:0.4; width: 2; height: 0.6;"
+          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        
     {/* imagenes */}
     <a-assets>
 
@@ -59,7 +72,7 @@ const SesionTres = () => {
     <a-box id="2"static-body position="14.845 1.929 4.12" rotation="0 90 0" color="#82E0AA" geometry="width:20.8;height:8;depth:0.05"></a-box>
     <a-box id="3"static-body position="-14.926 2.279 3.843" rotation="0 90 0" color="#82E0AA" geometry="width:20.8;height:8;depth:0.05"></a-box>
     <a-box id="4" static-body src="#madera" position="9.072 0.682 14.568" rotation="0 180 0" geometry="width:11.77;height:1.5;depth:0.05" ></a-box>
-    <a-box id="5" static-body src="#madera" position= "-9.536 0.704 14.253" rotation="0 180 0"  geometry="width:10.93;height:1.5;depth:0.05"></a-box>
+    <a-box id="5" static-body src="#madera" position= "-9.536 0.716 14.253" rotation="0 180 0"  geometry="width:10.93;height:1.5;depth:0.05"></a-box>
     <a-box id="6" static-body src="#madera" position="0.141 0.716 24.261" rotation="0 180 0"  geometry="width:29.95;height:1.5;depth:0.05"></a-box>
     <a-box id="7" static-body src="#madera" position="-14.963 0.741 19.213" rotation="0 90 0"  geometry="width:10.299999999999999;height:1.5;depth:0.05" ></a-box>
     <a-box id="8" static-body src="#madera" position="14.917 0.723 19.072" rotation="0 90 0" geometry="width:10.43;height:1.5;depth:0.05"></a-box>
