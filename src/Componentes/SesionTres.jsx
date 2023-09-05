@@ -23,7 +23,7 @@ const SesionTres = () => {
    
   return (
        
-    <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+    <Scene preloader="title: Cargando objetos ....;slowLoad:true;" id="scenaTres" physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
     
     <a-entity position="0 1.608 10.005" camera="active:false;userHeight:1.6" wasd-controls cursor-controls collision="objects: .colisionables" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
      <Entity  camera kinematic-body="radius:1"  look-controls universal-controls  position="0 2 13.15">
