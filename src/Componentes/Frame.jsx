@@ -13,7 +13,7 @@ import molinillo from '../obj/plantas/molinillo.glb'
 
 import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 import buda from '../obj/construccion/garden_buddha.glb'
-import nomo from '../obj/construccion/mesh_garden_gnome.glb'
+import mono from '../obj/construccion/mesh_garden_gnome.glb'
 import tori from '../obj/construccion/japanese_tori_gate.glb'
 import nubecumulo from '../obj/nubes/CumulusClouds.glb'
 import portalValores from '../obj/construccion/gate_wood.glb'
@@ -52,8 +52,8 @@ function Frame() {
       let scala = escala+Math.random() 
       let XX = x + Math.random()
       let ZZ = 1 + Math.floor(Math.random() * (max - min + 1) + min);
-
-      objetos.push(<a-gltf-model static-body id={`arbol_5${i}`} src={tipo1} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot} 0`} scale={`${scala} ${scala} ${scala}`}></a-gltf-model>)
+      console.log("obj "+ tipo1 + " - " +tipo2)
+      objetos.push(<a-gltf-model static-body id={`arbol_5${i}`} src={tipo1}  position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot} 0`} scale={`${scala} ${scala} ${scala}`}></a-gltf-model>)
       objetos.push(<a-gltf-model id={`hoja_5${i}`}  src={tipo2} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></a-gltf-model>)
     }
     return(objetos)
@@ -73,7 +73,7 @@ function Frame() {
 
     return (
       
-      <Scene id="Scene_1" physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
+      <Scene preloader="title: Cargando objetos...;slowLoad:true;" id="Scene_1" physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
         {/*
         <a-entity id="mano_left" hand-controls="left"></a-entity>
         <a-entity id="mano_right" hand-controls="right"></a-entity>
@@ -82,12 +82,22 @@ function Frame() {
         {/* recursos xrextras-loading */}
         <a-assets>
 
-          <sound id="jardin" crossorigin="anonymous" src="sound/jardin.ogg"  preload='auto'/>
+          <sound id="jardin" src="sound/jardin.ogg" preload='auto'/>
           <img id="imagen-pared" src={require('../resources/piedra_muro_1.jpg')} alt='' />
           <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
           <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
           <img id="camino_piedra" src={require('../resources/piedra_suelo_1.jpg')} alt='' />
           <img id="suelo-seco" src={require('../resources/suelo-seco.jpg')} alt='' />
+          <a-asset-item id="tori" src={tori} preload='auto'></a-asset-item>
+          <a-asset-item id="buda" src={buda} preload='auto'></a-asset-item>
+          <a-asset-item id="mono" src={mono} preload='auto'></a-asset-item>
+          <a-asset-item id="nube" src={nubecumulo} preload='auto'></a-asset-item>
+          <a-asset-item id="arbol" src={arbol} preload='auto'></a-asset-item>
+          <a-asset-item id="hojas" src={hojas} preload='auto'></a-asset-item>
+          <a-asset-item id="maple_tronco" src={maple_tronco} preload='auto'></a-asset-item>
+          <a-asset-item id="maple_hojas" src={maple_hojas} preload='auto'></a-asset-item>
+          <a-asset-item id="molinillo" src={molinillo} preload='auto'></a-asset-item>
+          <a-asset-item id="bambu" src={bamboo} preload='auto'></a-asset-item>
         </a-assets>
         {/* CARGAR SONIDO */
           sonido === 'on' ? <a-sound src="#jardin" volumen="7" autoplay="true" position="-3 1 -4" sound="" loop="true"></a-sound>:''
@@ -108,22 +118,22 @@ function Frame() {
           }
 
           {/* bambu */}
-          <a-entity id="bambu_11" gltf-model={bamboo} position="0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
-          <a-entity id="bambu_12" gltf-model={bamboo} position="0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-          <a-entity id="bambu_13" gltf-model={bamboo} position="0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
-          <a-entity id="bambu_14" gltf-model={bamboo} position="1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="bambu_16" gltf-model={bamboo} position="0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-          <a-entity id="bambu_17" gltf-model={bamboo} position="0.7 0.0 -7.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
-          <a-entity id="bambu_18" gltf-model={bamboo} position="0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
+          <a-gltf-model id="bambu_11" src="#bambu" position="0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_12" src="#bambu" position="0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_13" src="#bambu" position="0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-gltf-model>
+          <a-gltf-model id="bambu_14" src="#bambu" position="1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="bambu_16" src="#bambu" position="0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_17" src="#bambu" position="0.7 0.0 -7.3" rotation="0 181 0" scale="1 1 1.1"></a-gltf-model>
+          <a-gltf-model id="bambu_18" src="#bambu" position="0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
           {/* varias plantas */}
-          <a-entity id="varios_11" gltf-model={molinillo} position="0.61 0.0 -1.6" rotation="0 152 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="varios_12" gltf-model={molinillo} position="0.72 0.0 -1.5" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="varios_13" gltf-model={molinillo} position="0.53 0.0 -1.7" rotation="0 155 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="varios_14" gltf-model={molinillo} position="0.84 0.0 -1.55" rotation="0 154 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="varios_15" gltf-model={molinillo} position="0.75 0.0 -1.6" rotation="0 156 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="varios_16" gltf-model={molinillo} position="0.81 0.0 -1.5" rotation="0 153 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="varios_17" gltf-model={molinillo} position="0.92 0.0 -1.7" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="varios_18" gltf-model={molinillo} position="0.62 0.0 -1.55" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
+          <a-gltf-model id="varios_11" src="#molinillo" position="0.61 0.0 -1.6" rotation="0 152 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="varios_12" src="#molinillo" position="0.72 0.0 -1.5" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="varios_13" src="#molinillo" position="0.53 0.0 -1.7" rotation="0 155 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="varios_14" src="#molinillo" position="0.84 0.0 -1.55" rotation="0 154 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="varios_15" src="#molinillo" position="0.75 0.0 -1.6" rotation="0 156 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="varios_16" src="#molinillo" position="0.81 0.0 -1.5" rotation="0 153 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="varios_17" src="#molinillo" position="0.92 0.0 -1.7" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="varios_18" src="#molinillo" position="0.62 0.0 -1.55" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
           {/* muro  */}
           <a-box id="wall_11" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
@@ -146,13 +156,13 @@ function Frame() {
 
 
           {/* bambu */}
-          <a-entity id="bambu_21" gltf-model={bamboo} position="-0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
-          <a-entity id="bambu_22" gltf-model={bamboo} position="-0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-          <a-entity id="bambu_23" gltf-model={bamboo} position="-0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
-          <a-entity id="bambu_24" gltf-model={bamboo} position="-1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="bambu_25" gltf-model={bamboo} position="-0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
-          <a-entity id="bambu_26" gltf-model={bamboo} position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-          <a-entity id="bambu_28" gltf-model={bamboo} position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
+          <a-gltf-model id="bambu_21" src="#bambu" position="-0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_22" src="#bambu" position="-0.6 0.01 -13.5" rotation="0 151 0" scale="1 1.1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_23" src="#bambu" position="-0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-gltf-model>
+          <a-gltf-model id="bambu_24" src="#bambu" position="-1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="bambu_25" src="#bambu" position="-0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_26" src="#bambu" position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_28" src="#bambu" position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
           {/* varias plantas */}
           <a-entity id="varios_21" gltf-model={plantdandeli} position="-5.8 1.7 2.5" rotation="0 152 0" scale="6 6 6" ></a-entity>
           {/* muro  */}
@@ -174,12 +184,12 @@ function Frame() {
 
 
           {/* bambu */}
-          <a-entity id="bambu_31" gltf-model={bamboo} position="-0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
-          <a-entity id="bambu_33" gltf-model={bamboo} position="-0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-entity>
-          <a-entity id="bambu_34" gltf-model={bamboo} position="-1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
-          <a-entity id="bambu_35" gltf-model={bamboo} position="-0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-entity>
-          <a-entity id="bambu_36" gltf-model={bamboo} position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-entity>
-          <a-entity id="bambu_38" gltf-model={bamboo} position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-entity>
+          <a-gltf-model id="bambu_31" src="#bambu" position="-0.5 0.01 -10.4" rotation="0 181 0" scale="1.1 1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_33" src="#bambu" position="-0.8 0.01 -12.3" rotation="0 181 0" scale="1 1 1.1"></a-gltf-model>
+          <a-gltf-model id="bambu_34" src="#bambu" position="-1 0.01 -13.6" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="bambu_35" src="#bambu" position="-0.9 0.01 -14.4" rotation="0 181 0" scale="1.1 1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_36" src="#bambu" position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-gltf-model>
+          <a-gltf-model id="bambu_38" src="#bambu" position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
           {/* muro  */}
           <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:10 2;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
@@ -309,11 +319,10 @@ function Frame() {
           text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         {/* cosas varias */}
 
-        <a-entity id="buda" gltf-model={buda} position="-0.5 -0.25 -14" rotation="0 29 0" scale="1 1 1"></a-entity>
-        <a-entity id="nomo_1" gltf-model={nomo} position="-14 0.01 -14" rotation="0 29 0" scale="1.2 1.2 1.2"></a-entity>
-        <a-entity id="nomo_2" gltf-model={nomo} position="14 0.01 14" rotation="0 -100 0" scale="1.2 1.2 1.2"></a-entity>
-
-        <a-entity id="nomo_4" gltf-model={nomo} position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-entity>
+        <a-gltf-model id="buda" src="#buda" position="-0.5 -0.25 -14" rotation="0 29 0" scale="1 1 1"></a-gltf-model>
+        <a-gltf-model id="nomo_1" src="#mono" position="-14 0.01 -14" rotation="0 29 0" scale="1.2 1.2 1.2"></a-gltf-model>
+        <a-gltf-model id="nomo_2" src="#mono" position="14 0.01 14" rotation="0 -100 0" scale="1.2 1.2 1.2"></a-gltf-model>
+        <a-gltf-model id="nomo_4" src="#mono" position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-gltf-model>
 
         {/* ENTRADA */}
         <Entity id="frontal">
@@ -322,7 +331,7 @@ function Frame() {
           <a-box id="wall_seguro_3" width="10" height="3" depth="0.01" position="-15 0 15" material="opacity:0.1" static-body="true" rotation="0 -90 0" ></a-box>
           <a-box id="wall_tory_1" color="grey" width="13.1" height="3" depth="0.5" position="9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
           <a-box id="wall_tory_2" color="grey" width="13.1" height="3" depth="0.5" position="-9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
-          <a-entity id="tori" gltf-model={tori}  position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-entity>
+          <a-gltf-model id="tori" src="#tori"  position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-gltf-model>
         </Entity>
         {/* camino */}
         <Entity id="camino">
@@ -336,19 +345,18 @@ function Frame() {
         {/* cielo */}
         <a-sky id="cielo" sound="src:#jardin; on:click; loop:true; volume:0.75" color="#87CEEB" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
         {/* nubes */}
-        <a-entity id="nube_1" gltf-model={nubecumulo} position="-1.2 50 100.5" rotation="0 151 0" scale="6 6 6">
+        <a-gltf-model id="nube_1" src="#nube" position="-1.2 50 100.5" rotation="0 151 0" scale="6 6 6">
           <a-animation id="animacion_1" attribute="position" dur="300000" from="-1.2 50 100.5" to="-1.2 50 -200.0" repeat="indefinite">
           </a-animation>
-        </a-entity>
-        <a-entity id="nube_2" gltf-model={nubecumulo} position="-1.2 50 399.5" rotation="0 76 0" scale="10 10 10">
+        </a-gltf-model>
+        <a-gltf-model id="nube_2" src="#nube" position="-1.2 50 399.5" rotation="0 76 0" scale="10 10 10">
           <a-animation id="animacion_2" attribute="position" dur="300800" from="70 50 399.5" to="40 50 -500.0" repeat="indefinite">
           </a-animation>
-        </a-entity>
+        </a-gltf-model>
         {/* cámara */}
         {/*cargarCamara*/}
         <Entity id="camera"  camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
           <Entity cursor  position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
-
         </Entity>
     </Scene>
 
