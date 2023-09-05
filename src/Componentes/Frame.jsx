@@ -267,7 +267,7 @@ function Frame() {
             text={`value:Espacion / dinámicas de trabajo;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         </a-entity>
         {/* CARTELES */}
-        <Entity
+        <Entity shadow
           id="bienvenida"
           
           position="0.5 2.9 14.2"
@@ -340,8 +340,9 @@ function Frame() {
           })}
         </Entity>
         {/* suelo */}
+        <a-entity id="ocean" position="0 -3.7 0" ocean="density: 150; width: 550; depth: 50; speed:3" material="color: #9CE3F9; opacity: 0.75; metalness: 0; roughness: 1" rotation="-90 0 0" scale="10 10 10"></a-entity>
         <a-plane id="plano_1" static-body="true" position="0 0 0" rotation="-90 0 0" width="30" height="40" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
-        <a-plane id="plano_2" position="0 -0.5 0" rotation="-90 0 0" width="300" height="400" material="src: #suelo-seco; repeat: 100 100" radius="10"></a-plane>
+        
         {/* cielo */}
         <a-sky id="cielo" sound="src:#jardin; on:click; loop:true; volume:0.75" color="#87CEEB" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
         {/* nubes */}
