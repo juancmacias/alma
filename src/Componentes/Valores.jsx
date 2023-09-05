@@ -231,6 +231,8 @@ const Valores = () => {
    <a-entity position="-7.333 0.059 14.44" gltf-model="/static/media/stone_lantern.e0f7a238ccfbedee0bc4.glb" scale="0.19 0.28 0.24"></a-entity>
      
      {/* Flowers */}
+
+     
   <a-entity position="-7.273 -0.227 11.704" rotation="0 40 0" gltf-model="/static/media/purple_flower.957c4598e99bfc653c09.glb" scale="0.015 0.015 0.015"></a-entity> 
     <a-entity position="-7.273 -0.227 12.524" rotation="0 40 0" gltf-model="/static/media/purple_flower.957c4598e99bfc653c09.glb" scale="0.015 0.015 0.015"></a-entity> 
    </Entity>
