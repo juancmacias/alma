@@ -1,5 +1,5 @@
 import {Entity, Scene} from 'aframe-react';
-import React from 'react'
+import React, {useState} from 'react'
 
 import sofa from '../obj/sesion3/sofa.glb'
 import garden from '../obj/sesion3/garden-zen.glb'
@@ -16,6 +16,7 @@ import alfombra from '../obj/sesion3/alfombra2.glb'
 
 
 const SesionTres = () => {
+  const [sonido] = useState(localStorage.getItem('sonido'));
   const portalSeleccion = (ir) => {
     window.location.href=ir;
    }
@@ -44,7 +45,7 @@ const SesionTres = () => {
         
     {/* imagenes */}
     <a-assets>
-
+      
       <sound id="piano" src={require('../obj/sesion3/sound/piano.mp3')} alt=''/> 
       <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
       <img id="suelo" src={require('../obj/sesion3/suelo.jpg')} alt='' />
@@ -53,8 +54,10 @@ const SesionTres = () => {
       <img id="sky" src={require('../obj/sesion3/sky.jpg')} alt='' /> 
       
     </a-assets>
-
-   <a-sound src="#piano" volumen="5" autoplay="true" position="-3 1 -4" sound=""> </a-sound> 
+    {/* CARGAR SONIDO */
+          sonido === 'on' ? <a-sound src="#piano" volumen="5" autoplay="true" position="-3 1 -4" sound="" loop="true"></a-sound>:''
+    }
+    
    
     <a-entity position="-0.41 1.600  12.72" camera="active:false;userHeight:1.6" wasd-controls="" rotation="0.34377467707849396 -0.4583662361046586 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
     {/* VARIOS */}

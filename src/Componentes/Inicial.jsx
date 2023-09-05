@@ -37,6 +37,7 @@ function Inicial() {
                         <Link onClick={() => verListado('')}>Thinking inmersivo</Link>
                         </div>
                         <div className='botons'>
+                              
                               <button type="button"
                                     className={localStorage.getItem('sonido') === "on" ? "show" : "hidden"}
                                     aria-label="Sonido" onClick={() => setSonido('off')}
