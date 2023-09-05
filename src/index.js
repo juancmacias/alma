@@ -1,15 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+
 import './index.css';
-import App from './App';
+//import App from './App';
+import Frame from './Componentes/Frame';
+import Inicial from './Componentes/Inicial';
+//import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Valores from './Componentes/Valores';
 import reportWebVitals from './reportWebVitals';
+import SesionTres from './Componentes/SesionTres'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
     <BrowserRouter>
-      <App />
+
+      <Routes>
+        <Route exact path="/" element={<Inicial/>} />
+        <Route path="/hubs" element={<Frame />} />
+        <Route path="/valores" element={<Valores/>} />
+        <Route path="/sesiontres" element={<SesionTres/>} />
+      </Routes>
     </BrowserRouter>
 
 );
