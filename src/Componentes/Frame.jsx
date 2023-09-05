@@ -1,6 +1,6 @@
 import {Entity, Scene} from 'aframe-react';
 import React, {useState, useEffect, useRef} from 'react';
-
+import suelo from './json/camino.json'
 
 
 /* precargar los objetos en 3d */
@@ -260,7 +260,7 @@ function Frame() {
           rotation="-16 0 0"
           width="2"
           height="2"
-          material="color:#c6c6c6;opacity: 0.6;" geometry="primitive:plane; radius:0.4; width: 2; height: 2.1;"
+          material="color:#c6c6c6;opacity: 0.6;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 2; height: 2.1;"
           text={`value:¡Hola! Te doy la bienvenida a este viaje que te propongo. Me gustaría que te
           sintieras como en casa. ¡Abre tus sentidos y disfruta de la experiencia!;wrapCount:20;width: 2;yOffset:-4;color:black;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/normal/normal-msdf.json; align: center`} />
         <Entity
@@ -312,45 +312,20 @@ function Frame() {
         <a-entity id="nomo_4" gltf-model={nomo} position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-entity>
 
         {/* ENTRADA */}
-        <a-box id="wall_seguro_1" width="30" height="3" depth="0.01" position="0 0 20" material="opacity:0.1" static-body="true" rotation="0 180 0" ></a-box>
-        <a-box id="wall_seguro_2" width="10" height="3" depth="0.01" position="15 0 15" material="opacity:0.1" static-body="true" rotation="0 90 0" ></a-box>
-        <a-box id="wall_seguro_3" width="10" height="3" depth="0.01" position="-15 0 15" material="opacity:0.1" static-body="true" rotation="0 -90 0" ></a-box>
-        <a-box id="wall_tory_1" color="grey" width="13.1" height="3" depth="0.5" position="9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
-        <a-box id="wall_tory_2" color="grey" width="13.1" height="3" depth="0.5" position="-9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
-        <a-entity id="tori" gltf-model={tori}  position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-entity>
+        <Entity id="frontal">
+          <a-box id="wall_seguro_1" width="30" height="3" depth="0.01" position="0 0 20" material="opacity:0.1" static-body="true" rotation="0 180 0" ></a-box>
+          <a-box id="wall_seguro_2" width="10" height="3" depth="0.01" position="15 0 15" material="opacity:0.1" static-body="true" rotation="0 90 0" ></a-box>
+          <a-box id="wall_seguro_3" width="10" height="3" depth="0.01" position="-15 0 15" material="opacity:0.1" static-body="true" rotation="0 -90 0" ></a-box>
+          <a-box id="wall_tory_1" color="grey" width="13.1" height="3" depth="0.5" position="9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
+          <a-box id="wall_tory_2" color="grey" width="13.1" height="3" depth="0.5" position="-9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
+          <a-entity id="tori" gltf-model={tori}  position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-entity>
+        </Entity>
         {/* camino */}
-        <a-box id="camino_1" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="0 -0.244 15" rotation="90 0 0"></a-box>
-        <a-box id="camino_2" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="0.64 -0.244 13" rotation="90 -34.3 0"></a-box>
-        <a-box id="camino_3" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="-1.3 -0.2 11.66" rotation="90 44 0"></a-box>
-        <a-box id="camino_4" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="2.53 -0.2 11.03" rotation="90 -52 0"></a-box>
-        <a-box id="camino_5" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="4.69 -0.2 9.28" rotation="90 -52 0"></a-box>
-        <a-box id="camino_6" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="-3.3 -0.2 9.51" rotation="90 -138 0"></a-box>
-        <a-box id="camino_7" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="7 -0.2 7.5" rotation="90 -52 0"></a-box>
-        <a-box id="camino_8" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="-5.6 -0.2 5.4" rotation="90 2.7 0"></a-box>
-        <a-box id="camino_9" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="-5.8 -0.2 2.43" rotation="90 -0.2 0"></a-box>
-        <a-box id="camino_10" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="9.8 -0.2 1.0" rotation="90 2.46 0"></a-box>
-        <a-box id="camino_11" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="-5.2 -0.2 8.03" rotation="90 -91 0"></a-box>
-        <a-box id="camino_12" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="9.5 -0.2 -4.61" rotation="90 4.4 0"></a-box>
-        <a-box id="camino_13" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="-8.2 -0.2 7.8" rotation="90 -90 0"></a-box>
-        <a-box id="camino_14" width="2" height="3" depth="0.5" material="src:#camino_piedra" position="9.3 -0.2 5.6" rotation="90 -52 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_15" position="9.88 -0.2 3.8" rotation="90 4.4 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_16" position="4.2 -0.2 -11.2" rotation="90 -90 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_17" position="-0.5 -0.2 -10" rotation="90 -54 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_18" position="9.7 -0.2 -1.9" rotation="90 4.4 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_19" position="1.5 -0.2 -11" rotation="90 -90 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_20" position="9.4 -0.2 8.5" rotation="90 -141 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_21" position="-5.9 -0.2 -0.6" rotation="90 4.4 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_22" position="-5.3 -0.2 -5.6" rotation="90 -31.8 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_23" position="-2.7 -0.2 -8.5" rotation="90 -52 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_24" position="9.47 -0.2 -7.5" rotation="90 1.14 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_25" position="-6.0 -0.2 -3.4" rotation="90 -1.4 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_26" position="6.03 -0.2 -10.7" rotation="90 -113 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_27" position="-2.7 -0.2 -8.5" rotation="90 -52 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_28" position="-3.75 -0.2 -7.5" rotation="90 -46 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_29" position="8.03 -0.2 -9.55" rotation="90 56 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_30" position="9.5 -0.2 -10" rotation="90 -2.5 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_31" position="-3.87 -0.2 -10" rotation="90 40 0"></a-box>
-        <a-box width="2" height="3" depth="0.5" material="src:#camino_piedra" id="camino_32" position="-8.36 -0.2 -3" rotation="90 86.2 0"></a-box>
+        <Entity id="camino">
+          {suelo.camino.map(function (data, i) {
+            return <a-box id={`camino_${i}`} width="2" height="3" depth="0.5" material="src:#camino_piedra" position={`${data.position}`} rotation={`${data.rotation}`}></a-box>
+          })}
+        </Entity>
         {/* suelo */}
         <a-plane id="plano_1" static-body="true" position="0 0 0" rotation="-90 0 0" width="30" height="40" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
         <a-plane id="plano_2" position="0 -0.5 0" rotation="-90 0 0" width="300" height="400" color="green" radius="10"></a-plane>
