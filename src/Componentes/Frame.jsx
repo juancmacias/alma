@@ -10,7 +10,8 @@ import hojas from '../obj/plantas/hojas.glb'
 import maple_tronco from '../obj/plantas/maple_tronco.glb'
 import maple_hojas from '../obj/plantas/maple_hojas.glb'
 import molinillo from '../obj/plantas/molinillo.glb'
-
+import tumbona from '../obj/props/tumbona.glb'
+import atomico from '../obj/props/LoadingObject_Atom.glb'
 import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 import buda from '../obj/construccion/garden_buddha.glb'
 import mono from '../obj/construccion/mesh_garden_gnome.glb'
@@ -72,8 +73,8 @@ function Frame() {
  
 
     return (
-      
-      <Scene preloader="title: Cargando objetos...;slowLoad:true;" id="Scene_1" physics="debug: false;friction:0.1;restitution:0.5" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
+
+      <Scene preloader="title: Cargando objetos...;slowLoad:true;" id="Scene_1" physics="friction:10;restitution:10" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
         {/*
         <a-entity id="mano_left" hand-controls="left"></a-entity>
         <a-entity id="mano_right" hand-controls="right"></a-entity>
@@ -98,12 +99,16 @@ function Frame() {
           <a-asset-item id="maple_hojas" src={maple_hojas} preload='auto'></a-asset-item>
           <a-asset-item id="molinillo" src={molinillo} preload='auto'></a-asset-item>
           <a-asset-item id="bambu" src={bamboo} preload='auto'></a-asset-item>
+          <a-asset-item id="tumbona" src={tumbona} preload='auto'></a-asset-item>
+          <a-asset-item id="atomico" src={atomico} preload='auto'></a-asset-item>
         </a-assets>
         {/* CARGAR SONIDO */
           sonido === 'on' ? <a-sound src="#jardin" volumen="7" autoplay="true" position="-3 1 -4" sound="" loop="true"></a-sound>:''
         }
-        
-        <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false" color="#cesped" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"></Entity>
+
+        <Entity geometry="height: 3;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false"  material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3">
+        <a-gltf-model id="atomico" src="#atomico" animation-mixer="clip:Loading" position="0 3 0" rotation="0 0 0" scale="2 6 2"></a-gltf-model>
+        </Entity>
         
         <Entity key="muro_1" position="-15 0 0" rotation="0 0 0">
           {
@@ -323,7 +328,7 @@ function Frame() {
         <a-gltf-model id="nomo_1" src="#mono" position="-14 0.01 -14" rotation="0 29 0" scale="1.2 1.2 1.2"></a-gltf-model>
         <a-gltf-model id="nomo_2" src="#mono" position="14 0.01 14" rotation="0 -100 0" scale="1.2 1.2 1.2"></a-gltf-model>
         <a-gltf-model id="nomo_4" src="#mono" position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-gltf-model>
-
+        <a-gltf-model static-body shadow="receive: true" id="tumbona" src="#tumbona" position="-11.7 -0.88 11.5" rotation="0 29 0" scale="1 1 1"></a-gltf-model>
         {/* ENTRADA */}
         <Entity id="frontal">
           <a-box id="wall_seguro_1" width="30" height="3" depth="0.01" position="0 0 20" material="opacity:0.1" static-body="true" rotation="0 180 0" ></a-box>
@@ -359,6 +364,8 @@ function Frame() {
         <Entity id="camera"  camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
           <Entity cursor  position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
         </Entity>
+        <a-light type="ambient" color="#445451"></a-light>
+        <a-light type="point" intensity="1" position="2 50 40" rotation="19 0 0"></a-light>
     </Scene>
 
 
