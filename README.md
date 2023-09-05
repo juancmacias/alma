@@ -12,6 +12,8 @@
 <p>En este repositorio encontraras la parte del FrontEnd, desarrollado con:</p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" data-hovercard-type="achievement" width="64" alt="React" data-view-component="true" class="achievement-badge-sidebar">
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" data-hovercard-type="achievement" width="64" alt="CSS" data-view-component="true" class="achievement-badge-sidebar">
+<img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" data-hovercard-type="achievement" width="64" alt="A-frame" data-view-component="true" class="achievement-badge-sidebar">
+<img src="https://cdn-icons-png.flaticon.com/512/103/103093.png" data-hovercard-type="achievement" width="64" alt="A-frame" data-view-component="true" class="achievement-badge-sidebar">
 <p>Recuerda que tras clonar el repositorio, debes escribir en el directorio del proyecto</p>
 <p>npm install</p>
 <p>Así podras reproducirlo de forma local.</p>

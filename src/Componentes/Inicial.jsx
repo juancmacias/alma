@@ -8,14 +8,16 @@ import claro from '../resources/claro.svg'
 import oscuro from '../resources/oscuro.svg'
 import home from '../resources/home.svg'
 import contacto from '../resources/formulario.svg'
+import sonido_on from '../resources/speaker_on.svg'
+import sonido_off from '../resources/speaker_off.svg'
 
 function Inicial() {
       const prefersColorScheme = usePrefersColorScheme();
       const [theme, setTheme] = useState(prefersColorScheme);
       const [ seleccion, setSeleccion] = useState('');
-
-
-
+      const [sonido, setSonido] = useState(localStorage.getItem('sonido')=== null?'off':localStorage.getItem('sonido'));
+      localStorage.removeItem("position")
+      localStorage.setItem("sonido", sonido);
 
       console.log("Seleccion color "+ prefersColorScheme);
       const verListado = (select) => {
@@ -29,6 +31,18 @@ function Inicial() {
                         <Link onClick={() => verListado('')}>Thinking inmersivo</Link>
                         </div>
                         <div className='botons'>
+                              <button type="button"
+                                    className={localStorage.getItem('sonido') === "on" ? "show" : "hidden"}
+                                    aria-label="Sonido" onClick={() => setSonido('off')}
+                                    title='Activar sonido'>
+                                          <img src={sonido_on}  alt="Modo claro" />
+                              </button>
+                              <button type="button"
+                                    className={localStorage.getItem('sonido') === "off" ? "show" : "hidden"}
+                                    aria-label="Sonido" onClick={() => setSonido('on')}
+                                    title='Desactivar sonido'>
+                                          <img src={sonido_off}  alt="Modo claro" />
+                              </button>
                               <button type="button"
                                     className={theme === "dark" ? "show" : "hidden"}
                                     aria-label="Use Dark Mode" onClick={() => setTheme('light')}
