@@ -79,9 +79,6 @@ function Frame() {
         <a-entity id="mano_left" hand-controls="left"></a-entity>
         <a-entity id="mano_right" hand-controls="right"></a-entity>
         */}
-        
-
-
 
         {/* recursos xrextras-loading */}
         <a-assets>
@@ -90,10 +87,10 @@ function Frame() {
           <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
           <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
           <img id="camino_piedra" src={require('../resources/piedra_suelo_1.jpg')} alt='' />
-
         </a-assets>
 
-        <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder;" color="black" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"></Entity>
+        <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false" color="#cesped" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"></Entity>
+        
         <Entity key="muro_1" position="-15 0 0" rotation="0 0 0">
           {
             /* 
@@ -157,6 +154,7 @@ function Frame() {
           {/* muro  */}
           <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
+
         <Entity id="muro_3" position="0 0 -15" rotation="0 90 0">
           {/* Arboles del perimetro */}
           <a-entity static-body="true" id="arbol_31" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
@@ -185,32 +183,74 @@ function Frame() {
 
         {/* PORTALES */}
         <a-entity id="portalvalores" gltf-model={portalValores} position="8.3 -0.25 -11.6" rotation="0 88 0" scale="0.5 0.5 0.5">
-        <Entity
-          visible="true"
-          id="portalvalores_texto"
-          events={{
-            click: () => portalSeleccion('valores')
-          }}
-          position="0 3 2.5"
-          rotation="0 -85 0"
-          width="2"
-          height="2"
-          material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 3.7; height: 0.6;"
-          text={`value:Valores y Principios;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+          <Entity
+            visible="true"
+            id="portalvalores_texto"
+            events={{
+              click: () => portalSeleccion('valores')
+            }}
+            position="0 3 2.5"
+            rotation="0 -85 0"
+            width="2"
+            height="2"
+            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 3.7; height: 0.6;"
+            text={`value:Valores y Principios;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         </a-entity>
         <a-entity id="origenmisionvision" gltf-model={portalValores} position="11.03 -0.25 8.6" rotation="0 -48 0" scale="0.5 0.5 0.5">
-        <Entity
-          visible="true"
-          id="origenmisionvision_texto"
-          events={{
-            click: () => portalSeleccion('origen')
-          }}
-          position="0 3 2.5"
-          rotation="0 -85 0"
-          width="2"
-          height="2"
-          material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.1; height: 0.6;"
-          text={`value:Origen, Misión y Visión;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+          <Entity
+            visible="true"
+            id="origenmisionvision_texto"
+            events={{
+              click: () => portalSeleccion('valores')
+            }}
+            position="0 3 2.5"
+            rotation="0 -85 0"
+            width="2"
+            height="2"
+            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.1; height: 0.6;"
+            text={`value:Origen, Misión y Visión;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        </a-entity>
+        <a-entity id="desarrollo" gltf-model={portalValores} position="-5.60 -0.25 -10" rotation="0 129 0" scale="0.5 0.5 0.5">
+          <Entity
+            visible="true"
+            id="desarrollo_texto"
+            events={{
+              click: () => portalSeleccion('valores')
+            }}
+            position="0 3 2.5"
+            rotation="0 -85 0"
+            width="2"
+            height="2"
+            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.1; height: 0.8;"
+            text={`value:Desarrollo personal y\n profesional;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        </a-entity>
+        <a-entity id="tomadedecisiones" gltf-model={portalValores} position="-9.75 -0.25 -1.85" rotation="0 178 0" scale="0.5 0.5 0.5">
+          <Entity
+            visible="true"
+            id="tomadedecisiones_texto"
+            events={{
+              click: () => portalSeleccion('valores')
+            }}
+            position="0 3 2.5"
+            rotation="0 -85 0"
+            width="2"
+            height="2"
+            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.1; height: 0.6;"
+            text={`value:Estructura y toma de decisiones;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        </a-entity>
+        <a-entity id="espacios" gltf-model={portalValores} position="-9.5 -0.25 8.8" rotation="0 -175 0" scale="0.5 0.5 0.5">
+          <Entity
+            visible="true"
+            id="espacions_texto"
+            events={{
+              click: () => portalSeleccion('valores')
+            }}
+            position="0 3 2.5"
+            rotation="0 -85 0"
+            width="2"
+            height="2"
+            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.1; height: 0.6;"
+            text={`value:Espacion / dinámicas de trabajo;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         </a-entity>
         {/* CARTELES */}
         <Entity
