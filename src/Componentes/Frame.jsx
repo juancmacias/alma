@@ -82,13 +82,14 @@ function Frame() {
 
         {/* recursos xrextras-loading */}
         <a-assets>
-          <audio id="jardin" crossorigin="anonymous" src="sound/jardin.ogg"  preload='auto'></audio>
+
+          <sound id="jardin" crossorigin="anonymous" src="sound/jardin.ogg"  preload='auto'/>
           <img id="imagen-pared" src={require('../resources/piedra_muro_1.jpg')} alt='' />
           <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
           <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
           <img id="camino_piedra" src={require('../resources/piedra_suelo_1.jpg')} alt='' />
         </a-assets>
-
+        <a-sound src="#jardin" volumen="5" autoplay="true" position="-3 1 -4" sound=""> </a-sound> 
         <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false" color="#cesped" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"></Entity>
         
         <Entity key="muro_1" position="-15 0 0" rotation="0 0 0">
@@ -215,14 +216,14 @@ function Frame() {
             visible="true"
             id="desarrollo_texto"
             events={{
-              click: () => portalSeleccion('valores')
+              click: () => portalSeleccion('sesiontres')
             }}
             position="0 3 2.5"
             rotation="0 -85 0"
             width="2"
             height="2"
-            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.1; height: 0.8;"
-            text={`value:Desarrollo personal y\n profesional;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.3; height: 1.2;"
+            text={`value:Desarrollo personal y profesional\n Crecimiento y aprendizaje;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         </a-entity>
         <a-entity id="tomadedecisiones" gltf-model={portalValores} position="-9.75 -0.25 -1.85" rotation="0 178 0" scale="0.5 0.5 0.5">
           <Entity
@@ -255,7 +256,7 @@ function Frame() {
         {/* CARTELES */}
         <Entity
           id="bienvenida"
-          sound="src:#jardin; on:click; loop:true; volume:0.75"
+          
           position="0.5 2.9 14.2"
           rotation="-16 0 0"
           width="2"
