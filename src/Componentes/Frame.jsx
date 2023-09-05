@@ -23,7 +23,6 @@ import portalValores from '../obj/construccion/gate_wood.glb'
 function Frame() {
   const [sonido] = useState(localStorage.getItem('sonido'));
   
-  //const [playP, { stopP }] = useSound(forest);
   const start = ()  => {
     /* carga de sonido */
 
@@ -88,8 +87,12 @@ function Frame() {
           <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
           <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
           <img id="camino_piedra" src={require('../resources/piedra_suelo_1.jpg')} alt='' />
+          <img id="suelo-seco" src={require('../resources/suelo-seco.jpg')} alt='' />
         </a-assets>
-        <a-sound src="#jardin" volumen="5" autoplay="true" position="-3 1 -4" sound=""> </a-sound> 
+        {/* CARGAR SONIDO */
+          sonido === 'on' ? <a-sound src="#jardin" volumen="7" autoplay="true" position="-3 1 -4" sound="" loop="true"></a-sound>:''
+        }
+        
         <Entity geometry="height: 5;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false" color="#cesped" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3"></Entity>
         
         <Entity key="muro_1" position="-15 0 0" rotation="0 0 0">
@@ -222,7 +225,7 @@ function Frame() {
             rotation="0 -85 0"
             width="2"
             height="2"
-            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.3; height: 1.2;"
+            material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.7; height: 1.2;"
             text={`value:Desarrollo personal y profesional\n Crecimiento y aprendizaje;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         </a-entity>
         <a-entity id="tomadedecisiones" gltf-model={portalValores} position="-9.75 -0.25 -1.85" rotation="0 178 0" scale="0.5 0.5 0.5">
@@ -242,7 +245,7 @@ function Frame() {
         <a-entity id="espacios" gltf-model={portalValores} position="-9.5 -0.25 8.8" rotation="0 -175 0" scale="0.5 0.5 0.5">
           <Entity
             visible="true"
-            id="espacions_texto"
+            id="espacios_texto"
             events={{
               click: () => portalSeleccion('valores')
             }}
@@ -267,7 +270,7 @@ function Frame() {
         <Entity
           id="despedida"
           sound="src:#jardin; on:click; loop:true; volume:0.75"
-          position="0.5 1.6 14.2"
+          position="-0.48 2.57 14.2"
           rotation="4 180 0"
           width="2"
           height="2"
@@ -298,7 +301,7 @@ function Frame() {
           events={{
             click: () => portalSeleccion('/')
           }}
-          position="-1.6 3 14.8"
+          position="-0.43 0.9 14.8"
           rotation="0 -180 0"
           width="2"
           height="2"
@@ -329,7 +332,7 @@ function Frame() {
         </Entity>
         {/* suelo */}
         <a-plane id="plano_1" static-body="true" position="0 0 0" rotation="-90 0 0" width="30" height="40" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
-        <a-plane id="plano_2" position="0 -0.5 0" rotation="-90 0 0" width="300" height="400" color="green" radius="10"></a-plane>
+        <a-plane id="plano_2" position="0 -0.5 0" rotation="-90 0 0" width="300" height="400" material="src: #suelo-seco; repeat: 100 100" radius="10"></a-plane>
         {/* cielo */}
         <a-sky id="cielo" sound="src:#jardin; on:click; loop:true; volume:0.75" color="#87CEEB" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
         {/* nubes */}
