@@ -340,7 +340,7 @@ function Frame() {
           })}
         </Entity>
         {/* suelo */}
-        <a-entity id="ocean" position="0 -3.7 0" ocean="density: 150; width: 550; depth: 50; speed:3" material="color: #9CE3F9; opacity: 0.75; metalness: 0; roughness: 1" rotation="-90 0 0" scale="10 10 10"></a-entity>
+        <a-entity id="ocean" position="0 -3.9 0" ocean="density: 150; width: 550; depth: 150; speed:3" material="color: #9CE3F9; opacity: 0.75; metalness: 0; roughness: 1" rotation="-90 0 0" scale="10 10 10"></a-entity>
         <a-plane id="plano_1" static-body="true" position="0 0 0" rotation="-90 0 0" width="30" height="40" material="src: #cesped; repeat: 100 100" radius="10"></a-plane>
         
         {/* cielo */}
