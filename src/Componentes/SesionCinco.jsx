@@ -2,16 +2,16 @@
 import {Entity, Scene} from 'aframe-react';
 
 /* precargar los objetos en 3d */
-//import muromadera from '../obj/construccion/sesioncinco/muro_madera.glb'
+import muromadera from '../obj/construccion/sesioncinco/muro_madera.glb'
 import sofa from '../obj/construccion/sesioncinco/sofa.glb'
 import alfombraama from '../obj/construccion/sesioncinco/alfombraama.glb'
 import bonsai from '../obj/construccion/sesioncinco/bonsai.glb'
 import puff from '../obj/construccion/sesioncinco/puff.glb'
 import cerezojapones from '../obj/construccion/sesioncinco/cerezojapones.glb'
-//import mesa_centro from '../obj/construccion/sesioncinco/mesa_centro.glb'
+import mesa_centro from '../obj/construccion/sesioncinco/mesa_centro.glb'
 import chimenea from '../obj/construccion/sesioncinco/chimenea.glb'
-//import casajaponesa from '../obj/construccion/sesioncinco/casajaponesa.glb'
-//import cuadro from '../obj/construccion/sesioncinco/cuadro.glb'
+import casajaponesa from '../obj/construccion/sesioncinco/casajaponesa.glb'
+import cuadro from '../obj/construccion/sesioncinco/cuadro.glb'
 import sofanegro from '../obj/construccion/sesioncinco/sofanegro.glb'
 
 
@@ -82,7 +82,7 @@ function SesionCinco() {
        
         
         {/* Mesa de centro*/ }
-        <a-box gltf-model="/static/media/mesa_centro.4b8267e60d7c59835e29.glb" position="5.062 0.146 6.496" rotation="0 -89.782 0" scale="0.005 0.006 0.005" material=""></a-box>
+        <a-box gltf-model={mesa_centro} position="5.062 0.146 6.496" rotation="0 -89.782 0" scale="0.005 0.006 0.005" material=""></a-box>
        
         {/* Chimenea */}
         <a-box gltf-model={chimenea} position="4.046 0.028 9.653" rotation="0 -89.782 0" scale="0.01 0.009 0.01" material=""></a-box>
@@ -93,10 +93,10 @@ function SesionCinco() {
         <a-box width="30" height="2" depth="0.5" geometry="" position="-14.708 0.854 8.896" rotation="0 90.126 0" ></a-box>
         
        {/*Casa japonesa*/}
-       <a-box gltf-model="/static/media/casajaponesa.6bdb38851237023477c7.glb" position="7.301 0.303 -2.153" rotation="0 1.547 0" scale="1.1 0.89 1" material=""></a-box>
+       <a-box gltf-model={casajaponesa} position="7.301 0.303 -2.153" rotation="0 1.547 0" scale="1.1 0.89 1" material=""></a-box>
 
        {/* Cuadro */}
-       <a-box gltf-model="/static/media/cuadro.a5a23548bdcaf5cc1eee.glb" position="-5.975 2.758 3.416" rotation="0 -4.354 0" scale="0.005 0.005 0" material=""></a-box>
+       <a-box gltf-model={cuadro} position="-5.975 2.758 3.416" rotation="0 -4.354 0" scale="0.005 0.005 0" material=""></a-box>
       
        
         </Entity>
