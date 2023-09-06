@@ -13,12 +13,12 @@ import sonido_off from '../resources/speaker_off.svg'
 
 function Enviado() {
       const prefersColorScheme = usePrefersColorScheme();
-      const [theme, setTheme] = useState(prefersColorScheme);
+      const [theme, setTheme] = useState(localStorage.getItem('preferencia')=== null? prefersColorScheme:localStorage.getItem('preferencia'));
       const [ seleccion, setSeleccion] = useState('');
       const [sonido, setSonido] = useState(localStorage.getItem('sonido')=== null?'off':localStorage.getItem('sonido'));
       localStorage.removeItem("position")
       localStorage.setItem("sonido", sonido);
-      
+      localStorage.setItem("preferencia", theme);
 
       console.log("Seleccion color "+ prefersColorScheme);
       const verListado = (select) => {
@@ -29,6 +29,9 @@ function Enviado() {
                 });
             setSeleccion(select);
           }
+      const portalSeleccion = (ir) => {
+            window.location.href=ir;
+      }
     return (
       <div className={`${theme}`}>
             <header className="App-header">
@@ -85,7 +88,7 @@ function Enviado() {
                         );
                     case '../':
                         return (
-                            window.location.href='../'
+                              portalSeleccion('../')
                         );
                   default:
                         return(
