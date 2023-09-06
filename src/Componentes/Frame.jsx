@@ -181,8 +181,7 @@ function Frame() {
           <a-entity id="hojas_31" gltf-model={hojas} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
           <a-entity static-body="true" id="arbol_33" gltf-model={arbol} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-entity>
           <a-entity id="hojas_33" gltf-model={hojas} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-entity>
-          <a-entity static-body="true" id="arbol_35" gltf-model={arbol} position="-0.6 -0.0 10.4" rotation="0 119 0" scale="1.4 1.4 1.4"></a-entity>
-          <a-entity id="hojas_35" gltf-model={hojas} position="-0.6 -0.0 10.4" rotation="0 119 0" scale="1.4 1.4 1.4"></a-entity>
+
           <a-entity static-body id="arbol_37" gltf-model={arbol} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity id="hojas_37" gltf-model={hojas} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
           <a-entity static-body="true" id="arbol_38" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
