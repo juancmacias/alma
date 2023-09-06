@@ -2,6 +2,7 @@ import {Entity, Scene} from 'aframe-react';
 import React from 'react'
 
 
+
 import door from '../obj/sesion2/japanese_door.glb'
 import house from '../obj/sesion2/house-te.glb'
 import bambo from '../obj/plantas/bamboo.glb'
@@ -17,7 +18,27 @@ import tree from '../obj/sesion2/treeN.glb'
 import fontain from '../obj/construccion/fontain_2s.glb'
 import chair from '../obj/construccion/parkchair.glb'
 import lamp from '../obj/sesion2/japanese_lamp.glb'
-// import walk from '../obj/construccion/walk.glb'
+import walk from '../obj/construccion/walk.glb'
+
+import Fontain from '../obj/construccion/fontain_2s.glb'
+import stylized from '../obj/arboles/stylized_tree.glb'
+import treerose from '../obj/arboles/tree_rose.glb'
+ import flower from '../obj/plantas/blue-flower.glb'
+import zennor from '../obj/construccion/zennor.glb'
+ import bamboo from '../obj/plantas/bamboo.glb'
+ import portal from '../obj/construccion/gate_wood.glb'
+import vines from '../obj/plantas/vines.glb'
+import rocar from '../obj/rocas/rocar.glb'
+import roca from '../obj/rocas/roca.glb'
+import walk from '../obj/construccion/walk.glb'
+import farola from '../obj/construccion/farola.glb'
+import chair from '../obj/construccion/free_parkchair.glb'
+import  setp from '../obj/construccion/healing.glb'
+import lamp  from '../obj/construccion/lamp.glb'
+import lantern from '../obj/construccion/garden_lantern.glb'
+import stone from '../obj/construccion/stone_lantern.glb'
+import fantasy from '../obj/plantas/purple_flower.glb'
+
 
 
 
