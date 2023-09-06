@@ -2,6 +2,7 @@ import React , { useState }  from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadingSpinner from "./LoadingSpinner";
 
+
 function Formulario() {
   const [ email, setEmail] = useState('');
   const [ nombre, setNombre] = useState('');
