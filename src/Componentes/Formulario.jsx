@@ -1,7 +1,7 @@
 import React , { useState }  from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadingSpinner from "./LoadingSpinner";
-
+import { urlApi } from './../services/urls';
 
 function Formulario() {
   const [ email, setEmail] = useState('');
@@ -65,11 +65,20 @@ function Formulario() {
     setIsLoading(true);
     
     console.log("Enviar formulario");
-
-
-    fetch('http://127.0.0.1:8000/formulario/nuevo?email='+email+'&nombre='+nombre+'&texto='+texto, {
-      method: 'GET',
-    })
+    var raw = JSON.stringify({
+      "nombreContacto": nombre,
+      "consultaContacto": texto,
+      "emailContacto": email
+    });
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'manual'
+    };
+    fetch(urlApi+'/api/contactos', requestOptions)
     .then((response) => response.json())
     .then((data) => {
         if(data.code === 401){
@@ -84,7 +93,8 @@ function Formulario() {
     })
     .finally(()=>{
       setIsLoading(false);
-      //window.location.reload();
+      window.location.href='/enviado';
+    
     });
   }
   const renderUser = (
