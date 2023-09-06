@@ -83,6 +83,7 @@ function Frame() {
           <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
           <img id="camino_piedra" src={require('../resources/piedra_suelo_1.jpg')} alt='' />
           <img id="suelo-seco" src={require('../resources/suelo-seco.jpg')} alt='' />
+          <a-asset-item id="plantdandeli" src={plantdandeli} preload='auto'></a-asset-item>
           <a-asset-item id="tori" src={tori} preload='auto'></a-asset-item>
           <a-asset-item id="buda" src={buda} preload='auto'></a-asset-item>
           <a-asset-item id="mono" src={mono} preload='auto'></a-asset-item>
@@ -144,18 +145,18 @@ function Frame() {
 
         <Entity id="muro_2" position="15 0 0" rotation="0 0 0">
           {/* Arboles del perimetro  "dynamic-body="mass: 5"*/}
-          <a-entity static-body="true" id="arbol_21" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
-          <a-entity id="hojas_21" gltf-model={hojas} position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-entity>
-          <a-entity static-body="true" id="arbol_22" gltf-model={arbol} position="-0.7 0 4.6" rotation="0 80 0" scale="1.0 1.0 1.0"></a-entity>
-          <a-entity id="hojas_22" gltf-model={hojas} position="-0.7 0 4.6" rotation="0 80 0" scale="1.0 1.0 1.0"></a-entity>
-          <a-entity static-body="true" id="arbol_23" gltf-model={arbol} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-entity>
-          <a-entity id="hojas_23" gltf-model={hojas} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-entity>
-          <a-entity static-body="true" id="arbol_24" gltf-model={arbol} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity id="hojas_24" gltf-model={hojas} position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity static-body="true" id="arbol_27" gltf-model={arbol} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
-          <a-entity id="hojas_27" gltf-model={hojas} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
-          <a-entity static-body="true" id="arbol_28" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity id="hojas_28" gltf-model={hojas} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
+          <a-gltf-model static-body="true" id="arbol_21" src="#arbol" position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-gltf-model>
+          <a-gltf-model id="hojas_21" src="#hojas" position="-0.67 0 1" rotation="0 0 0" scale="1.0 1.0 1.0"></a-gltf-model>
+          <a-gltf-model static-body="true" id="arbol_22" src="#arbol" position="-0.7 0 4.6" rotation="0 80 0" scale="1.0 1.0 1.0"></a-gltf-model>
+          <a-gltf-model id="hojas_22" src="#hojas" position="-0.7 0 4.6" rotation="0 80 0" scale="1.0 1.0 1.0"></a-gltf-model>
+          <a-gltf-model static-body="true" id="arbol_23" src="#arbol" position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model id="hojas_23" src="#hojas" position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1.1 1.1"></a-gltf-model>
+          <a-gltf-model static-body="true" id="arbol_24" src="#arbol" position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-gltf-model>
+          <a-gltf-model id="hojas_24" src="#hojas" position="-0.66 -0.1 -6.58" rotation="0 39 0" scale="1.2 1.2 1.2"></a-gltf-model>
+          <a-gltf-model static-body="true" id="arbol_27" src="#arbol" position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-gltf-model>
+          <a-gltf-model id="hojas_27" src="#hojas" position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-gltf-model>
+          <a-gltf-model static-body="true" id="arbol_28" src="#arbol" position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-gltf-model>
+          <a-gltf-model id="hojas_28" src="#hojas" position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-gltf-model>
 
 
 
@@ -168,24 +169,24 @@ function Frame() {
           <a-gltf-model id="bambu_26" src="#bambu" position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-gltf-model>
           <a-gltf-model id="bambu_28" src="#bambu" position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
           {/* varias plantas */}
-          <a-entity id="varios_21" gltf-model={plantdandeli} position="-5.92 1.7 2.1" rotation="0 152 0" scale="6 6 6" ></a-entity>
-          <a-entity id="varios_22" gltf-model={plantdandeli} position="-5.9 1.7 2.5" rotation="0 153 0" scale="6 6 6" ></a-entity>
-          <a-entity id="varios_23" gltf-model={plantdandeli} position="-4.6 1.7 3.1" rotation="0 180 0" scale="6 6 6" ></a-entity>
+          <a-gltf-model id="varios_21" src="#plantdandeli" position="-5.92 1.7 2.1" rotation="0 152 0" scale="6 6 6" ></a-gltf-model>
+          <a-gltf-model id="varios_22" src="#plantdandeli" position="-5.9 1.7 2.5" rotation="0 153 0" scale="6 6 6" ></a-gltf-model>
+          <a-gltf-model id="varios_23" src="#plantdandeli" position="-4.6 1.7 3.1" rotation="0 180 0" scale="6 6 6" ></a-gltf-model>
           {/* muro  */}
           <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
 
         <Entity id="muro_3" position="0 0 -15" rotation="0 90 0">
           {/* Arboles del perimetro */}
-          <a-entity static-body="true" id="arbol_31" gltf-model={arbol} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
-          <a-entity id="hojas_31" gltf-model={hojas} position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-entity>
-          <a-entity static-body="true" id="arbol_33" gltf-model={arbol} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-entity>
-          <a-entity id="hojas_33" gltf-model={hojas} position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-entity>
+          <a-gltf-model static-body="true" id="arbol_31" src="#arbol" position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+          <a-gltf-model id="hojas_31" src="#hojas" position="-0.67 0 1" rotation="0 0 0" scale="1 1 1"></a-gltf-model>
+          <a-gltf-model static-body="true" id="arbol_33" src="#arbol" position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-gltf-model>
+          <a-gltf-model id="hojas_33" src="#hojas" position="-0.9 -0.5 8" rotation="0 119 0" scale="1.1 1. 1.1"></a-gltf-model>
 
-          <a-entity static-body id="arbol_37" gltf-model={arbol} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
-          <a-entity id="hojas_37" gltf-model={hojas} position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-entity>
-          <a-entity static-body="true" id="arbol_38" gltf-model={arbol} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
-          <a-entity id="hojas_38" gltf-model={hojas} position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-entity>
+          <a-gltf-model static-body id="arbol_37" src="#arbol" position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-gltf-model>
+          <a-gltf-model id="hojas_37" src="#hojas" position="-0.7 -0.5 -2.4" rotation="0 15 0" scale="1.6 1.6 1.6"></a-gltf-model>
+          <a-gltf-model static-body="true" id="arbol_38" src="#arbol" position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-gltf-model>
+          <a-gltf-model id="hojas_38" src="#hojas" position="-1 -0.05 -12.4" rotation="0 181 0" scale="1.2 1.2 1.2"></a-gltf-model>
 
 
           {/* bambu */}
