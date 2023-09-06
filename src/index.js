@@ -10,6 +10,7 @@ import { Route, Routes } from 'react-router-dom';
 import Valores from './Componentes/Valores';
 import reportWebVitals from './reportWebVitals';
 import SesionTres from './Componentes/SesionTres'
+import SesionCinco from './Componentes/SesionCinco';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
         <Route path="/hubs" element={<Frame />} />
         <Route path="/valores" element={<Valores/>} />
         <Route path="/sesiontres" element={<SesionTres/>} />
+        <Route path="/sesioncinco" element={<SesionCinco/>} />
       </Routes>
     </BrowserRouter>
 
