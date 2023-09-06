@@ -37,12 +37,12 @@ const Valores = () => {
         </a-assets>
         {/* CAMARA */}
         
-        <a-entity position="0 1.608 10.005" camera="active:false;userHeight:1.6" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
+      <a-entity position="0 1.608 10.005" camera="active:false;userHeight:1.6" wasd-controls cursor-controls collision="objects: .colisionables" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
+     <Entity  camera kinematic-body="radius:1"  look-controls universal-controls  position="0 2 13.15">
+     <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" 
+        material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5" raycaster ></Entity> 
+    </Entity> 
         
-        <Entity  camera kinematic-body="radius:2"  look-controls universal-controls  position="0 1.6 9.7">
-        <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" 
-        material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity> 
-        </Entity> 
         {/* VARIOS */}
         <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="180 180 180"></a-sky>
         
@@ -95,23 +95,22 @@ const Valores = () => {
       {/* diorema */}
       <a-box position="-8.257 -4.517 9.378" rotation="0 87.66254265501595 0" gltf-model={diorema} scale="0.1 0.1 0.1"></a-box>
      
-  
+   <a-entity positio="0 0 0">
     <a-box id="tree" position="11.095 -0.008 3.602"  rotation="0 45 0" gltf-model={tree}  scale="0.004 0.004 0.005"></a-box>
     <a-box position="11.162 -0.042 3.587" src="#madera" rotation="0 90.814 0" geometry="height:0.21;width:2.40;depth:2.0" material=""></a-box>       
-    
-  
-      {/* bancos */} 
-      <a-entity id="chair" position="12.706 0.088 1.647" scale="0.018 0.018 0.018" gltf-model={chair}> </a-entity>
-      <a-entity id="chair" position="8.677 -0.005 5.691" scale="0.018 0.018 0.018" gltf-model={chair} rotation="0.2291831180523293 -177.15855025445055 0.6875493541569879"> </a-entity>
-
-{/*   
-   <a-box position="6.095 0.5 8.221" rotation="0 45 0" gltf-model={1} material=""></a-box> */}
+    <a-entity id="chair" position="12.706 0.088 1.647" scale="0.018 0.018 0.018" gltf-model={chair}> </a-entity>
+    <a-entity id="chair" position="8.677 -0.005 5.691" scale="0.018 0.018 0.018" gltf-model={chair} rotation="0.2291831180523293 -177.15855025445055 0.6875493541569879"> </a-entity>
+    </a-entity>
+   
+   <a-box position="6.095 0.5 8.221" rotation="0 45 0" gltf-model={1} material=""></a-box> 
 
    <a-box id="lamp" position="10.096 0.5 -11.286" rotation="0 84.05290854569178 0" gltf-model={lamp}scale="0.01 0.01 0.01"></a-box>  
    <a-box id="lamp" position="10.51 0.109 -7.015" rotation="0 84.053 0" gltf-model={lamp} material="" scale="0.01 0.01 0.01"></a-box>
    <a-box id="lamp" position="12.009 0.065 1.978" rotation="0 84.053 0" gltf-model={lamp}material="" scale="0.01 0.01 0.01"></a-box>     
    
-
+   <a-entity positio="0 0 0">
+   <a-box position="6.517 0.3 8.971" rotation="89.09493714284301 -111.1538122553797 68.18197762056796" gltf-model="1" material="" geometry="width:4.67;height:5.57;depth:0.65"></a-box>
+   </a-entity> 
 </Scene >
 
 
