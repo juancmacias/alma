@@ -18,8 +18,7 @@ import mono from '../obj/construccion/mesh_garden_gnome.glb'
 import tori from '../obj/construccion/japanese_tori_gate.glb'
 import nubecumulo from '../obj/nubes/CumulusClouds.glb'
 import portalValores from '../obj/construccion/gate_wood.glb'
-//import useSound from 'use-sound';
-//import forest from '../sound/jardin.mp3';
+
 
 function Frame() {
   const [sonido] = useState(localStorage.getItem('sonido'));
@@ -34,7 +33,6 @@ function Frame() {
   }
 
   useEffect(()=> {
-
     caches.keys().then((names) => {
       names.forEach((name) => {
         caches.delete(name);
@@ -53,7 +51,6 @@ function Frame() {
       let scala = escala+Math.random() 
       let XX = x + Math.random()
       let ZZ = 1 + Math.floor(Math.random() * (max - min + 1) + min);
-      console.log("obj "+ tipo1 + " - " +tipo2)
       objetos.push(<a-gltf-model static-body id={`arbol_5${i}`} src={tipo1}  position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot} 0`} scale={`${scala} ${scala} ${scala}`}></a-gltf-model>)
       objetos.push(<a-gltf-model id={`hoja_5${i}`}  src={tipo2} position={`${XX} ${y} ${ZZ}`} rotation={`0 ${rot}) 0`} scale={`${scala} ${scala} ${scala}`}></a-gltf-model>)
     }
@@ -62,9 +59,6 @@ function Frame() {
  }
  const portalSeleccion = (ir) => {
   var pos = document.querySelector('#camera').getAttribute('position');
-  console.log("Hecho " + pos.x)
-  console.log("Hecho " + pos.z)
-  console.log("Hecho " + pos.y)
   var position = pos.x+ ' '+ pos.y+ ' '+pos.z 
   localStorage.setItem("position", position);
   //stopP();
@@ -101,14 +95,19 @@ function Frame() {
           <a-asset-item id="bambu" src={bamboo} preload='auto'></a-asset-item>
           <a-asset-item id="tumbona" src={tumbona} preload='auto'></a-asset-item>
           <a-asset-item id="atomico" src={atomico} preload='auto'></a-asset-item>
+
         </a-assets>
         {/* CARGAR SONIDO */
           sonido === 'on' ? <a-sound src="#jardin" volumen="7" autoplay="true" position="-3 1 -4" sound="" loop="true"></a-sound>:''
         }
-
-        <Entity geometry="height: 3;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false"  material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3">
-        <a-gltf-model id="atomico" src="#atomico" animation-mixer="clip:Loading" position="0 3 0" rotation="0 0 0" scale="2 6 2"></a-gltf-model>
+        
+        
+        {/* OBJETOS ANIMADOS */}
+        <Entity geometry="height: 3;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false"  material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3" shadow>
+        <a-gltf-model id="atomico" src="#atomico" animation-mixer="clip:Loading" position="0 3 0" rotation="0 0 0" scale="2 6 2" shadow></a-gltf-model>
         </Entity>
+
+
         
         <Entity key="muro_1" position="-15 0 0" rotation="0 0 0">
           {
@@ -169,7 +168,9 @@ function Frame() {
           <a-gltf-model id="bambu_26" src="#bambu" position="-0.9 0.01 -9.5" rotation="0 151 0" scale="1 1.1 1"></a-gltf-model>
           <a-gltf-model id="bambu_28" src="#bambu" position="-0.6 0.0 -1.6" rotation="0 151 0" scale="1 1.1 1.1"></a-gltf-model>
           {/* varias plantas */}
-          <a-entity id="varios_21" gltf-model={plantdandeli} position="-5.8 1.7 2.5" rotation="0 152 0" scale="6 6 6" ></a-entity>
+          <a-entity id="varios_21" gltf-model={plantdandeli} position="-5.92 1.7 2.1" rotation="0 152 0" scale="6 6 6" ></a-entity>
+          <a-entity id="varios_22" gltf-model={plantdandeli} position="-5.9 1.7 2.5" rotation="0 153 0" scale="6 6 6" ></a-entity>
+          <a-entity id="varios_23" gltf-model={plantdandeli} position="-4.6 1.7 3.1" rotation="0 180 0" scale="6 6 6" ></a-entity>
           {/* muro  */}
           <a-box id="wall_21" color="grey" width="30" height="3" depth="1" position="0 0 0" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 90 0" ></a-box>
         </Entity>
@@ -272,9 +273,8 @@ function Frame() {
             text={`value:Espacion / dinámicas de trabajo;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         </a-entity>
         {/* CARTELES */}
-        <Entity shadow
+        <Entity
           id="bienvenida"
-          
           position="0.5 2.9 14.2"
           rotation="-16 0 0"
           width="2"
@@ -328,7 +328,7 @@ function Frame() {
         <a-gltf-model id="nomo_1" src="#mono" position="-14 0.01 -14" rotation="0 29 0" scale="1.2 1.2 1.2"></a-gltf-model>
         <a-gltf-model id="nomo_2" src="#mono" position="14 0.01 14" rotation="0 -100 0" scale="1.2 1.2 1.2"></a-gltf-model>
         <a-gltf-model id="nomo_4" src="#mono" position="14 0.01 -14" rotation="0 -29 0" scale="1.2 1.2 1.2"></a-gltf-model>
-        <a-gltf-model static-body shadow="receive: true" id="tumbona" src="#tumbona" position="-11.7 -0.88 11.5" rotation="0 29 0" scale="1 1 1"></a-gltf-model>
+        <a-gltf-model static-body shadow id="tumbona" src="#tumbona" position="-11.7 -0.88 11.5" rotation="0 29 0" scale="1 1 1"></a-gltf-model>
         {/* ENTRADA */}
         <Entity id="frontal">
           <a-box id="wall_seguro_1" width="30" height="3" depth="0.01" position="0 0 20" material="opacity:0.1" static-body="true" rotation="0 180 0" ></a-box>
@@ -336,7 +336,7 @@ function Frame() {
           <a-box id="wall_seguro_3" width="10" height="3" depth="0.01" position="-15 0 15" material="opacity:0.1" static-body="true" rotation="0 -90 0" ></a-box>
           <a-box id="wall_tory_1" color="grey" width="13.1" height="3" depth="0.5" position="9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
           <a-box id="wall_tory_2" color="grey" width="13.1" height="3" depth="0.5" position="-9.26 0 15" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body rotation="0 180 0" ></a-box>
-          <a-gltf-model id="tori" src="#tori"  position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7"></a-gltf-model>
+          <a-gltf-model id="tori" src="#tori"  position="0 0 15" rotation="0 0 0" scale="0.7 0.7 0.7" shadow></a-gltf-model>
         </Entity>
         {/* camino */}
         <Entity id="camino">
@@ -364,8 +364,9 @@ function Frame() {
         <Entity id="camera"  camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
           <Entity cursor  position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
         </Entity>
+        {/* ILUMINACIÓN */}
         <a-light type="ambient" color="#445451"></a-light>
-        <a-light type="point" intensity="1" position="2 50 40" rotation="19 0 0"></a-light>
+        <a-entity light="type:directional; castShadow:true; type: spot; castShadow: true" intensity="1" position="2 50 40" rotation="-43 0 0"></a-entity>
     </Scene>
 
 
