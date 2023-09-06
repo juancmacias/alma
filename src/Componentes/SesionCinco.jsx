@@ -2,7 +2,7 @@
 import {Entity, Scene} from 'aframe-react';
 
 /* precargar los objetos en 3d */
-import muromadera from '../obj/construccion/sesioncinco/muro_madera.glb'
+//import muromadera from '../obj/construccion/sesioncinco/muro_madera.glb'
 import sofa from '../obj/construccion/sesioncinco/sofa.glb'
 import alfombraama from '../obj/construccion/sesioncinco/alfombraama.glb'
 import bonsai from '../obj/construccion/sesioncinco/bonsai.glb'
