@@ -1,5 +1,5 @@
 import {Entity, Scene} from 'aframe-react';
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import suelo from './json/camino.json'
 
 
@@ -104,7 +104,7 @@ function Frame() {
         
         {/* OBJETOS ANIMADOS */}
         <Entity geometry="height: 3;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false"  material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3" shadow>
-        <a-gltf-model id="atomico" src="#atomico" animation-mixer="clip:Loading" position="0 3 0" rotation="0 0 0" scale="2 6 2" shadow></a-gltf-model>
+          <a-gltf-model id="atomico" src="#atomico" animation-mixer="clip:Loading" position="0 3 0" rotation="0 0 0" scale="2 6 2" shadow></a-gltf-model>
         </Entity>
 
 
