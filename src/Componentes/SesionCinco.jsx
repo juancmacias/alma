@@ -2,16 +2,16 @@
 import {Entity, Scene} from 'aframe-react';
 
 /* precargar los objetos en 3d */
-import muromadera from '../obj/construccion/sesioncinco/muro_madera.glb'
+//import muromadera from '../obj/construccion/sesioncinco/muro_madera.glb'
 import sofa from '../obj/construccion/sesioncinco/sofa.glb'
 import alfombraama from '../obj/construccion/sesioncinco/alfombraama.glb'
 import bonsai from '../obj/construccion/sesioncinco/bonsai.glb'
 import puff from '../obj/construccion/sesioncinco/puff.glb'
 import cerezojapones from '../obj/construccion/sesioncinco/cerezojapones.glb'
-import mesa_centro from '../obj/construccion/sesioncinco/mesa_centro.glb'
+//import mesa_centro from '../obj/construccion/sesioncinco/mesa_centro.glb'
 import chimenea from '../obj/construccion/sesioncinco/chimenea.glb'
-import casajaponesa from '../obj/construccion/sesioncinco/casajaponesa.glb'
-import cuadro from '../obj/construccion/sesioncinco/cuadro.glb'
+//import casajaponesa from '../obj/construccion/sesioncinco/casajaponesa.glb'
+//import cuadro from '../obj/construccion/sesioncinco/cuadro.glb'
 import sofanegro from '../obj/construccion/sesioncinco/sofanegro.glb'
 
 
@@ -26,8 +26,11 @@ import sofanegro from '../obj/construccion/sesioncinco/sofanegro.glb'
 
 
 function SesionCinco() {
+    const portalSeleccion = (ir) => {
+        window.location.href=ir;
+       }
     return (
-        <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+        <Scene preloader="title: Cargando objetos ....;slowLoad:true;" physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
         {/* recursos */}
         <a-assets>
             <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
@@ -35,7 +38,19 @@ function SesionCinco() {
             <img id="sky" src={require('../resources/amanecer.jpg')} alt='' />
             <img id="texturamuro" src={require('../resources/texturamurodibu.png')} alt='' />
         </a-assets>
-        
+            {/* CARTEL SALIDA */}
+    <Entity
+          id="salida_cartel"
+          events={{
+            click: () => portalSeleccion('/hubs')
+          }}
+          position="-1.6 1.1 11.9"
+          rotation="0 -180 0"
+          width="2"
+          height="2"
+          material="color:#14B76E;opacity: 0.5;" geometry="primitive:plane; radius:0.4; width: 2; height: 0.6;"
+          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+  
         {/* objetos de la escena */}
         <Entity position="0 0 -9" >
         
@@ -75,7 +90,7 @@ function SesionCinco() {
         {/* Muro */} 
         <a-box width="30" height="2" depth="0.5" geometry="" position="0 0.854 -5.96" material=""></a-box>
         <a-box width="30" height="2" depth="0.5" geometry="" position="14.692 0.854 8.896" material="" rotation="0 90.1262611740785 0"></a-box>
-        <a-box width="30" height="2" depth="0.5" geometry="" position="-14.708 0.854 8.896" material="" rotation="0 90.126 0" material="src= #texturamuro"></a-box>
+        <a-box width="30" height="2" depth="0.5" geometry="" position="-14.708 0.854 8.896" rotation="0 90.126 0" ></a-box>
         
        {/*Casa japonesa*/}
        <a-box gltf-model="/static/media/casajaponesa.6bdb38851237023477c7.glb" position="7.301 0.303 -2.153" rotation="0 1.547 0" scale="1.1 0.89 1" material=""></a-box>
@@ -94,7 +109,9 @@ function SesionCinco() {
         {/* cielo */}
         <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
         {/* CAMARA */}
-        <a-entity camera="active:false" velocity="" kinematic-body="radius:2" position="0 1.6 14.696" look-controls="" universal-controls="" gamepad-controls="" keyboard-controls="" touch-controls="" hmd-controls="" mouse-controls="" data-aframe-inspector-original-camera=""><a-entity raycaster="" cursor="" position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;color:blue" scale="0.8 0.8 0.8"></a-entity></a-entity>
+        <Entity id="camera"  camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
+          <Entity cursor  position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
+        </Entity>
         { /*<a-box gltf-model="/static/media/jardin_kyoto.f56981aff04dcb9e5e13.glb"  position="0.321 1.818 -1.022" rotation="0 1.547 0" scale="0.01 0.01 0.01" material=""></a-box> */}
         </Scene>
         

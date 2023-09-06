@@ -263,7 +263,7 @@ function Frame() {
             visible="true"
             id="espacios_texto"
             events={{
-              click: () => portalSeleccion('valores')
+              click: () => portalSeleccion('sesioncinco')
             }}
             position="0 3 2.5"
             rotation="0 -85 0"
