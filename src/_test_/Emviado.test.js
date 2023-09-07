@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import ReactDOM from 'react-dom';
 import Enviado from '../Componentes/Enviado'
 test('Create render h2', async () => {

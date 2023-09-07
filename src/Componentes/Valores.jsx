@@ -62,17 +62,17 @@ const Valores = () => {
         {/* CAMARA */}
 
         <a-entity id="cameraRig">
-        <a-entity camera position="0 1.608 10.005">
-           <a-text id="contadorTiempo" position="1 1 -3" color="white" align="center" ></a-text>
-          <a-text id="message" position="-1 2 -3" color="white" align="center" value=""></a-text>
+          <a-entity camera position="0 1.608 10.005">
+            <a-text id="contadorTiempo" position="1 1 -3" color="white" align="center" ></a-text>
+            <a-text id="message" position="-1 2 -3" color="white" align="center" value=""></a-text>
+          </a-entity>
+          <a-entity oculus-touch-controls="hand: left"
+                    collider-check raycaster="objects: .collidable; showLine: true"
+                    thumbstick-logging></a-entity>
+          <a-entity oculus-touch-controls="hand: right"
+                    collider-check raycaster="objects: .collidable; showLine: true"
+                    thumbstick-logging></a-entity>
         </a-entity>
-        <a-entity oculus-touch-controls="hand: left"
-                  collider-check raycaster="objects: .collidable; showLine: true"
-                  thumbstick-logging></a-entity>
-        <a-entity oculus-touch-controls="hand: right"
-                  collider-check raycaster="objects: .collidable; showLine: true"
-                  thumbstick-logging></a-entity>
-      </a-entity>
 
 
 
