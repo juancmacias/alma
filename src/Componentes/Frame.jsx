@@ -65,8 +65,7 @@ function Frame() {
 
       {/* recursos xrextras-loading */}
       <a-assets>
-
-        <audio  id="jardin" src="sound/jardin.ogg" preload='auto' />
+        <sound id="jardin" src="sound/jardin.ogg"></sound>
         <img id="imagen-pared" src={require('../resources/piedra_muro_1.jpg')} alt='' />
         <img id="cesped" src={require('../resources/cesped.jpg')} alt='' />
         <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
@@ -87,6 +86,7 @@ function Frame() {
         <a-asset-item id="atomico" src={atomico} preload='auto'></a-asset-item>
 
       </a-assets>
+
       {/* CARGAR SONIDO */
         sonido === 'on' ? <a-sound src="#jardin" volumen="7" autoplay="true" position="-3 1 -4" sound="" loop="true"></a-sound> : ''
       }
