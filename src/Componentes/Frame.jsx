@@ -11,7 +11,7 @@ import maple_tronco from '../obj/plantas/maple_tronco.glb'
 import maple_hojas from '../obj/plantas/maple_hojas.glb'
 import molinillo from '../obj/plantas/molinillo.glb'
 import tumbona from '../obj/props/tumbona.glb'
-import atomico from '../obj/props/LoadingObject_Atom.glb'
+import atomico from '../obj/thinkito/thinkito_version.glb'
 import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 import buda from '../obj/construccion/garden_buddha.glb'
 import mono from '../obj/construccion/mesh_garden_gnome.glb'
@@ -91,7 +91,13 @@ function Frame() {
 
       {/* OBJETOS ANIMADOS */}
       <Entity geometry="height: 3;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3" shadow>
-        <a-gltf-model id="atomico" src="#atomico" animation-mixer="clip:Loading" position="0 3 0" rotation="0 0 0" scale="2 6 2" shadow></a-gltf-model>
+        <a-entity  id="atomico" gltf-model={atomico}  position="0 3 0" rotation="0 0 0" scale="0.3 1.3 0.3" shadow>
+          <a-animation id="animacion_3" attribute="rotation" dur="17000" from="0 0 0 " to="0 360 0" repeat="indefinite">
+          </a-animation>
+          <a-animation id="animacion_4" attribute="position" dur="1000" from="0 3 0 " to="0 3.01 0" repeat="indefinite">
+          </a-animation>
+
+        </a-entity>
       </Entity>
 
       <Entity key="1" id="muro_1" position="-15 0 0" rotation="0 0 0">
@@ -335,12 +341,10 @@ function Frame() {
 
         <Entity id="cameraRig" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
           <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
-          <a-entity oculus-touch-controls="hand: left"
-                    collider-check raycaster="objects: .collidable; showLine: true"
-                    thumbstick-logging></a-entity>
-          <a-entity oculus-touch-controls="hand: right"
-                    collider-check raycaster="objects: .collidable; showLine: true"
-                    thumbstick-logging></a-entity>
+          <a-entity controller="hand: left">
+            <a-entity stats-in-vr position="0.47 0 0.08"></a-entity>
+          </a-entity>
+          <a-entity controller="hand: right"></a-entity>
         </Entity>
       
       {/* ILUMINACIÓN */}
