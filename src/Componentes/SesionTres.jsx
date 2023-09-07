@@ -1,5 +1,6 @@
 import {Entity, Scene} from 'aframe-react';
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import { urlFont } from './../services/urls';
 
 import sofa from '../obj/sesion3/sofa.glb'
 import garden from '../obj/sesion3/garden-zen.glb'
@@ -41,7 +42,7 @@ const SesionTres = () => {
           width="2"
           height="2"
           material="color:#14B76E;opacity: 0.5;" geometry="primitive:plane; radius:0.4; width: 2; height: 0.6;"
-          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
         
     {/* imagenes */}
     <a-assets>
