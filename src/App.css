@@ -38,6 +38,7 @@ button{
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 .botonEntrar{
+  font-family: 'Permanent Marker', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,6 +132,8 @@ main {
   font-size: 35px;
   color: #36A0FF;
 }
+.hideError{display: none;}
+.showError{display: block;font-size: 0.7em;color: red;}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -141,6 +144,9 @@ main {
   body {
     background-color: rgb(230, 173, 180);
   }
+  .fondo{
+    height: 84vh;
+  }
   main{
     min-height: 84vh;
   }
@@ -150,16 +156,20 @@ main {
 
   }
   .card, .card_dos{
-    width: 360px  ;
-    margin: 10px auto;
+    width: auto !important;
+    margin: 58px auto !important;
   }
   .light .card, .card_dos{
     color: black ;
     background-color:#fff ;
+    margin-top: 39px !important;
+
   }
   .dark .card, .card_dos{
     color: #fff ;
     background-color:#011233 ;
+    margin-top: 39px !important;
+
   }
   
 }
@@ -191,6 +201,7 @@ main {
   font-size: calc(10px + 1.4vmin);
   text-align: left;
   color: #36A0FF;
+  margin-bottom: 13px;
   
 }
 .form-check{
