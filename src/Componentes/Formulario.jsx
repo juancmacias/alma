@@ -13,6 +13,9 @@ function Formulario() {
   const [ errorCorreo, setErrorCorreo] = useState('hideError');
   const [ errorNombre, setErrorNombre] = useState('hideError');
   const [ errorTexto, setErrorTexto] = useState('hideError');
+  const [ errorValidacion, setValidacion] = useState('hideError');
+  const [ numeroUno] = useState(getRandomInt(9))
+  const [ numeroDos] = useState(getRandomInt(9))
 
   const handleEmailChange = (e) => {
     let posicionArroba = e.target.value.lastIndexOf('@');
@@ -36,6 +39,17 @@ function Formulario() {
       setNombre(e.target.value);
     }
   };
+  const handleValidacion = (e) => {
+    console.log("valop puesto" + e.target.value)
+    if (e.target.value === ( numeroUno + numeroDos)) {
+      setValidacion('showError')
+      console.log("Error validación");
+    }else{
+      setValidacion('hideError')
+      console.log("Validación valido");
+      //setNombre(e.target.value);
+    }
+  };
   const handleTextoChange = (e) => {
     setMaximo(250 - e.target.value.length)
     if (e.target.value.length < 2) {
@@ -56,7 +70,9 @@ function Formulario() {
     }
 
   }
-
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
   const enviarMensaje = (e) => {
     e.preventDefault(); 
     setIsLoading(true);
@@ -122,9 +138,9 @@ function Formulario() {
             <input onChange={handleChexbox} type="checkbox" className="form-check-input" id="checked" required />
           </div>
           <div className="form-group">
-            <label htmlFor="validacion">Dirección de correo</label>
-            <input type="email" id="validacion" onChange={handleEmailChange}  className="form-control"  aria-describedby="emailHelp" placeholder="Tu correo electrónico" required />
-            <span className={errorCorreo}>El correo no tiene un formato correto</span>
+            <label htmlFor="validacion">Validación: ¿cuanto es {numeroUno} + {numeroDos} ?</label>
+            <input type="text" id="validacion" onChange={handleValidacion}  className="form-control"  aria-describedby="validadorHelp" placeholder={`Cuanto es ${numeroUno} + ${numeroDos}`} required />
+            <span className={errorValidacion}>Error al sumar {numeroUno} y {numeroDos}.</span>
           </div>
           <button type="submit" disabled={botonState} className="btn btn-primary">Enviar formulario</button>
       </form>

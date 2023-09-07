@@ -47,7 +47,7 @@ function Frame() {
     return (objetos)
   }
   const portalSeleccion = (ir) => {
-    var pos = document.querySelector('#camera').getAttribute('position');
+    var pos = document.querySelector('#cameraRig').getAttribute('position');
     var position = pos.x + ' ' + pos.y + ' ' + pos.z
     localStorage.setItem("position", position);
     //stopP();
@@ -332,17 +332,16 @@ function Frame() {
       </a-gltf-model>
       {/* cámara */}
       {/*cargarCamara*/}
-      <a-entity id="cameraRig">
-          <Entity id="camera" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
-            <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
-          </Entity>
+
+        <Entity id="cameraRig" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
+          <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
           <a-entity oculus-touch-controls="hand: left"
                     collider-check raycaster="objects: .collidable; showLine: true"
                     thumbstick-logging></a-entity>
           <a-entity oculus-touch-controls="hand: right"
                     collider-check raycaster="objects: .collidable; showLine: true"
                     thumbstick-logging></a-entity>
-        </a-entity>
+        </Entity>
       
       {/* ILUMINACIÓN */}
       <a-light type="ambient" color="#445451"></a-light>
