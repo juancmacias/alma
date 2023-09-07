@@ -95,33 +95,33 @@ function Formulario() {
     });
   }
   const renderUser = (
-    <div class="card">
-    <div class="card-header">
+    <div className="card">
+    <div className="card-header">
       Contactar con Thinking
     </div>
-    <div class="card-body">
+    <div className="card-body">
       <form onSubmit={enviarMensaje}>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Nombre de contacto</label>
-            <input type="text" id="nombre" onChange={handleNombreChange}  class="form-control"  aria-describedby="emailHelp" placeholder="Nombre de contacto" required />
+        <div className="form-group">
+            <label htmlFor="exampleInputEmail1">Nombre de contacto</label>
+            <input type="text" id="nombre" onChange={handleNombreChange}  className="form-control"  aria-describedby="emailHelp" placeholder="Nombre de contacto" required />
             <span className={errorNombre}>Debes escribir un nombre</span>
           </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Dirección de correo</label>
-            <input type="email" id="email" onChange={handleEmailChange}  class="form-control"  aria-describedby="emailHelp" placeholder="Tu correo electrónico" required />
+          <div className="form-group">
+            <label htmlFor="exampleInputEmail1">Dirección de correo</label>
+            <input type="email" id="email" onChange={handleEmailChange}  className="form-control"  aria-describedby="emailHelp" placeholder="Tu correo electrónico" required />
             <span className={errorCorreo}>El correo no tiene un formato correto</span>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Déjame tu consulta, máximo {maximo} caracteres</label>
-            <textarea name="texto" id='texto' onChange={handleTextoChange} class="form-control" maxlength="250" placeholder='Déja tu consulta' rows={4} cols={43} required />
+          <div className="form-group">
+            <label htmlFor="exampleInputPassword1">Déjame tu consulta, máximo {maximo} caracteres</label>
+            <textarea name="texto" id='texto' onChange={handleTextoChange} className="form-control" maxLength="250" placeholder='Déja tu consulta' rows={4} cols={43} required />
             <span className={errorTexto}>Haz una sujerencia o dejanos una pregunta</span>
 
           </div>
-          <div class="form-check">
-          <label  class="form-check-label" for="checked">Aceptar protección de datos</label>
-            <input onChange={handleChexbox} type="checkbox" class="form-check-input" id="checked" required />
+          <div className="form-check">
+          <label  className="form-check-label" htmlFor="checked">Aceptar protección de datos</label>
+            <input onChange={handleChexbox} type="checkbox" className="form-check-input" id="checked" required />
           </div>
-          <button type="submit" disabled={botonState} class="btn btn-primary">Enviar formulario</button>
+          <button type="submit" disabled={botonState} className="btn btn-primary">Enviar formulario</button>
       </form>
     </div>
   </div>

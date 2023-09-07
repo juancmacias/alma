@@ -1,5 +1,5 @@
-
 import {Entity, Scene} from 'aframe-react';
+import { urlFont } from './../services/urls';
 
 /* precargar los objetos en 3d */
 //import muromadera from '../obj/construccion/sesioncinco/muro_madera.glb'
@@ -49,7 +49,7 @@ function SesionCinco() {
           width="2"
           height="2"
           material="color:#14B76E;opacity: 0.5;" geometry="primitive:plane; radius:0.4; width: 2; height: 0.6;"
-          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:https://juancmacias.github.io/alma-thinking-with-you/public/font/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
   
         {/* objetos de la escena */}
         <Entity position="0 0 -9" >
@@ -58,13 +58,6 @@ function SesionCinco() {
         <a-box gltf-model={sofa} position="-6.965 0.32 3.965" rotation="0 1.547 0" scale="1.1 1 1" material=""></a-box>
         <a-box gltf-model={sofanegro} position="9.926 0.124 6.892" rotation="0 -93.965078401455 0" scale="0.02 0.02 0.02" material=""></a-box>
 
-        {/* <a-box gltf-model={muromadera} position="-0.200 -0.007 4.3" rotation="0 1.547 0" scale="1.1 1 1"></a-box>
-        <a-box gltf-model={muromadera} position="1.423 -0.007 4.3" rotation="0 1.547 0" scale="1.1 1 1"></a-box>
-        <a-box gltf-model={muromadera} position="2.981 -0.007 4.3" rotation="0 1.547 0" scale="1.1 1 1"></a-box>
-        <a-box gltf-model={muromadera} position="3.743 -0.007 5.128" rotation="0 -93.163 0" scale="1.1 1 1"></a-box>
-        <a-box gltf-model={muromadera} position="-1.810 -0.007 4.300" rotation="0 1.547 0" scale="1.1 1 1"></a-box>
-        <a-box gltf-model={muromadera} position="-3.390 -0.007 4.300" rotation="0 1.547 0" scale="1.1 1 1"></a-box>
-    <a-box gltf-model={muromadera} position="-4.271 -0.007 5.128" rotation="0 -93.163 0" scale="1.1 1 1"></a-box> */}
         
         {/* Alfombraama */}
         <a-box gltf-model={alfombraama} position="-6.848 0.32 5.755" rotation="0 1.547 0" scale="1.1 1 1" material=""></a-box>

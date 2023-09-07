@@ -1,6 +1,6 @@
 import {Entity, Scene} from 'aframe-react';
-import React from 'react'
-
+import React, {useState} from 'react'
+import { urlFont } from './../services/urls';
 
 
 import door from '../obj/sesion2/japanese_door.glb'
@@ -24,9 +24,13 @@ import lamp from '../obj/sesion2/japanese_lamp.glb'
 
 
 const Valores = () => {
+  const [sonido] = useState(localStorage.getItem('sonido'));
+  const portalSeleccion = (ir) => {
+    window.location.href=ir;
+   }
   return (
 
-      <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+      <Scene preloader="title: Cargando objetos...;slowLoad:true;" physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
         {/* imagenes */}
         <a-assets>
           <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
@@ -37,13 +41,26 @@ const Valores = () => {
       
         
         </a-assets>
+        {/* CARTEL SALIDA */}
+    <Entity
+          id="salida_cartel"
+          events={{
+            click: () => portalSeleccion('/hubs')
+          }}
+          position="-0.80 1.6 14.1"
+          rotation="0 -180 0"
+          width="2"
+          height="2"
+          material="color:#14B76E;opacity: 0.5;" geometry="primitive:plane; radius:0.4; width: 2; height: 0.6;"
+          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        
         {/* CAMARA */}
         
         <a-entity position="0 1.608 10.005" camera="active:false;userHeight:1.6" wasd-controls="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
         
         <Entity  camera kinematic-body="radius:2"  look-controls universal-controls  position="0 1.6 9.7">
-        <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" 
-        material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity> 
+          <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" 
+          material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5" raycaster ></Entity> 
         </Entity> 
         {/* VARIOS */}
         <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="180 180 180"></a-sky>
