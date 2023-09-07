@@ -37,6 +37,7 @@ const Valores = () => {
           <img id="grava" src={require('../obj/sesion2/grava.jpg')} alt='' /> 
           <img id="madera" src={require('../obj/sesion3/madera-oscura.jpg')} alt='' /> 
           <img id="baldosa" src={require('../obj/sesion2/texture-baldosa.jpg')} alt='' /> 
+          
           <img id="gravaverde" src={require('../obj/sesion3/grava-verde.jpg')} alt='' /> 
       
         
