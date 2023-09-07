@@ -42,13 +42,36 @@ const Valores = () => {
         
         </a-assets>
         {/* CAMARA */}
+
+        <a-entity id="cameraRig">
+        <a-entity camera position="0 1.608 10.005">
+           <a-text id="contadorTiempo" position="1 1 -3" color="white" align="center" ></a-text>
+          <a-text id="message" position="-1 2 -3" color="white" align="center" value=""></a-text>
+        </a-entity>
+        <a-entity oculus-touch-controls="hand: left"
+                  collider-check raycaster="objects: .collidable; showLine: true"
+                  thumbstick-logging></a-entity>
+        <a-entity oculus-touch-controls="hand: right"
+                  collider-check raycaster="objects: .collidable; showLine: true"
+                  thumbstick-logging></a-entity>
+      </a-entity>
+
+
+
+
         
-      <a-entity position="0 1.608 10.005" camera="active:false;userHeight:1.6" wasd-controls cursor-controls collision="objects: .colisionables" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
+      {/* <a-entity position="0 1.608 10.005" camera="active:false;userHeight:1.6" wasd-controls cursor-controls collision="objects: .colisionables" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
      <Entity  camera kinematic-body="radius:1"  look-controls universal-controls  position="0 2 13.15">
      <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" 
         material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5" raycaster ></Entity> 
-    </Entity> 
+    </Entity>  */}
         
+
+
+
+
+
+
         {/* VARIOS */}
         <a-sky  src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="180 180 180"></a-sky>
         
