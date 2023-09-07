@@ -40,8 +40,8 @@ function Formulario() {
     }
   };
   const handleValidacion = (e) => {
-    console.log("valop puesto" + e.target.value)
-    if (e.target.value === ( numeroUno + numeroDos)) {
+    console.log("valor puesto" + e.target.value + "y la suma es " + (numeroDos+ numeroUno))
+    if ( Number.parseInt(e.target.value) !== numeroUno + numeroDos) {
       setValidacion('showError')
       console.log("Error validación");
     }else{
