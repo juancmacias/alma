@@ -11,7 +11,7 @@ import maple_tronco from '../obj/plantas/maple_tronco.glb'
 import maple_hojas from '../obj/plantas/maple_hojas.glb'
 import molinillo from '../obj/plantas/molinillo.glb'
 import tumbona from '../obj/props/tumbona.glb'
-import atomico from '../obj/thinkito/thinkito_version.glb'
+import atomico from '../obj/thinkito/thinkito_giro.glb'
 import plantdandeli from '../obj/plantas/plants-dandelion.glb'
 import buda from '../obj/construccion/garden_buddha.glb'
 import mono from '../obj/construccion/mesh_garden_gnome.glb'
@@ -91,14 +91,23 @@ function Frame() {
 
       {/* OBJETOS ANIMADOS */}
       <Entity geometry="height: 3;segmentsHeight:30;segmentsRadial:30; primitive:cylinder; buffer: false" material="repeat:19 5;color:withe;metalness:0.2;roughness:0.1;src:#imagen-pared" static-body="shape: cylinder" position="1.9 0 0" rotation="0 -11 0" scale="4.5 1 6.3" shadow>
-        <a-entity  id="atomico" gltf-model={atomico}  position="0 3 0" rotation="0 0 0" scale="0.3 1.3 0.3" shadow>
-          <a-animation id="animacion_3" attribute="rotation" dur="17000" from="0 0 0 " to="0 360 0" repeat="indefinite">
+        <a-gltf-model  id="atomico" src="#atomico"  position="0 1.90 0" rotation="0 0.9 0" scale="0.25 1.5 0.25" shadow>
+          <a-animation id="animacion_3" attribute="rotation" dur="20000" from="0 0.9 0 " to="0 360.1 0" repeat="indefinite">
           </a-animation>
-          <a-animation id="animacion_4" attribute="position" dur="1000" from="0 3 0 " to="0 3.01 0" repeat="indefinite">
+          <a-animation id="animacion_4" attribute="position" dur="6000" from="0 1.90 0 " to="0 1.92 0" repeat="indefinite">
           </a-animation>
-
-        </a-entity>
+          <a-animation id="animacion_5" attribute="position" dur="3000" from="0 1.92 0 " to="0 1.90 0" repeat="indefinite">
+          </a-animation>
+        </a-gltf-model>
       </Entity>
+      <a-gltf-model id="nube_1" src="#nube" position="-1.2 50 100.5" rotation="0 151 0" scale="6 6 6">
+        <a-animation id="animacion_1" attribute="position" dur="300000" from="-1.2 50 100.5" to="-1.2 50 -200.0" repeat="indefinite">
+        </a-animation>
+      </a-gltf-model>
+      <a-gltf-model id="nube_2" src="#nube" position="-1.2 50 399.5" rotation="0 76 0" scale="10 10 10">
+        <a-animation id="animacion_2" attribute="position" dur="300800" from="70 50 399.5" to="40 50 -500.0" repeat="indefinite">
+        </a-animation>
+      </a-gltf-model>
 
       <Entity key="1" id="muro_1" position="-15 0 0" rotation="0 0 0">
         {
@@ -327,15 +336,7 @@ function Frame() {
 
       {/* cielo */}
       <a-sky id="cielo" sound="src:#jardin; on:click; loop:true; volume:0.75" color="#87CEEB" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
-      {/* nubes */}
-      <a-gltf-model id="nube_1" src="#nube" position="-1.2 50 100.5" rotation="0 151 0" scale="6 6 6">
-        <a-animation id="animacion_1" attribute="position" dur="300000" from="-1.2 50 100.5" to="-1.2 50 -200.0" repeat="indefinite">
-        </a-animation>
-      </a-gltf-model>
-      <a-gltf-model id="nube_2" src="#nube" position="-1.2 50 399.5" rotation="0 76 0" scale="10 10 10">
-        <a-animation id="animacion_2" attribute="position" dur="300800" from="70 50 399.5" to="40 50 -500.0" repeat="indefinite">
-        </a-animation>
-      </a-gltf-model>
+      
       {/* cámara */}
       {/*cargarCamara*/}
 
