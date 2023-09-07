@@ -58,10 +58,7 @@ function Frame() {
   return (
 
     <Scene preloader="title: Cargando objetos...;slowLoad:true;" id="Scene_1" physics="friction:10;restitution:10" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="true" auto-enter-vr="">
-      {/*
-        <a-entity id="mano_left" hand-controls="left"></a-entity>
-        <a-entity id="mano_right" hand-controls="right"></a-entity>
-        */}
+
 
       {/* recursos xrextras-loading */}
       <a-assets>
@@ -203,20 +200,7 @@ function Frame() {
           material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 3.7; height: 0.6;"
           text={`value:Valores y Principios;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
       </a-entity>
-      <a-entity id="origenmisionvision" gltf-model={portalValores} position="11.03 -0.25 8.6" rotation="0 -48 0" scale="0.5 0.5 0.5">
-        <Entity
-          visible="true"
-          id="origenmisionvision_texto"
-          events={{
-            click: () => portalSeleccion('valores')
-          }}
-          position="0 3 2.5"
-          rotation="0 -85 0"
-          width="2"
-          height="2"
-          material="shader: flat;color:#c6c6c6;opacity: 0.5;" geometry="primitive:plane; radius:10; width: 4.1; height: 0.6;"
-          text={`value:Origen, Misión y Visión;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
-      </a-entity>
+      
       <a-entity id="desarrollo" gltf-model={portalValores} position="-5.60 -0.25 -10" rotation="0 129 0" scale="0.5 0.5 0.5">
         <Entity
           visible="true"
@@ -348,9 +332,18 @@ function Frame() {
       </a-gltf-model>
       {/* cámara */}
       {/*cargarCamara*/}
-      <Entity id="camera" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
-        <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
-      </Entity>
+      <a-entity id="cameraRig">
+          <Entity id="camera" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
+            <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
+          </Entity>
+          <a-entity oculus-touch-controls="hand: left"
+                    collider-check raycaster="objects: .collidable; showLine: true"
+                    thumbstick-logging></a-entity>
+          <a-entity oculus-touch-controls="hand: right"
+                    collider-check raycaster="objects: .collidable; showLine: true"
+                    thumbstick-logging></a-entity>
+        </a-entity>
+      
       {/* ILUMINACIÓN */}
       <a-light type="ambient" color="#445451"></a-light>
       <a-entity light="type:directional; castShadow:true; type: spot; castShadow: true" intensity="1" position="2 50 40" rotation="-43 0 0"></a-entity>
