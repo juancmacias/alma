@@ -1,3 +1,4 @@
+
 import {Entity, Scene} from 'aframe-react';
 import React, {useState, useEffect} from 'react';
 import suelo from './json/camino.json'
@@ -340,10 +341,10 @@ function Frame() {
       {/* cámara */}
       {/*cargarCamara*/}
 
-        <Entity id="cameraRig" camera kinematic-body="radius:1" universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
+        <Entity id="cameraRig" camera kinematic-body="radius:1" stats-in-vr universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
           <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
           <a-entity controller="hand: left">
-            <a-entity stats-in-vr position="0.47 0 0.08"></a-entity>
+
           </a-entity>
           <a-entity controller="hand: right"></a-entity>
         </Entity>
