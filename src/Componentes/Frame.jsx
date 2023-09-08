@@ -96,12 +96,12 @@ function Frame() {
 
 
       {/* OBJETOS ANIMADOS */}
-      <a-gltf-model  id="atomico" src="#atomico"  position="1.9 1.90 0" rotation="0 0.9 0" scale="1 1 1" shadow>
+      <a-gltf-model  id="atomico" src="#atomico"  position="0 3 9.5" rotation="0 0.9 0" scale="1 1 1" shadow>
           <a-animation id="animacion_3" attribute="rotation" dur="20000" from="0 0.9 0 " to="0 360.1 0" repeat="indefinite">
           </a-animation>
-          <a-animation id="animacion_4" attribute="position" dur="6000" from="0 1.90 0 " to="0 1.92 0" repeat="indefinite">
+          <a-animation id="animacion_4" attribute="position" dur="6000" from="0 3 9.5" to="0 3.02 9.5" repeat="indefinite">
           </a-animation>
-          <a-animation id="animacion_5" attribute="position" dur="3000" from="0 1.92 0 " to="0 1.90 0" repeat="indefinite">
+          <a-animation id="animacion_5" attribute="position" dur="3000" from="0 3.02 9.5" to="0 3 9.5" repeat="indefinite">
           </a-animation>
         </a-gltf-model>
       <a-gltf-model id="nube_1" src="#nube" position="-1.2 50 100.5" rotation="0 151 0" scale="6 6 6">
@@ -267,13 +267,13 @@ function Frame() {
       {/* CARTELES */}
       <Entity
         id="bienvenida"
-        position="-2.14 1.0 15.15"
-        rotation="-0 19 -3"
-        width="2"
-        height="2"
-        material="color:#c6c6c6;opacity: 0.6;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 2; height: 2.1;"
-        text={`value:¡Hola! Te doy la bienvenida a este viaje que te propongo. Me gustaría que te
-          sintieras como en casa. ¡Abre tus sentidos y disfruta de la experiencia!;wrapCount:20;width: 2;yOffset:-4;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+        position="-0.1 1 9.5"
+        rotation="-0 0 0"
+        width="3"
+        height="1.7"
+        material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
+        text={`value:¡Hola! Te doy la bienvenida a este viaje que te propongo.\n\n Me gustaría que te
+          sintieras como en casa.\n\n ¡Abre tus sentidos y disfruta de la experiencia!;wrapCount:25;width: 2.2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
       <Entity
         id="despedida"
         sound="src:#jardin; on:click; loop:true; volume:0.75"
