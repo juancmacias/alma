@@ -296,7 +296,7 @@ function Frame() {
         width="2"
         height="2"
         material="color:#c6c6c6;opacity: 0;" geometry="primitive:plane; radius:0.4; width: 3; height: 0.6;"
-        text={`value:YOU;wrapCount:20;width: 4;yOffset:-4;color:blue; align: center`} />
+        text={`value:YOU;wrapCount:20;width: 4;yOffset:-4;color:#3DB4EB; align: center`} />
 
       <Entity
         id="salida_cartel"
@@ -308,7 +308,7 @@ function Frame() {
         width="2"
         height="2"
         material="color:#14B76E;opacity: 0.5;" geometry="primitive:plane; radius:0.4; width: 2; height: 0.6;"
-        text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#3DB4EB;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
       {/* cosas varias */}
 
       <a-gltf-model id="buda" src="#buda" position="-0.5 -0.25 -14" rotation="0 29 0" scale="1 1 1"></a-gltf-model>
@@ -341,12 +341,15 @@ function Frame() {
       {/* cámara */}
       {/*cargarCamara*/}
 
-        <Entity id="cameraRig" camera kinematic-body="radius:1" stats-in-vr universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
+        <Entity id="cameraRig" camera kinematic-body="radius:1"  look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
           <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
-          <a-entity controller="hand: left">
-
-          </a-entity>
+          {
+            /*
+             <a-entity controller="hand: left"></a-entity>
           <a-entity controller="hand: right"></a-entity>
+            */
+          }
+         
         </Entity>
       
       {/* ILUMINACIÓN */}
