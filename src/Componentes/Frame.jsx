@@ -58,7 +58,7 @@ function Frame() {
 
   return (
 
-    <Scene
+    <a-scene
      preloader="title: Cargando objetos...;slowLoad:true;"
      id="Scene_1"
      physics="friction:10;restitution:10"
@@ -347,7 +347,7 @@ function Frame() {
       {/*cargarCamara*/}
 
       {/*      */}
-      <Entity id="cameraRig" camera kinematic-body="radius:1" stats-in-vr universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
+      <Entity id="cameraRig" camera kinematic-body="radius:1" look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
           <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
           <a-entity controller="hand: left"></a-entity>
           <a-entity controller="hand: right"></a-entity>
@@ -358,7 +358,7 @@ function Frame() {
       {/* ILUMINACIÓN */}
       <a-light type="ambient" color="#445451"></a-light>
       <a-entity light="type:directional; castShadow:true; type: spot; castShadow: true" intensity="1" position="2 50 40" rotation="-43 0 0"></a-entity>
-    </Scene>
+    </a-scene>
 
 
   );
