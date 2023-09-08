@@ -112,8 +112,8 @@ function Frame() {
         <a-animation id="animacion_2" attribute="position" dur="300800" from="70 50 399.5" to="40 50 -500.0" repeat="indefinite">
         </a-animation>
       </a-gltf-model>
-      <a-gltf-model id="arrow_move_una" animation-mixer="clip: *; playbackSpeed:0.3;" src="#arrow_move" position="3.9 0.14 9.9" rotation="-3.15 -44.1 0" scale="0.3 0.3 0.3"></a-gltf-model>
-      <a-gltf-model id="arrow_move_dos" animation-mixer="clip: *; crossFadeDuration:0.4;" src="#arrow_move" position="-3.16 0.14 9.5" rotation="-3.15 44.1 0" scale="0.3 0.3 0.3"></a-gltf-model>
+      <a-gltf-model id="arrow_move_una" animation-mixer="clip: *; " src="#arrow_move" position="3.9 0.1 9.9" rotation="-3.15 -44.1 0" scale="0.3 0.3 0.3"></a-gltf-model>
+      <a-gltf-model id="arrow_move_dos" animation-mixer="clip: *;" src="#arrow_move" position="-3.16 0.1 9.5" rotation="-3.15 44.1 0" scale="0.3 0.3 0.3"></a-gltf-model>
 
       <Entity key="1" id="muro_1" position="-15 0 0" rotation="0 0 0">
         {
