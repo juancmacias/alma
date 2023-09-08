@@ -345,22 +345,14 @@ function Frame() {
       
       {/* cámara */}
       {/*cargarCamara*/}
-      
-        <a-entity camera kinematic-body="radius:1" position="0 1.6 19.5" look-controls>
-        <a-entity id="rig" movement-controls="fly:true;" position="0 1.6 19.5">
-        </a-entity>
-        <a-entity id="left-hand" hand-controls="hand: left"></a-entity>
-        <a-entity hand-controls="hand: right"></a-entity>
-      </a-entity>
-      {/*
+
+      {/*      */}
       <Entity id="cameraRig" camera kinematic-body="radius:1" stats-in-vr universal-controls look-controls position={localStorage.getItem('position') === null ? "0 1.6 19.5" : localStorage.getItem('position')} rotation="16.6 0 0">
           <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.5 0.5 0.5"></Entity>
-          <a-entity controller="hand: left">
-
-          </a-entity>
+          <a-entity controller="hand: left"></a-entity>
           <a-entity controller="hand: right"></a-entity>
-        </Entity>
-      */}
+      </Entity>
+
         
       
       {/* ILUMINACIÓN */}
