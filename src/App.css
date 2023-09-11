@@ -38,12 +38,14 @@ button{
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 .botonEntrar{
+  font-family: 'Permanent Marker', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 3em;
   padding: 30px;
+  margin-top: 383px;
   background-color: azure;
   border-radius: 40px;
   -webkit-box-shadow: -1px 2px 18px 0px rgba(0,0,0,0.75);
@@ -131,42 +133,10 @@ main {
   font-size: 35px;
   color: #36A0FF;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: rgb(230, 173, 180);
-  }
-  main{
-    min-height: 84vh;
-  }
-  footer{
-    height: 6vh;
-    font-size: 1rem ;
-
-  }
-  .card, .card_dos{
-    width: 360px  ;
-    margin: 10px auto;
-  }
-  .light .card, .card_dos{
-    color: black ;
-    background-color:#fff ;
-  }
-  .dark .card, .card_dos{
-    color: #fff ;
-    background-color:#011233 ;
-  }
-  
-}
-
-
+.hideError{display: none;}
+.showError{display: block;font-size: 0.7em;color: red;}
 .card{
-  margin: 100px auto;
+  margin: 80px auto;
   z-index: 1000 !important;
   width: 550px ;
   -webkit-box-shadow: 0px 7px 22px 1px rgba(112, 110, 110, 0.51);
@@ -191,9 +161,53 @@ main {
   font-size: calc(10px + 1.4vmin);
   text-align: left;
   color: #36A0FF;
+  margin-bottom: 13px;
   
 }
 .form-check{
   margin-bottom: 2rem !important;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(230, 173, 180);
+  }
+  .fondo{
+    height: 84vh;
+  }
+  main{
+    min-height: 84vh;
+  }
+  footer{
+    height: 6vh;
+    font-size: 1rem ;
+
+  }
+  .card{
+    margin: 0px !important;
+  }
+  .card_dos{
+      margin-top: 10px !important;
+  }
+  .card, .card_dos{
+    width: auto !important;
+  }
+  .light .card, .card_dos{
+    color: black ;
+    background-color:#fff ;
+  }
+  .dark .card, .card_dos{
+    color: #fff ;
+    background-color:#011233 ;
+  }
+  
+}
+
+
+
 
