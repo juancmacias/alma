@@ -13,6 +13,9 @@ function Formulario() {
   const [ errorCorreo, setErrorCorreo] = useState('hideError');
   const [ errorNombre, setErrorNombre] = useState('hideError');
   const [ errorTexto, setErrorTexto] = useState('hideError');
+  const [ errorValidacion, setValidacion] = useState('hideError');
+  const [ numeroUno] = useState(getRandomInt(9))
+  const [ numeroDos] = useState(getRandomInt(9))
 
   const handleEmailChange = (e) => {
     let posicionArroba = e.target.value.lastIndexOf('@');
@@ -36,6 +39,17 @@ function Formulario() {
       setNombre(e.target.value);
     }
   };
+  const handleValidacion = (e) => {
+    console.log("valor puesto" + e.target.value + "y la suma es " + (numeroDos+ numeroUno))
+    if ( Number.parseInt(e.target.value) !== numeroUno + numeroDos) {
+      setValidacion('showError')
+      console.log("Error validación");
+    }else{
+      setValidacion('hideError')
+      console.log("Validación valido");
+      //setNombre(e.target.value);
+    }
+  };
   const handleTextoChange = (e) => {
     setMaximo(250 - e.target.value.length)
     if (e.target.value.length < 2) {
@@ -56,7 +70,9 @@ function Formulario() {
     }
 
   }
-
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
   const enviarMensaje = (e) => {
     e.preventDefault(); 
     setIsLoading(true);
@@ -102,17 +118,17 @@ function Formulario() {
     <div className="card-body">
       <form onSubmit={enviarMensaje}>
         <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Nombre de contacto</label>
+            <label htmlFor="nombre">Nombre de contacto</label>
             <input type="text" id="nombre" onChange={handleNombreChange}  className="form-control"  aria-describedby="emailHelp" placeholder="Nombre de contacto" required />
             <span className={errorNombre}>Debes escribir un nombre</span>
           </div>
           <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Dirección de correo</label>
+            <label htmlFor="email">Dirección de correo</label>
             <input type="email" id="email" onChange={handleEmailChange}  className="form-control"  aria-describedby="emailHelp" placeholder="Tu correo electrónico" required />
             <span className={errorCorreo}>El correo no tiene un formato correto</span>
           </div>
           <div className="form-group">
-            <label htmlFor="exampleInputPassword1">Déjame tu consulta, máximo {maximo} caracteres</label>
+            <label htmlFor="texto">Déjame tu consulta, máximo {maximo} caracteres</label>
             <textarea name="texto" id='texto' onChange={handleTextoChange} className="form-control" maxLength="250" placeholder='Déja tu consulta' rows={4} cols={43} required />
             <span className={errorTexto}>Haz una sujerencia o dejanos una pregunta</span>
 
@@ -120,6 +136,11 @@ function Formulario() {
           <div className="form-check">
           <label  className="form-check-label" htmlFor="checked">Aceptar protección de datos</label>
             <input onChange={handleChexbox} type="checkbox" className="form-check-input" id="checked" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="validacion">Validación: ¿cuanto es {numeroUno} + {numeroDos} ?</label>
+            <input type="text" id="validacion" onChange={handleValidacion}  className="form-control"  aria-describedby="validadorHelp" placeholder={`Cuanto es ${numeroUno} + ${numeroDos}`} required />
+            <span className={errorValidacion}>Error al sumar {numeroUno} y {numeroDos}.</span>
           </div>
           <button type="submit" disabled={botonState} className="btn btn-primary">Enviar formulario</button>
       </form>
