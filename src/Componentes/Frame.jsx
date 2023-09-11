@@ -242,7 +242,7 @@ function Frame() {
           visible="true"
           id="tomadedecisiones_texto"
           events={{
-            click: () => portalSeleccion('valores')
+            click: () => portalSeleccion('sesionuno')
           }}
           position="0 3 2.5"
           rotation="0 -85 0"
