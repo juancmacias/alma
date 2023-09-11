@@ -1,6 +1,6 @@
 import {Entity, Scene} from 'aframe-react';
 import React, {useState} from 'react';
-import { urlFont } from './../services/urls';
+import { urlFont,  urlApi } from './../services/urls';
 
 import sofa from '../obj/sesion3/sofa.glb'
 import garden from '../obj/sesion3/garden-zen.glb'

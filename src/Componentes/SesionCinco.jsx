@@ -1,5 +1,7 @@
 
 import {Entity, Scene} from 'aframe-react';
+import React, {useState} from 'react'
+import { urlFont, urlApi } from './../services/urls';
 
 /* precargar los objetos en 3d */
 import sofa from '../obj/construccion/sesioncinco/sofa.glb'
@@ -24,7 +26,10 @@ import thinkito from '../obj/construccion/sesioncinco/thinkito.glb'
 
 
 function SesionCinco() {
-
+  const [sonido] = useState(localStorage.getItem('sonido'));
+  const portalSeleccion = (ir) => {
+    window.location.href=ir;
+   }
     return (
         <Scene physics="debug:false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
         {/* recursos */}
@@ -47,7 +52,18 @@ function SesionCinco() {
         scale= "2.4 0.5 1"
         play-on-click
         visible="true"></Entity>       
-
+        <Entity
+          id="salida_cartel"
+          events={{
+            click: () => portalSeleccion('/hubs')
+          }}
+          position="-0.80 1.7 14.1"
+          rotation="0 -180 0"
+          width="2"
+          height="2"
+          material="color:#14B76E;opacity: 0.5;" geometry="primitive:plane; radius:0.4; width: 2; height: 0.6;"
+          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        
 
         {/* Sofa */}
         <a-box gltf-model={sofa} position="-6.753 0.32 3.965" rotation="0 1.547 0" scale="1.5 1.5 1.5" material=""></a-box>
