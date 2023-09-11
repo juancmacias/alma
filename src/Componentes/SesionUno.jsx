@@ -1,5 +1,6 @@
 import { Entity, Scene } from 'aframe-react';
 import React, { useState, useEffect } from 'react';
+import { urlFont, urlApi } from './../services/urls';
 //import Axios from 'axios';
 //import DiaryVR from './DiaryVR';
 //import DiaryContent from './DiaryContent';
@@ -33,7 +34,7 @@ function SesionUno() {
 
   const recibeinfo = () => {
     console.log("inicio llamada");
-    fetch("https://thinkito.coderf5.es/escena/3", requestOptionsInfo)
+    fetch(urlApi+"/escena/3", requestOptionsInfo)
       .then((response) => response.text())
       .then((result) => {
         setDiaryText(result);
@@ -51,9 +52,12 @@ function SesionUno() {
 
 
   });
-
+  const [sonido] = useState(localStorage.getItem('sonido'));
+  const portalSeleccion = (ir) => {
+    window.location.href=ir;
+   }
   return (
-    <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="" frustum-culling>
+    <Scene  preloader="title: Cargando objetos...;slowLoad:true;" physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="" frustum-culling>
       {/* recursos */}
       <a-assets>
         <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
@@ -62,10 +66,19 @@ function SesionUno() {
         <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
         <a-asset-item id="japones-obj" src={require('../obj/construccion/Section1/japones_pond/Pond.obj')}></a-asset-item>
         <a-asset-item id="japones-mtl" src={require('../obj/construccion/Section1/japones_pond/Pond.mtl')}></a-asset-item>
-      
-
       </a-assets>
-      {/* Sonido MP3 */}
+      <Entity
+          id="salida_cartel"
+          events={{
+            click: () => portalSeleccion('/hubs')
+          }}
+          position="-0.80 1.7 14.1"
+          rotation="0 -180 0"
+          width="2"
+          height="2"
+          material="color:#14B76E;opacity: 0.5;" geometry="primitive:plane; radius:0.4; width: 2; height: 0.6;"
+          text={`value:Salida;wrapCount:20;width: 4;yOffset:-4;color:#F7f7f7;shader: msdf; font:${urlFont}/marker/PermanentMarker-Regular-msdf.json;align: center`} />
+        
       <Entity
         id="muro-entrada"
         position="0 0 15"
