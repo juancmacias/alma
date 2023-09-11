@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Entity, Scene} from 'aframe-react';
 
 
 const SesionCuatro = () => {

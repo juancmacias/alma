@@ -88,7 +88,8 @@ function Frame() {
         <a-asset-item id="atomico" src={atomico} preload='auto'></a-asset-item>
         <a-asset-item id="jardinzen" src={jardin} preload='auto'></a-asset-item>
         <a-asset-item id="arrow_move" src={arrow_move} preload='auto'></a-asset-item>
-      </a-assets>
+        </a-assets>
+      
 
       {/* CARGAR SONIDO */
         sonido === 'on' ? <a-sound src="#jardin" volumen="7" autoplay="true" position="-3 1 -4" sound="" loop="true"></a-sound> : ''
