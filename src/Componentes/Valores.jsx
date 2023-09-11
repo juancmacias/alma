@@ -1,6 +1,8 @@
 import { Entity, Scene } from 'aframe-react';
-import React, { useState } from 'react'
-import { urlFont } from './../services/urls';
+import React, { useState, useEffect } from 'react'
+import { urlFont, urlApi } from './../services/urls';
+import { requestOptionsInfo } from '../services/method';
+import LoadingSpinner from "./LoadingSpinner";
 
 import door from '../obj/sesion2/japanese_door.glb'
 import house from '../obj/sesion2/house-te.glb'
@@ -26,13 +28,32 @@ import rug from '../obj/sesion3/rug.glb'
 
 
 const Valores = () => {
+  const [ escena, setEscena] = useState([]);
+  const [ isLoading, setIsLoading] = useState(false);
   const [sonido] = useState(localStorage.getItem('sonido'));
   const portalSeleccion = (ir) => {
     window.location.href = ir;
   }
+
+  const recibirInfo = (id = 3) => {
+    setIsLoading(true);
+    fetch(urlApi+"/escena/"+id, requestOptionsInfo)
+      .then(response => response.text())
+      .then(result => setEscena(result))
+      .catch(error => console.log('error', error))
+      .finally(()=>{
+        setIsLoading(false)
+        console.log("Devuelto "+ escena)
+      });
+  }
+  
+  useEffect(() => {
+    recibirInfo();
+  })
   return (
 
     <Scene preloader="title: Cargando objetos...;slowLoad:true;" physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+      {isLoading ? <LoadingSpinner /> : ''}
       {/* imagenes */}
       <a-assets>
         <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
