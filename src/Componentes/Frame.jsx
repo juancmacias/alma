@@ -88,17 +88,8 @@ function Frame() {
         <a-asset-item id="atomico" src={atomico} preload='auto'></a-asset-item>
         <a-asset-item id="jardinzen" src={jardin} preload='auto'></a-asset-item>
         <a-asset-item id="arrow_move" src={arrow_move} preload='auto'></a-asset-item>
-        <video id="videoBunny" preload="auto" 
-               src="https://cdn.aframe.io/videos/bunny.mp4"
-               width="160" height="90" 
-               crossOrigin="anonymous"></video>
-      </a-assets>
-      <a-entity id="video" material="shader: flat; src: #videoBunny;visible:true;"
-                geometry="primitive: plane; width: 2; height: 2"
-                position="0 2 0"
-                rotation="0 0  0" 
-                play-on-click
-                ></a-entity>
+        </a-assets>
+      
 
       {/* CARGAR SONIDO */
         sonido === 'on' ? <a-sound src="#jardin" volumen="7" autoplay="true" position="-3 1 -4" sound="" loop="true"></a-sound> : ''
