@@ -1,7 +1,7 @@
 
 import {Entity, Scene} from 'aframe-react';
 import React, {useState} from 'react'
-import { urlFont, urlApi } from './../services/urls';
+import { urlFont, urlApi, urlVid } from './../services/urls';
 
 /* precargar los objetos en 3d */
 import sofa from '../obj/construccion/sesioncinco/sofa.glb'
@@ -39,7 +39,7 @@ function SesionCinco() {
             <img id="sky" src={require('../resources/amanecer.jpg')} alt='' />
             <img id="texturamuro" src={require('../resources/texturamurodibu.png')} alt='' />
             <img id="entrada" src={require('../resources/entrada.jpg')} alt='' />
-            <video preload="auto" id="manifiesto" src={manifiesto}></video>
+            <video preload="auto" id="manifiesto" src={`${urlVid}/public/manifiesto.mp4`}></video>
     
         </a-assets>
         
