@@ -1,0 +1,42 @@
+.diary-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .diary {
+    width: 420px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: url('https://i.imgur.com/zUREMmE.png');
+  }
+  
+  .diary-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('https://i.imgur.com/9aSfasV.png');
+    transition: height 1s ease; /* Transición de altura */
+  }
+  
+  .contenido-diary {
+    padding: 35px;
+    color: #000;
+    line-height: 140%;
+    text-align: justify;
+    font-family: satisfy;
+    font-size: 15px;
+    font-weight: normal;
+    height: 0; /* Inicialmente oculto */
+    overflow: hidden;
+    transition: height 1s ease; /* Transición de altura */
+  }
+  
+  .diary:hover .contenido-diary {
+    height: 545px; /* Altura máxima cuando se hace hover */
+  }
+  
