@@ -52,6 +52,7 @@ function SesionCinco() {
         scale= "2.4 0.5 1"
         play-on-click
         visible="true"></Entity>       
+        
         <Entity
           id="salida_cartel"
           events={{
