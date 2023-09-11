@@ -87,8 +87,8 @@ function SesionUno() {
           static-body
           rotation="0 90 0"
         ></a-box>
-        <a-entity static-body="sphereRadius:NaN" gltf-model="/static/media/pink_tree.9a8eed9449e9f57750b4.glb" position="0.6 0 7.373" scale="1 0.8 1"></a-entity>
-        <a-entity static-body="sphereRadius:NaN" gltf-model="/static/media/pink_tree.9a8eed9449e9f57750b4.glb" position="1.394 -0.037 -14.37" rotation="0 80 0" scale="0.6 0.76 0.52"></a-entity>
+        <a-entity static-body gltf-model={arbre} position="0.6 0 7.373" scale="1 0.8 1"></a-entity>
+        <a-entity static-body gltf-model={arbre} position="1.394 -0.037 -14.37" rotation="0 80 0" scale="0.6 0.76 0.52"></a-entity>
 
         <a-entity static-body gltf-model={hojas} position="0.53 0 1" scale="1 1.23 1"></a-entity>
         <a-entity static-body gltf-model={arbol} position="0.53 0 1" scale="1 1.23 1"></a-entity>
@@ -121,7 +121,7 @@ function SesionUno() {
         <a-entity static-body gltf-model={hojas} position="0.66 -0.1 -8.366" rotation="0 39 0" scale="1.2 1.22 1.2"></a-entity>
         <a-entity static-body gltf-model={arbol} position="0 0 1" scale="1 1.23 1"></a-entity>
 
-        <a-entity id="bambu_1" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-4.564 0.01 -7.909" rotation="0 181 0" scale="7.534 7.597 6.335"></a-entity>
+        <a-entity id="bambu_1" gltf-model={bamboo} position="-4.564 0.01 -7.909" rotation="0 181 0" scale="7.534 7.597 6.335"></a-entity>
         <a-entity id="bambu_3" gltf-model={bamboo} position="0 0 0" rotation="4.57 120 2.33" scale="1.17 -0.96  1.15"></a-entity>
 
 
@@ -138,9 +138,9 @@ function SesionUno() {
           material="repeat: 19 5; color: white; metalness: 0.2; roughness: 0.1; src: #imagen-pared"
           static-body
           rotation="0 90 0"></a-box>
-        <a-entity id="bambu_1" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-4.759 0.01 -7.533" rotation="0 181 0" scale="5.839 8.489 5.662"></a-entity>
-        <a-entity id="bambu_1" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-4.564 0.01 -7.909" rotation="0 181 0" scale="7.534 7.597 6.335"></a-entity>
-        <a-entity id="bambu_3" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-6.47 0.01 -10.837" rotation="0 181 0" scale="5.18 6.14 5.02"></a-entity>
+        <a-entity id="bambu_1" gltf-model={bamboo} position="-4.759 0.01 -7.533" rotation="0 181 0" scale="5.839 8.489 5.662"></a-entity>
+        <a-entity id="bambu_1" gltf-model={bamboo} position="-4.564 0.01 -7.909" rotation="0 181 0" scale="7.534 7.597 6.335"></a-entity>
+        <a-entity id="bambu_3" gltf-model={bamboo} position="-6.47 0.01 -10.837" rotation="0 181 0" scale="5.18 6.14 5.02"></a-entity>
 
       </Entity>
       {/* muro 4 */}
@@ -188,17 +188,17 @@ function SesionUno() {
 
       {/* Arena blanca en el centro del plano*/}
       <a-plane position="-2.995 0.1 0.105" rotation="-90 0 0" width="5" height="5" color="#green" geometry="" material=""></a-plane>
-      <a-entity id="bambu_5" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-6.47 0.46 -10.837" rotation="0 181 0" scale="7.135 8.155 6.915"></a-entity>
+      <a-entity id="bambu_5" gltf-model={bamboo} position="-6.47 0.46 -10.837" rotation="0 181 0" scale="7.135 8.155 6.915"></a-entity>
       {/* cascada */}
       <a-entity id="cascada"  gltf-model={cascada} position="13.39 4 -14.58" rotation="3.7815214478634336 -44.919891138256546 2.6929016371148693" scale="0.5 0.5 0.5"></a-entity>
       <a-entity id="bamboo"   gltf-model={bamboo} position="6.08 0.052 -14.32" rotation="0 180 0" scale="0.15 0.15 0.15"></a-entity>
-      <a-entity id="pillar-1" gltf-model="/static/media/japanese_toro.e3fd436526c78817f0bf.glb" position="-12.71 1.699 -6.069" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
+      <a-entity id="pillar-1" gltf-model={japanese1} position="-12.71 1.699 -6.069" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
       <a-entity id="pillar-2" gltf-model={japanese1} position="1 1 1" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
       <a-entity id="pillar-3" gltf-model={japanese1} position="1 2 1" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
       <a-entity id="pillar-4" gltf-model={japanese1} position="1 1 1.5" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
-      <a-entity id="pillar-5" gltf-model="/static/media/japanese_toro.e3fd436526c78817f0bf.glb" position="2 1 -10.281" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
-      <a-entity id="pillar-6" gltf-model="/static/media/japanese_toro.e3fd436526c78817f0bf.glb" position="13.631 1 3.862" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
-      <a-entity id="pillar_7" gltf-model="/static/media/japanese_toro.e3fd436526c78817f0bf.glb" position="-9.853 1 8.583" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
+      <a-entity id="pillar-5" gltf-model={japanese1} position="2 1 -10.281" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
+      <a-entity id="pillar-6" gltf-model={japanese1} position="13.631 1 3.862" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
+      <a-entity id="pillar_7" gltf-model={japanese1} position="-9.853 1 8.583" rotation="0 90 0" scale="-1.175 0.778 -1.052"></a-entity>
       {/* Piedras blancas */}
       <a-sphere id="piedra-1" radius="0.5" position="-3.982 1.977 -12.403" material="color:gray" geometry="" scale="1 0.85 1.619" rotation="0 90 0"></a-sphere>
       <a-sphere id="piedra-4" radius="1" position="-4.208 1.317 -12.539" material="color:gray" scale="1 0.469 1.46" geometry="" rotation="0 90 0"></a-sphere>
@@ -214,13 +214,12 @@ function SesionUno() {
       {/* Árboles o plantas */}
       <a-entity id="bambu_1" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-7.899 0.313 -11.587" rotation="0.115 -160.142 -7.162" scale="10.201 8.855 -8.818"></a-entity>
       <a-entity id="bambu_2" gltf-model={bamboo} position="0 0.01 -10.293" rotation="0 151 0" scale="5.18 6.14 5.02"></a-entity>
-      <a-entity id="bambu_3" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-9.248 0.01 -9.104" rotation="0 181 0" scale="5.18 6.14 5.02"></a-entity>
-      <a-entity id="bambu_4" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-8.023 0.01 -13.874" rotation="0 151 0" scale="13.177 9.496 3.309"></a-entity>
-      <a-entity id="bambu_5" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="5.082 -2.332 -7.886" rotation="0 181 0" scale="7.135 8.155 6.915"></a-entity>
+      <a-entity id="bambu_3" gltf-model={bamboo} position="-9.248 0.01 -9.104" rotation="0 181 0" scale="5.18 6.14 5.02"></a-entity>
+      <a-entity id="bambu_4" gltf-model={bamboo} position="-8.023 0.01 -13.874" rotation="0 151 0" scale="13.177 9.496 3.309"></a-entity>
+      <a-entity id="bambu_5" gltf-model={bamboo}position="5.082 -2.332 -7.886" rotation="0 181 0" scale="7.135 8.155 6.915"></a-entity>
 
      <a-entity 
               id="fuente"
-               gltf-model="/static/media/zsolnay_fountain.fe0d89593cb31acc11ec.glb" 
                position="0.32 1.843 2.214" 
                rotation="0 181 0"
                scale="1 1 1 "
