@@ -4,7 +4,7 @@ import {Entity, Scene} from 'aframe-react';
 
 const SesionCuatro = () => {
   return (
-    <Scene physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
+    <Scene  preloader="title: Cargando objetos...;slowLoad:true;" physics="debug: false" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" auto-enter-vr="">
     {/* recursos */}
     <a-assets>
         <img id="imagen-pared" src={require('../resources/piedra_muro.jpg')} alt='' />
