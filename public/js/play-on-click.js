@@ -2,7 +2,10 @@
 AFRAME.registerComponent('play-on-click', {
   init: function () {
     this.onClick = this.onClick.bind(this);
+<<<<<<< HEAD
     
+=======
+>>>>>>> 6c5d6ffa8828943c949c17667fd565853cd576be
   },
   play: function () {
     window.addEventListener('click', this.onClick);
@@ -15,6 +18,9 @@ AFRAME.registerComponent('play-on-click', {
     if (!videoEl) { return; }
     this.el.object3D.visible = true;
     videoEl.play();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c5d6ffa8828943c949c17667fd565853cd576be
   }
 });
