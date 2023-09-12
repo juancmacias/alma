@@ -197,7 +197,7 @@ const Valores = () => {
         <a-entity id="tre4" position="1.919 -0.121 2.507" gltf-model={treetwo} scale="0.005 0.007 0.005" rotation="0 177.21584603396363 0"></a-entity>
         <a-entity id="tre5" position="1.919 -0.121 7.061" gltf-model={treetwo} scale="0.005 0.007 0.005" rotation="0 177.21584603396363 0"></a-entity>
         <a-entity id="tre6" position="-2.176 -0.121 6.606" gltf-model={treetwo} scale="0.005 0.007 0.005" rotation="0 -178.304 0"></a-entity>
-        <a-entity id="tre7" position="-4.97 -0.121 13.422" gltf-model={treetwo} scale="0.005 0.007 0.005" rotation="0 -80.386 0"></a-entity>
+        <a-entity id="tre7" position="-8.516 -0.121 12.525" gltf-model={treetwo} scale="0.005 0.007 0.005" rotation="0 -80.386 0"></a-entity>
       </a-entity>
 
 
@@ -216,21 +216,35 @@ const Valores = () => {
       <a-entity id="flowergrass" position="6.531 0.386 -10.797" gltf-model={flowers2} scale="0.6900000000000001 0.65 0.76"></a-entity>
       <a-entity position="5.338 1.272 -11.575" gltf-model={flowers2} scale="0.6100000000000001 0.59 0.51" rotation="0 -43.029130414324825 0"></a-entity>
 
-      <a-entity id="thinkito" gltf-model={thinkito} position="0.535 1.18 -9.082" rotation="7.276 13.078 11.575" scale="0.5 0.5 0.5">
+      {/* <a-entity id="thinkito" gltf-model={thinkito} position="0.535 1.18 -9.082" rotation="7.276 13.078 11.575" scale="0.5 0.5 0.5">
         <a-animation attribute="rotation" dur="7000" to="0 360 0" repeat="infinity"></a-animation>
-      </a-entity>
+      </a-entity> */}
+
+        <a-entity id="thinkito" gltf-model={thinkito} position="0 1.18 -9.082" rotation="7.276 13.078 11.575" scale="0.5 0.5 0.5">
+          <a-animation attribute="position" dur="7000" to="0 1.18 9.082" repeat="infinite" direction="alternate"></a-animation>
+          <a-animation attribute="rotation" dur="7000" to="0 360 0" repeat="infinite"></a-animation>
+        </a-entity>
 
 
       <a-entity id="wallfontain" position="9.6 0 1.531" scale="1.3 1.56 1">
-        <a-entity id="walk1" position="-2.109 0.012 9.445" rotation="0 178.82 0" gltf-model={wall} scale="1 0.76 0.81"></a-entity>
-        <a-entity id="walk2" position="-5.131 0.012 9.398" rotation="0 178.82 0" gltf-model={wall} scale="1 0.76 0.81"></a-entity>
+      <a-entity id="walk1" position="-2.109 0.012 9.445" rotation="0 178.82 0" gltf-model={wall} scale="1 0.76 0.81"></a-entity>
+      <a-entity id="walk2" position="-5.131 0.012 9.398" rotation="0 178.82 0" gltf-model={wall} scale="1 0.76 0.81"></a-entity>
       </a-entity>
       <a-entity position="-10.913 0.259 10.224" gltf-model={flowerfontain} scale="0.02 0.02 0.02"></a-entity>
       <a-entity position="-10.913 0.259 11.83" gltf-model={flowerfontain} scale="0.02 0.02 0.02"></a-entity>
       <a-entity id="rocar3" position="-0.264 0.253 5.726" rotation="0 45 0" gltf-model={rocar} scale="0.12 0.17 0.12"></a-entity>
       <a-entity id="rocar4" position="1.871 -0.123 10.575" rotation="0 45 0" gltf-model={rocar} scale="0.12 0.17 0.12"></a-entity>
       <a-entity id="roca4" position="0.348 -0.669 11.901" rotation="-17.647 62.051 5.672" gltf-model={roca} scale="0.324 0.547 0.44"></a-entity>
+      
 
+      <a-entity id="despedida sescion2" position="3.627 1.57 14.354" rotation="0 -177.789 0" width="3" height="1.7" material="color:#3DB4EB" geometry="primitive:plane;width:3;height:1.7" text="value:Tómate tu tiempo, reflexiona y comparte (solo si te apetece)\n \n
+        - ¿ Conoces los valores de tu empresa?\n \n
+        - ¿ Cómo crees que pueden impactar en su cultura?;wrapCount:25;width:2.2;yOffset:-5;color:black;shader:msdf;font:https://juancmacias.github.io/alma-thinking-with-you/public/font/normal/normal-msdf.json;align:center" scale="0.58 0.88 0.63">
+      </a-entity>
+        
+     
+
+       
     </Scene >
   )
 }

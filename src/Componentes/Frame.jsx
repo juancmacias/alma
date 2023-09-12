@@ -364,6 +364,9 @@ function Frame() {
       <a-entity light="type:directional; castShadow:true; type: spot; castShadow: true" intensity="1" position="2 50 40" rotation="-43 0 0"></a-entity>
     </Scene>
 
+   
+
+
 
   );
 }

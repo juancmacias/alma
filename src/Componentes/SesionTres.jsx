@@ -17,6 +17,7 @@ import alfombra from '../obj/sesion3/alfombra2.glb'
 import wallscroll from '../obj/sesion3/wall_scroll.glb'
 import thinkito from '../obj/sesion3/thinkito.glb'
 import arrow from '../obj/sesion2/arrow.glb'
+import datos from './json/2.json'
 
 
 const SesionTres = () => {
@@ -178,8 +179,8 @@ const SesionTres = () => {
       
     </a-entity>
     
-    <a-entity id="decoration" position="-12.594 1.06 3.015" rotation="1.5469860468532226 87.66254265501595 1.1459155902616465" gltf-model={wallscroll} scale="8.88 7.03 4.03" ></a-entity>
-    <a-entity id="decoration" position="-12.594 1.06 -3.291" rotation="1.547 87.663 1.146" gltf-model={wallscroll} scale="8.88 7.03 4.03" ></a-entity>
+    <a-entity id="decoration1" position="-12.594 1.06 2.047" rotation="1.547 87.663 1.146" gltf-model={wallscroll} scale="8.88 7.03 4.03"></a-entity>
+    <a-entity id="decoration2" position="-12.594 1.06 -3.291" rotation="1.547 87.663 1.146" gltf-model={wallscroll} scale="8.88 7.03 4.03" ></a-entity>
 
     
     <a-entity id="thinkito" gltf-model={thinkito} position="-7.87 0.528 7.8" rotation="8.823550045014677 -60.73352628386726 14.03746598070517"  scale="0.5 0.5 0.50">
@@ -188,10 +189,76 @@ const SesionTres = () => {
     <a-box id="arrow1" position="-14.861 5.355 4.656" rotation="87.72 -49.102 41.769" gltf-model={arrow}scale="0.2 0.2 0.2" ></a-box>
     <a-box id="arrow2"position="14.444 5.355 4.613" rotation="87.72 -49.102 41.769" gltf-model={arrow}scale="0.2 0.2 0.2" ></a-box>
     
-    <a-box position="-1 0.5 -3" rotation="0 45 0" gltf-model={1} ></a-box>
+    
+    <a-entity id="despedida sescion3" position="0.153 2.746 14.29" rotation="-6.532 176.356 -0.057" width="3" height="1.7" material="color:#3DB4EB" geometry="primitive:plane;width:3;height:1.7" 
+  
+     text="value:-Cuéntanos:\n \n
+      - ¿Tu trabajo te ofrece desafíos y la oportunidad de seguir mejorando?\n \n
+      - ¿Sientes que trabajando en tu organización puedes equilibrar tu vida
+      personal y profesional?;wrapCount:25;width:2.2;yOffset:-5;color:black;shader:msdf;font:https://juancmacias.github.io/alma-thinking-with-you/public/font/normal/normal-msdf.json;align:center" scale="0.909 0.93 0.87"></a-entity>
+    
+      <a-entity id="Respeto a las individualidades (Diversidad como Riqueza)" position="-3.63 1.573 -0.36" rotation="0.057295779513082325 0.6875493541569879 -0.34377467707849396" width="3" height="1.7" material="color:#EDBB99 " geometry="primitive:plane;width:3;height:1.7" 
+       text={`value:${datos.secciones[0].apartados[0].tituloApartado}\n\n${datos.secciones[0].apartados[0].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}
+       ></a-entity>
+        
+      <a-entity id="Proceso de (s)elección" position="4.316 1.857 0.067" rotation="0 2.1199438419840457 0.057295779513082325" width="3" height="1.7" material="color:#EDBB99 " geometry="primitive:plane;width:3;height:1.7"
+      text={`value:${datos.secciones[0].apartados[1].tituloApartado}\n\n${datos.secciones[0].apartados[1].contenidoApartado};wrapCount:40;width: 1.9;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity> 
+        
+      <a-entity id="Buddy System en el proceso de integración y bienvenida (“Onboarding”)" position="4.413 1.969 -0.27" rotation="-1.260507149287811 179.8514518915654 0.17188733853924698" width="3" height="1.7" material="color:#EDBB99 " geometry="primitive:plane;width:3;height:1.7"
+      text={`value:${datos.secciones[0].apartados[2].tituloApartado}\n\n${datos.secciones[0].apartados[2].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+        
+      <a-entity id="Revisión de la Relación (“Rozamiento”)roceso de (s)elección" position="-3.848 1.672 -0.67" rotation="0 179.96604345059157 1.5469860468532226" width="3" height="1.7" material="color:#EDBB99 " geometry="primitive:plane;width:3;height:1.7" 
+       text={`value:${datos.secciones[0].apartados[3].tituloApartado}\n\n${datos.secciones[0].apartados[3].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
 
-    </Scene>
+
+      <a-entity id="Apoyo en momentos de salida (“Offboarding”)" position="4.334 1.533 -7.137" rotation="0.5729577951308232 -1.6615776058793874 0.057295779513082325" width="3" height="1.7" material="color:#EDBB99 " geometry="primitive:plane;width:3;height:1.7"
+       text={`value:${datos.secciones[0].apartados[4].tituloApartado}\n\n${datos.secciones[0].apartados[4].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+      
+      <a-entity id="Retribuciones:" position="4.126 1.536 -7.419" rotation="0 -179.79415611205232 -0.40107045659157625" width="3" height="1.7" material="color:#EDBB99 " geometry="primitive:plane;width:3.0;height:2.0"
+       text={`value:${datos.secciones[0].apartados[5].tituloApartado}\n\n${datos.secciones[0].apartados[5].contenidoApartado};wrapCount:30;width: 1.5;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+
+      <a-entity id="Flexibilidad en las vacaciones (vaciones ilimitadas):" position="-3.834 1.546 -7.488" rotation="0.5156620156177408 -179.10660675789532 0" width="3" height="1.7" material="color:#EDBB99 " geometry="primitive:plane;width:3;height:1.7" 
+       text={`value:${datos.secciones[0].apartados[6].tituloApartado}\n\n${datos.secciones[0].apartados[6].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity> 
+
+      <a-entity id="Celebración y Reconocimiento:" position="-3.662 1.594 -7.141" rotation="0 1.088619810748564 0" width="3" height="1.7" material="color:#EDBB99 " geometry="primitive:plane;width:3;height:1.7"
+       text={`value:${datos.secciones[0].apartados[7].tituloApartado}\n\n${datos.secciones[0].apartados[7].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+
+      
+      
+      
+      <a-entity id=" Formación-interna" position="-12.60 3.617 -14.828" rotation="0 -2.0053522829578814 0" width="3" height="2.25" material="color:#AF7AC5  " geometry="primitive:plane;width:3;height:2.5" 
+       text={`value:${datos.secciones[1].apartados[0].tituloApartado}\n\n${datos.secciones[1].apartados[0].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+
+      <a-entity id="Formación-externa:" position="-8.75 3.556 -14.895" rotation="0 -1.776169164905552 0" width="3" height="1.7" material="color:#AF7AC5 " geometry="primitive:plane;width:3;height:1.7" 
+       text={`value:${datos.secciones[1].apartados[1].tituloApartado}\n\n${datos.secciones[1].apartados[1].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+
+      <a-entity id="Aprendizaje-error:" position="-4.59 3.600 -14.70" rotation="0 0.2864788975654116 0" width="3" height="3." material="color:#AF7AC5 " geometry="primitive:plane;width:3;height:1.7"
+       text={`value:${datos.secciones[1].apartados[2].tituloApartado}\n\n${datos.secciones[1].apartados[2].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+
+      <a-entity id="Proyectos-aprendizaje:" position="11.78 3.364 -14.744" rotation="0 0.2864788975654116 0" width="3" height="2.25" material="color:#AF7AC5 " geometry="primitive:plane;width:3;height:2.5"
+       text={`value:${datos.secciones[1].apartados[3].tituloApartado}\n\n${datos.secciones[1].apartados[3].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+
+      <a-entity id="Demandas-Oportunidades" position="7.90 3.364 -14.744" rotation="0 0.2864788975654116 0" width="3" height="2.25" material="color:#AF7AC5 " geometry="primitive:plane;width:3;height:2.0"
+       text={`value:${datos.secciones[1].apartados[4].tituloApartado}\n\n${datos.secciones[1].apartados[4].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
+      </a-entity>
+      
+      <a-entity id="decoration3" position="0.245 0.683 -12.457" rotation="1.5469860468532226 3.4950425502980216 1.1459155902616465" gltf-model={wallscroll} scale="9.450000000000001 7.2700000000000005 4.2"></a-entity>
+      <a-entity id="decoration4" position="11.935 1.06 -1.14" rotation="-3.7815214478634336 -97.97578296737078 2.0053522829578814" gltf-model={wallscroll}scale="8.88 7.03 4.03"></a-entity>
+      <a-entity id="decoration5" position="11.935 1.109 -9.226" rotation="-3.782 -97.976 2.005" gltf-model={wallscroll} scale="8.88 7.03 4.03"></a-entity>    
+          
+          </Scene>
   )
-}
+}    
 
 export default SesionTres

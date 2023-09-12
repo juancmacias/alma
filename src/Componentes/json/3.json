@@ -1,0 +1,136 @@
+{"secciones":[
+    {
+        "idSeccion": 5,
+        "tituloSeccion": "V. Estructura",
+        "apartados": [
+            {
+                "idApartado": 21,
+                "tituloApartado": "Organizaci\u00f3n Horizontal",
+                "contenidoApartado": "Al contrario que otras organizaciones m\u00e1s tradicionales y jer\u00e1rquicas, no hay figuras centralizadas para la gesti\u00f3n y toma de decisiones. En su lugar, esta responsabilidad se distribuye en todo el equipo, asegurando que cada individuo participe y se involucre en decisiones que impactan su labor.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 22,
+                "tituloApartado": "Equipos Generosos de Iniciativas (EDIs)",
+                "contenidoApartado": "Abrazamos nuestra autenticidad. Seg\u00fan las necesidades, nos alineamos en torno a estructuras horizontales y aut\u00f3nomas llamadas \u0022EDIs\u0022 (Equipos Generosos de Iniciativas). Evitamos los departamentos para prevenir divisiones aisladas, valorando la colaboraci\u00f3n y la cohesi\u00f3n.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 23,
+                "tituloApartado": "Liderazgo Contextual",
+                "contenidoApartado": "De acuerdo con la esencia del trabajo (ya sea m\u00e1s filos\u00f3fico, art\u00edstico, etc.), emergen roles naturales. Estos se desarrollan en cada EDI* de manera org\u00e1nica, en respuesta a las necesidades del proyecto espec\u00edfico. Enfatizamos la noci\u00f3n de que cada individuo posee su talento \u00fanico, y desde ah\u00ed lidera, aportando al equipo lo que trae consigo.",
+                "subapartados": [],
+                "citasApartado": [
+                    {
+                        "idCita": 15,
+                        "contenidoCita": "Un ejemplo de esto fue el redise\u00f1o de la web de Thinking. En los meses de verano creamos una nueva y cada cual sum\u00f3 desde su conocimiento y experiencia. Realmente se form\u00f3 un equipo multidisciplinar al servicio del objetivo marcado. (Ana Corrales)"
+                    }
+                ],
+                "audiovisualesApartado": []
+            }
+        ],
+        "citas": [],
+        "audiovisuales": []
+    },
+    {
+        "idSeccion": 6,
+        "tituloSeccion": "VI. Toma de Decisiones",
+        "apartados": [
+            {
+                "idApartado": 24,
+                "tituloApartado": "Proceso de Consentimiento (Decisiones estrat\u00e9gicas)",
+                "contenidoApartado": "Cuando lidiamos con decisiones estrat\u00e9gicas que tienen un alto alcance en el equipo o que influyen en la organizaci\u00f3n, son abordables a trav\u00e9s del proceso de consentimiento de la sociocracia, que consta de los siguientes pasos...",
+                "subapartados": [
+                    {
+                        "idSubapartado": 1,
+                        "tituloSubapartado": "1. Presentaci\u00f3n de propuesta",
+                        "contenidoSubapartado": "El interesado presenta una propuesta sobre un tema espec\u00edfico al equipo. Se aconseja que la propuesta sea redactada previamente y compartida con todos para que todos partan de una comprensi\u00f3n similar.",
+                        "citasSubapartado": [
+                            {
+                                "idCita": 17,
+                                "contenidoCita": "Tratamos de tomar decisiones de esta forma no para que seamos lo m\u00e1s r\u00e1pidos, sino para tomar la decisi\u00f3n m\u00e1s inteligente. Buscamos cuidar a todas las personas del equipo. (Israel Alc\u00e1zar)"
+                            }
+                        ],
+                        "audiovisualesSubapartado": [
+                            {
+                                "idAudiovisual": 3,
+                                "rutaAudiovisual": "https:\/\/thinkingwithyou.notion.site\/image\/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe98ec6dc-33ac-4244-be5f-3cd6825e7316%2FCaptura_de_Pantalla_2023-07-21_a_las_10.08.49.png?table=block\u0026id=5b6e3df6-d726-41cf-9624-40a50f542c1b\u0026spaceId=3410b7f7-de6d-4e56-9c47-246af3b3e7f3\u0026width=1440\u0026userId=\u0026cache=v2",
+                                "pieAudiovisual": null
+                            }
+                        ]
+                    },
+                    {
+                        "idSubapartado": 2,
+                        "tituloSubapartado": "2. Clarificaci\u00f3n de dudas",
+                        "contenidoSubapartado": "Despu\u00e9s de presentar la propuesta, se resuelven preguntas para asegurar una comprensi\u00f3n completa, no para cuestionarla. Preguntas como \u0022\u00bfqu\u00e9 necesitas para entender la propuesta?\u0022 ayudan. Una vez respondidas, se busca m\u00e1s claridad si hay inquietudes basadas en la informaci\u00f3n presentada, previniendo malentendidos (interpretaciones err\u00f3neas y juicios de valor futuros).",
+                        "citasSubapartado": [],
+                        "audiovisualesSubapartado": []
+                    },
+                    {
+                        "idSubapartado": 3,
+                        "tituloSubapartado": "3. Consentimiento",
+                        "contenidoSubapartado": "Cada miembro del equipo expresa su opini\u00f3n a trav\u00e9s de las 3 opciones:\nAprobaci\u00f3n: Indicada con el pulgar hacia arriba.\nAprobaci\u00f3n con preocupaciones: Representada con una mano en movimiento, muestra acuerdo con preocupaciones a resolver posteriormente.\nObjeci\u00f3n: Se levanta la mano en \u0022ofrenda\u0022 al equipo. Indica perspectivas no atendidas que podr\u00edan afectar al equipo.",
+                        "citasSubapartado": [],
+                        "audiovisualesSubapartado": []
+                    },
+                    {
+                        "idSubapartado": 4,
+                        "tituloSubapartado": "4. Toma de decisi\u00f3n",
+                        "contenidoSubapartado": "La decisi\u00f3n se toma \u201cen ausencia de objeciones\u201d, abordando cada una e integr\u00e1ndolas en la propuesta antes de la decisi\u00f3n. Algunas objeciones pueden requerir m\u00e1s trabajo de integraci\u00f3n. Cuando no hay objeciones, se celebra la decisi\u00f3n y se atienden las dem\u00e1s preocupaciones.",
+                        "citasSubapartado": [],
+                        "audiovisualesSubapartado": []
+                    }
+                ],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 25,
+                "tituloApartado": "Proceso de Consejo (Decisiones en \u00e1reas espec\u00edficas: clientes, marketing, comunicaci\u00f3n\u2026)",
+                "contenidoApartado": "Las personas con un mayor entendimiento y contexto son las que toman estas decisiones. Por ejemplo, quienes comprenden el contexto de un cliente deciden en asuntos que lo afectan. Si se requiere una visi\u00f3n externa, se puede pedir consejo usando el \u0022process advice\u0022 (proceso de consejo)...",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 26,
+                "tituloApartado": "Decisiones de bajo impacto",
+                "contenidoApartado": "Algunas decisiones operativas tienen un impacto menor operativo o t\u00e1ctico para el equipo, como la creaci\u00f3n de merchandising para una conferencia o el patrocinio de un evento. En estos casos, buscamos agilidad, por lo que optamos por tomas as\u00edncronas mediante herramientas como Slack o correo electr\u00f3nico en situaciones espec\u00edficas...",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": [
+                    {
+                        "idAudiovisual": 4,
+                        "rutaAudiovisual": "https:\/\/thinkingwithyou.notion.site\/image\/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5cb7312f-5c74-4a0c-9f8e-f323515c1499%2FScreenshot_2023-07-24_at_18.36.41.png?table=block\u0026id=2be24c5b-379b-4239-bc1d-2c66cad75929\u0026spaceId=3410b7f7-de6d-4e56-9c47-246af3b3e7f3\u0026width=1730\u0026userId=\u0026cache=v2",
+                        "pieAudiovisual": null
+                    }
+                ]
+            },
+            {
+                "idApartado": 27,
+                "tituloApartado": "Comunicaci\u00f3n y Colaboraci\u00f3n",
+                "contenidoApartado": "Nos comunicamos aut\u00e9nticamente, destacando nuestra singularidad, por lo que no consideramos que exista competencia en un sentido negativo. Estamos entusiasmados de asociarnos con empresas y profesionales que comparten nuestra misi\u00f3n de humanizar organizaciones...",
+                "subapartados": [],
+                "citasApartado": [
+                    {
+                        "idCita": 18,
+                        "contenidoCita": "Otra forma de potenciar el cuidado a las personas es estar pendientes tambi\u00e9n de lo que comunican en sus canales y \u0022hacer de altavoz\u0022 de alg\u00fan modo. Comprender la comunicaci\u00f3n externa como \u0022otra extensi\u00f3n m\u00e1s\u0022 de nuestro deseo de apoyar, nos resulta esencial. A\u00fan as\u00ed, a veces somos torpes en ello. Tenemos mucho espacio de mejora aqu\u00ed. (EDI - Comunicaci\u00f3n)"
+                    }
+                ],
+                "audiovisualesApartado": []
+            }
+        ],
+        "citas": [
+            {
+                "idCita": 16,
+                "contenidoCita": "Cuando tus valores son claros, tomar decisiones se vuelve m\u00e1s f\u00e1cil. (Roy E. Disney)"
+            }
+        ],
+        "audiovisuales": []
+    }
+]
+}
