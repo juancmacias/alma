@@ -17,9 +17,13 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="64" alt="React"> 
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="64" alt="CSS">
-<img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" width="64" alt="A-frame">![apache](https://github.com/juancmacias/alma/assets/126780440/35bf2ce9-b6f5-4590-9745-cb6df4522708)
-
- 
+<img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" width="64" alt="A-frame">
+<img src="https://github.com/juancmacias/alma/assets/126780440/73bb6c4a-334a-4774-b75a-a307c01287e7" width="64" alt="">
+<img src="https://github.com/juancmacias/alma/assets/126780440/20c7f218-9dd0-4113-8ab8-31227c4eed8b" width="64" alt="">
+<img src="https://github.com/juancmacias/alma/assets/126780440/77d4027e-e7e9-4ee3-9e02-abcdfe230d80" width="64" alt="">
+<img src="https://github.com/juancmacias/alma/assets/126780440/0463c5c1-92d9-4ab0-b33b-92703c449931" width="64" alt="">
+<img src="https://github.com/juancmacias/alma/assets/126780440/ebfa9a2f-2660-4504-9d54-f846c52d6388" width="64" alt="">
+ <img src="" width="64" alt="">
 
 <p>Recuerda que tras clonar el repositorio, debes escribir en el directorio del proyecto</p>
 <p>npm install</p>
