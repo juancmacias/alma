@@ -16,7 +16,15 @@
 <p>En este repositorio encontraras la parte del FrontEnd, desarrollado con:</p>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="64" alt="React"> <img src= "https://github.com/juancmacias/alma/assets/126780440/990094b5-81e0-4f5c-9e3d-6ada0df43a56" width="64" alt=""> <img src="https://github.com/juancmacias/alma/assets/126780440/064fcc31-6ccf-4ac7-baee-cce3e7dc563a"
- width="64" alt="">
+ width="64" alt=""> <img src="https://github.com/juancmacias/alma/assets/126780440/23f5153d-2a05-4ea9-b2a4-5935c80b938c"
+ width="64" alt=""> <img src="https://github.com/juancmacias/alma/assets/126780440/58975976-1cfe-431d-bb4d-4e4e85976797"
+ width="64" alt=""> <img src="https://github.com/juancmacias/alma/assets/126780440/153c8af6-8d6f-409f-ad9e-d0786a049e0f"
+ width="64" alt="">  <img src="https://github.com/juancmacias/alma/assets/126780440/1893ae4a-a704-4858-8874-3ac862d9c965"
+ width="64" alt="">  <img src="https://github.com/juancmacias/alma/assets/126780440/00268c5e-caa5-4a2d-a2fd-257f5d279dab"
+ width="64" alt="">  <img src="https://github.com/juancmacias/alma/assets/126780440/153c8af6-8d6f-409f-ad9e-d0786a049e0f"
+ width="64" alt="">  
+
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="64" alt="CSS">
 <img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" width="64" alt="A-frame">
 <img src="https://github.com/juancmacias/alma/assets/126780440/4c563a5b-1800-4344-b2fa-fdecb58822ed"
