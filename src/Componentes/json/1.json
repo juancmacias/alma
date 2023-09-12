@@ -1,0 +1,138 @@
+{"secciones":[
+    {
+        "idSeccion": 2,
+        "tituloSeccion": "II. Origen. Misi\u00f3n. Visi\u00f3n",
+        "apartados": [
+            {
+                "idApartado": 1,
+                "tituloApartado": "Origen",
+                "contenidoApartado": "En 2014, los socios fundadores Diego Rojas e Israel Alc\u00e1zar, decidieron embarcarse en un proyecto para crear una organizaci\u00f3n diferente.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": [
+                    {
+                        "idAudiovisual": 2,
+                        "rutaAudiovisual": "https:\/\/thinkingwithyou.notion.site\/image\/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd994d5c8-6fe6-426b-b961-232ff2e89f95%2FFoto_1_.jpg?table=block\u0026id=3b028114-1dc6-4e9a-9837-87d91f2787e2\u0026spaceId=3410b7f7-de6d-4e56-9c47-246af3b3e7f3\u0026width=2000\u0026userId=\u0026cache=v2",
+                        "pieAudiovisual": "En esta cafeter\u00eda madrile\u00f1a se reunieron Diego e Isra, los socio-fundadores de Thinking With You, para poner en marcha su idea de organizaci\u00f3n."
+                    }
+                ]
+            },
+            {
+                "idApartado": 2,
+                "tituloApartado": "Misi\u00f3n",
+                "contenidoApartado": "Facilitamos la (re)humanizaci\u00f3n de las organizaciones al brindar acompa\u00f1amiento especializado en procesos de cambio, transformaci\u00f3n e innovaci\u00f3n. Nuestro enfoque se basa en la promoci\u00f3n de culturas organizacionales inclusivas, colaborativas y adaptativas, permitiendo a las empresas prosperar en un mundo en constante evoluci\u00f3n.",
+                "subapartados": [],
+                "citasApartado": [
+                    {
+                        "idCita": 2,
+                        "contenidoCita": "Prop\u00f3sito Evolutivo: (Re) Humanizar organizaciones desde lo que somos y hacemos."
+                    },
+                    {
+                        "idCita": 3,
+                        "contenidoCita": "Buscamos cambiar el mundo humanizando las organizaciones desde el \u201cc\u00f3mo somos\u201d. Para ello, ayudamos a las personas en su camino de desarrollo, elevando su consciencia, responsabilidad y autonom\u00eda. (Diego Rojas)"
+                    }
+                ],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 3,
+                "tituloApartado": "Visi\u00f3n",
+                "contenidoApartado": "Nos visualizamos como el referente en la industria de consultor\u00eda, distinguidos por nuestro enfoque vanguardista y nuestra excelencia en dise\u00f1o organizacional. Nuestro laboratorio organizacional y de ideas, concebido para cultivar tanto el crecimiento personal como profesional, fortalece nuestra capacidad para generar un impacto perdurable en nuestros clientes. A trav\u00e9s de nuestra dedicaci\u00f3n, contribuimos al desarrollo sostenible de empresas en todo el mundo, estableciendo nuevas pautas de \u00e9xito en la industria.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            }
+        ],
+        "citas": [],
+        "audiovisuales": []
+    },
+    {
+        "idSeccion": 3,
+        "tituloSeccion": "III. Valores y Principios",
+        "apartados": [
+            {
+                "idApartado": 4,
+                "tituloApartado": "1. Somos Aut\u00e9nticos",
+                "contenidoApartado": "Nuestra autenticidad nos distingue. Somos genuinos y \u00fanicos en lo que hacemos. Juntos, somos una fuerza que nadie puede igualar. Vendemos haciendo, pero tambi\u00e9n creamos relaciones basadas en la honestidad y la verdadera identidad. Somos fieles a quienes somos, y esa es nuestra mayor fortaleza.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 5,
+                "tituloApartado": "2. Somos Honestos",
+                "contenidoApartado": "Asumimos nuestras limitaciones con humildad. Decimos las cosas como son, sin ocultar motivos ni situaciones. La transparencia gu\u00eda nuestro camino.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 6,
+                "tituloApartado": "3. Somos Generosos",
+                "contenidoApartado": "Buscamos enriquecernos mutuamente en nuestras interacciones con colegas, colaboradores, clientes y proveedores. La generosidad fluye en cada v\u00ednculo que construimos.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 7,
+                "tituloApartado": "4. Coherencia en Pensar-Hacer-Sentir",
+                "contenidoApartado": "Creemos firmemente en que lo que somos se refleja en nuestras acciones y en la manera en que las llevamos a cabo. Nuestra coherencia es el fundamento de nuestras relaciones y nuestro trabajo.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 8,
+                "tituloApartado": "5. Colaboramos Siempre",
+                "contenidoApartado": "Abrazamos la colaboraci\u00f3n con empresas y profesionales afines a nuestro prop\u00f3sito. Juntos, construimos un camino m\u00e1s fuerte hacia nuestros objetivos compartidos.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 9,
+                "tituloApartado": "6. Feedback y Conversaci\u00f3n",
+                "contenidoApartado": "Buscamos la mejora constante en nuestro equipo, fomentando conversaciones abiertas y retroalimentaci\u00f3n constructiva. As\u00ed, construimos relaciones s\u00f3lidas y alcanzamos nuestro mejor potencial, tanto colectiva como individualmente.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 10,
+                "tituloApartado": "7. Transparencia y Confianza",
+                "contenidoApartado": "Operamos bajo la premisa de la transparencia en todos los datos, salvo excepciones espec\u00edficas. En nuestro equipo, la confianza se refuerza con la expresi\u00f3n: \u0022tranquila\/o, hay agua\u0022, asegurando que siempre estamos aqu\u00ed para apoyarnos mutuamente.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 11,
+                "tituloApartado": "8. Responsabilidad y Compromiso",
+                "contenidoApartado": "Promovemos la responsabilidad en todos los niveles, desde el equipo hasta nuestros colaboradores. Cumplir nuestros compromisos es una prioridad, y nos esforzamos por hacerlo en todo momento.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 12,
+                "tituloApartado": "9. Pide Cuando Necesites, Cuando Pidan Da",
+                "contenidoApartado": "Fomentamos la autonom\u00eda y la responsabilidad en la toma de decisiones. Reconocemos que tener informaci\u00f3n, confianza y apoyo son claves para solicitar ayuda cuando sea necesario, y estar dispuestos a brindarla cuando otros lo necesiten.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            }
+        ],
+        "citas": [
+            {
+                "idCita": 4,
+                "contenidoCita": "Valores: Somos lo que somos por ellos"
+            },
+            {
+                "idCita": 5,
+                "contenidoCita": "Una de las claves para el correcto funcionamiento de Thinking With You es que todas las personas est\u00e9n fuertemente alineadas y hayan interiorizado nuestros valores y principios. De esta forma, todo lo dem\u00e1s se simplifica notablemente, desde el funcionamiento del d\u00eda a d\u00eda hasta la toma de decisiones. Sobre todo en las decisiones complicadas, ya que son m\u00e1s f\u00e1ciles de tomar cuando recurres a tus principios y valores (Israel Alc\u00e1zar)"
+            }
+        ],
+        "audiovisuales": []
+    }
+]}
