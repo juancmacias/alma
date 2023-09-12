@@ -19,6 +19,19 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="64" alt="CSS">
 <img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" width="64" alt="A-frame">
 <img src="https://cdn-icons-png.flaticon.com/512/103/103093.png"  width="64" alt="A-frame">
+![trello](https://github.com/juancmacias/alma/assets/126780440/d977559a-11ad-4b4a-b06d-bdf2c7e8934b)
+![xampp](https://github.com/juancmacias/alma/assets/126780440/128e53c7-e141-4d59-ac1b-5b756946abc6)
+![symfony](https://github.com/juancmacias/alma/assets/126780440/0dff1ce5-f085-404e-9799-1b2fa5680d53)
+![postman](https://github.com/juancmacias/alma/assets/126780440/e9c0a4f5-e7a7-4907-9705-bb46295752a5)
+![MySQL-logo](https://github.com/juancmacias/alma/assets/126780440/69c8d65f-0984-46da-8f4a-80d7b0ded69c)
+![JavaScript](https://github.com/juancmacias/alma/assets/126780440/48f6d837-e34f-48f0-ada5-3b8041d3d6b7)
+![html](https://github.com/juancmacias/alma/assets/126780440/880e8326-1604-4390-8e6a-e9c7fd7bb176)
+![github](https://github.com/juancmacias/alma/assets/126780440/3bbe2d10-c2ca-4b62-b0a3-7f06203ca54a)
+![figma](https://github.com/juancmacias/alma/assets/126780440/fb3dc283-83e3-44e4-ae09-960e7a8d3384)
+![blender](https://github.com/juancmacias/alma/assets/126780440/e5ebc1c6-5d6b-4298-948c-a1ca54eb2699)
+![apache](https://github.com/juancmacias/alma/assets/126780440/1fb6b93f-ea03-44f5-bd9e-be67cf712ec9)
+
+
 
 <p>Recuerda que tras clonar el repositorio, debes escribir en el directorio del proyecto</p>
 <p>npm install</p>
