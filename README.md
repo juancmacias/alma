@@ -18,8 +18,8 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="64" alt="React">
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="64" alt="CSS">
 <img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" width="64" alt="A-frame">
-<img src=![xampp](https://github.com/juancmacias/alma/assets/126780440/4c563a5b-1800-4344-b2fa-fdecb58822ed)
- width="64" alt="A-frame">
+<img src="https://github.com/juancmacias/alma/assets/126780440/4c563a5b-1800-4344-b2fa-fdecb58822ed"
+ width="64" alt="">
 
 
 <p>Recuerda que tras clonar el repositorio, debes escribir en el directorio del proyecto</p>
