@@ -233,23 +233,23 @@ const SesionTres = () => {
       
       
       
-      <a-entity id=" Formación-interna" position="-12.60 3.617 -14.828" rotation="0 -2.0053522829578814 0" width="3" height="2.25" material="color:#AF7AC5  " geometry="primitive:plane;width:3;height:2.5" 
+      <a-entity id=" Formación-interna" position="-12.60 3.617 -14.828" rotation="0 -2.0053522829578814 0" width="3" height="2.25" material="color:#C39BD3 " geometry="primitive:plane;width:3;height:2.5" 
        text={`value:${datos.secciones[1].apartados[0].tituloApartado}\n\n${datos.secciones[1].apartados[0].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
       </a-entity>
 
-      <a-entity id="Formación-externa:" position="-8.75 3.556 -14.895" rotation="0 -1.776169164905552 0" width="3" height="1.7" material="color:#AF7AC5 " geometry="primitive:plane;width:3;height:1.7" 
+      <a-entity id="Formación-externa:" position="-8.75 3.556 -14.895" rotation="0 -1.776169164905552 0" width="3" height="1.7" material="color:#C39BD3" geometry="primitive:plane;width:3;height:1.7" 
        text={`value:${datos.secciones[1].apartados[1].tituloApartado}\n\n${datos.secciones[1].apartados[1].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
       </a-entity>
 
-      <a-entity id="Aprendizaje-error:" position="-4.59 3.600 -14.70" rotation="0 0.2864788975654116 0" width="3" height="3." material="color:#AF7AC5 " geometry="primitive:plane;width:3;height:1.7"
+      <a-entity id="Aprendizaje-error:" position="-4.59 3.600 -14.70" rotation="0 0.2864788975654116 0" width="3" height="3." material="color:#C39BD3" geometry="primitive:plane;width:3;height:1.7"
        text={`value:${datos.secciones[1].apartados[2].tituloApartado}\n\n${datos.secciones[1].apartados[2].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
       </a-entity>
 
-      <a-entity id="Proyectos-aprendizaje:" position="11.78 3.364 -14.744" rotation="0 0.2864788975654116 0" width="3" height="2.25" material="color:#AF7AC5 " geometry="primitive:plane;width:3;height:2.5"
+      <a-entity id="Proyectos-aprendizaje:" position="11.78 3.364 -14.744" rotation="0 0.2864788975654116 0" width="3" height="2.25" material="color:#C39BD3" geometry="primitive:plane;width:3;height:2.5"
        text={`value:${datos.secciones[1].apartados[3].tituloApartado}\n\n${datos.secciones[1].apartados[3].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
       </a-entity>
 
-      <a-entity id="Demandas-Oportunidades" position="7.90 3.364 -14.744" rotation="0 0.2864788975654116 0" width="3" height="2.25" material="color:#AF7AC5 " geometry="primitive:plane;width:3;height:2.0"
+      <a-entity id="Demandas-Oportunidades" position="7.90 3.364 -14.744" rotation="0 0.2864788975654116 0" width="3" height="2.25" material="color:#C39BD3" geometry="primitive:plane;width:3;height:2.0"
        text={`value:${datos.secciones[1].apartados[4].tituloApartado}\n\n${datos.secciones[1].apartados[4].contenidoApartado};wrapCount:30;width: 2.0;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`}>
       </a-entity>
       
