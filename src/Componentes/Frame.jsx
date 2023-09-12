@@ -2,7 +2,7 @@
 import {Entity, Scene} from 'aframe-react';
 import React, {useState, useEffect} from 'react';
 import suelo from './json/camino.json'
-import { urlFont } from './../services/urls';
+import { urlFont,urlVid } from './../services/urls';
 
 /* precargar los objetos en 3d */
 import bamboo from '../obj/plantas/bamboo.glb'
@@ -25,7 +25,7 @@ function Frame() {
   const [sonido] = useState(localStorage.getItem('sonido'));
   const start = () => {
     /* carga de sonido */
-
+    localStorage.removeItem("datos_libro");
     if (sonido === "on") {
       //playP()
     }
@@ -51,10 +51,33 @@ function Frame() {
     var pos = document.querySelector('#cameraRig').getAttribute('position');
     var position = pos.x + ' ' + pos.y + ' ' + pos.z
     localStorage.setItem("position", position);
-    //stopP();
-    window.location.href = ir;
-  }
+    switch(ir) {
+      case 'valores':
+        return llamada(1, ir);
+      case 'sesiontres':
+        return llamada(2, ir);
+      default:
+    }
 
+    
+    //stopP();
+    
+  }
+  const llamada = (id, ir)  => {
+    fetch(`${urlVid}public/json/${id}.json`, {
+      method: 'GET',
+    })
+    .then((response) => response.text())
+    .then((data) => {
+
+      localStorage.setItem("datos_libro", data);
+    })
+    .catch((error) => {
+        console.error('Error carga datos:', error);
+        // Manejar el error de la API
+    })
+    .finally(()=>{window.location.href = ir;});
+}
 
   return (
 

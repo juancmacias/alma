@@ -1,8 +1,8 @@
 import { Entity, Scene } from 'aframe-react';
-import React, { useState, useEffect } from 'react';
-import { urlFont, urlApi, urlVid } from '../services/urls';
+import React, { useState } from 'react';
+import { urlFont } from '../services/urls';
 
-import datos from './json/1.json'
+//import datos from './json/1.json'
 
 
 import door from '../obj/sesion2/japanese_door.glb'
@@ -40,11 +40,11 @@ import flowerfontain from '../obj/sesion2/flowerfontain.glb'
 
 const Valores = () => {
   const [sonido] = useState(localStorage.getItem('sonido'));
-
+  const [datosU, setDatos] = useState( JSON.parse(localStorage.getItem('datos_libro')))
+  console.log("datos "+ datosU)
   const portalSeleccion = (ir) => {
     window.location.href = ir;
   }
-
 
 
   return (
@@ -66,7 +66,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[0].apartados[0].tituloApartado}\n${datos.secciones[0].apartados[0].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[0].apartados[0].tituloApartado}\n${datosU.secciones[0].apartados[0].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
 
           <Entity
           id={`texto_2`}
@@ -75,7 +75,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[0].apartados[1].tituloApartado}\n${datos.secciones[0].apartados[1].contenidoApartado};wrapCount:25;width: 1.5;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[0].apartados[1].tituloApartado}\n${datosU.secciones[0].apartados[1].contenidoApartado};wrapCount:25;width: 1.5;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           
           <Entity
           id={`texto_3`}
@@ -84,7 +84,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[0].apartados[2].tituloApartado}\n${datos.secciones[0].apartados[2].contenidoApartado};wrapCount:40;width: 2.5;yOffset:-7;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[0].apartados[2].tituloApartado}\n${datosU.secciones[0].apartados[2].contenidoApartado};wrapCount:40;width: 2.5;yOffset:-7;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           
           <Entity
           id={`texto_21`}
@@ -93,7 +93,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[0].tituloApartado}\n${datos.secciones[1].apartados[0].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[0].tituloApartado}\n${datosU.secciones[1].apartados[0].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           
           <Entity
           id={`texto_22`}
@@ -102,7 +102,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[1].tituloApartado}\n${datos.secciones[1].apartados[1].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[1].tituloApartado}\n${datosU.secciones[1].apartados[1].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           <Entity
           id={`texto_23`}
           position={`11 1 3`}
@@ -110,7 +110,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[2].tituloApartado}\n${datos.secciones[1].apartados[2].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[2].tituloApartado}\n${datosU.secciones[1].apartados[2].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           <Entity
           id={`texto_24`}
           position={`11 1 0`}
@@ -118,7 +118,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[3].tituloApartado}\n${datos.secciones[1].apartados[3].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[3].tituloApartado}\n${datosU.secciones[1].apartados[3].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           <Entity
           id={`texto_25`}
           position={`7.5 1  0`}
@@ -126,7 +126,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[4].tituloApartado}\n${datos.secciones[1].apartados[4].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[4].tituloApartado}\n${datosU.secciones[1].apartados[4].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           <Entity
           id={`texto_26`}
           position={`4 1 0`}
@@ -134,7 +134,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[5].tituloApartado}\n${datos.secciones[1].apartados[5].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[5].tituloApartado}\n${datosU.secciones[1].apartados[5].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           <Entity
           id={`texto_27`}
           position={`2.3 1 2`}
@@ -142,7 +142,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[6].tituloApartado}\n${datos.secciones[1].apartados[6].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[6].tituloApartado}\n${datosU.secciones[1].apartados[6].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           <Entity
           id={`texto_28`}
           position={`2.3 1 -4.5`}
@@ -150,7 +150,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[7].tituloApartado}\n${datos.secciones[1].apartados[7].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[7].tituloApartado}\n${datosU.secciones[1].apartados[7].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           <Entity
           id={`texto_29`}
           position={`0 1 -12`}
@@ -158,7 +158,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].apartados[8].tituloApartado}\n${datos.secciones[1].apartados[8].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].apartados[8].tituloApartado}\n${datosU.secciones[1].apartados[8].contenidoApartado};wrapCount:25;width: 2;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           <Entity
           id={`texto_30`}
           position={`-13.4 1.2 1.2`}
@@ -166,7 +166,7 @@ const Valores = () => {
           width="3"
           height="1.7"
           material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
-          text={`value:${datos.secciones[1].citas[0].contenidoCita}\n\n${datos.secciones[1].citas[1].contenidoCita};wrapCount:35;width: 1.9;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
+          text={`value:${datosU.secciones[1].citas[0].contenidoCita}\n\n${datosU.secciones[1].citas[1].contenidoCita};wrapCount:35;width: 1.9;yOffset:-5;color:black;shader: msdf; font:${urlFont}/normal/normal-msdf.json; align: center`} />
           
 
       {/* CARTEL SALIDA */}
