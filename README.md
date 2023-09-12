@@ -15,7 +15,7 @@
 </ul>
 <p>En este repositorio encontraras la parte del FrontEnd, desarrollado con:</p>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="64" alt="React">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="64" alt="React"> <img src= "https://github.com/juancmacias/alma/assets/126780440/990094b5-81e0-4f5c-9e3d-6ada0df43a56" width="64" alt="">
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="64" alt="CSS">
 <img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" width="64" alt="A-frame">
 <img src="https://github.com/juancmacias/alma/assets/126780440/4c563a5b-1800-4344-b2fa-fdecb58822ed"
