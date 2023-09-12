@@ -9,7 +9,7 @@
 <h2>Propuesta</h2>
 <p>La empresa Thinking With You quiere transmitir sus valores a la sociedad de una manera moderna y actual. La idea es emular el Libro blanco de Thinking With You con experiencias inmersiva, nesitan también un formulario de contacto y zona de administración para actualizar la información de la presentación.
 <ul>
-  <li>El usuario deber ser capaz de.:</li>
+  <h3>El usuario deber ser capaz de:</h3>
   <li>Desplazarse por la experiencia inmersiva</li>
   <li>Interactuar con la experiencia inmersiva </li>
 </ul>
@@ -24,6 +24,8 @@
 <p>npm install</p>
 <p>Así podras reproducirlo de forma local iniciando el servidor local con:</p>
 <p>npm start</p>
+
+
 <h2>Equipo</h2>
 <a href="https://github.com/chiaravigi" class="position-relative"><img src="https://avatars.githubusercontent.com/u/126780221?v=4" data-hovercard-type="achievement" width="64" alt="chiaravigi" data-view-component="true" class="achievement-badge-sidebar"></a>
 <a href="https://github.com/fran-eliot" class="position-relative"><img src="https://avatars.githubusercontent.com/u/5796681?v=4" data-hovercard-type="achievement" width="64" alt="Fran Ramírez" data-view-component="true" class="achievement-badge-sidebar"></a>
