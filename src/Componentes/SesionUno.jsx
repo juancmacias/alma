@@ -29,30 +29,6 @@ import japanese1 from '../obj/construccion/Section1/japanese_toro.glb';
 
 
 function SesionUno() {
-  const [diaryText, setDiaryText] = useState([]);
-  const requestOptionsInfo = { method: 'GET', redirect: 'manual' };
-
-
-  const recibeinfo = () => {
-    console.log("inicio llamada");
-    fetch(urlApi + "/escena/3", requestOptionsInfo)
-      .then((response) => response.text())
-      .then((result) => {
-        // setDiaryText(result);
-        console.log("Devuelto " + diaryText);
-      })
-      .catch((error) => {
-        console.log('error', error);
-      });
-  };
-
-
-
-  useEffect(() => {
-    //recibeinfo()
-
-
-  });
   const [sonido] = useState(localStorage.getItem('sonido'));
   const portalSeleccion = (ir) => {
     window.location.href = ir;
@@ -117,7 +93,7 @@ function SesionUno() {
 <Entity
         id={`a5`}
         position={`13.9 1.15 6.47 `}
-        rotation="-0.68 -97.24 4.41"
+        rotation="-0.68 -97.24 0"
         width="3"
        height="1.7"
         material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
@@ -125,7 +101,7 @@ function SesionUno() {
           <Entity
         id={`a6`}
         position={`3.29 0.8 13.02 `}
-        rotation="4.24 172.5 1.66"
+        rotation="0 180 0"
         width="3"
         height="1.7"
         material="color:#3DB4EB;" geometry="primitive:plane; radiusBottom: 1; radiusTop: 0.1; width: 3; height: 1.7;"
@@ -176,12 +152,11 @@ function SesionUno() {
           rotation="0 90 0"></a-box>
         <a-entity gltf-model={hojas} position="-8.833 -0.291 13.418" scale="1 1.23 1"></a-entity>
         <a-entity static-body gltf-model={arbol} position="-8.833 -0.291 13.418" scale="1 1.23 1"></a-entity>
-
-
-        <a-entity static-body gltf-model={arbol} position="-14.665 0.248 13.483" scale="1 1.23 1"></a-entity>
-        <a-entity gltf-model={hojas} position="-14.297 1.352 13.506" scale="1 1.23 1"></a-entity>
+        <a-entity id="a1" static-body gltf-model={arbol} position="-14.665 0.248 13.483" scale="1 1.23 1"></a-entity>
+        <a-entity id="i1" gltf-model={hojas} position="-14.665 0.248 13.483" scale="1 1.23 1"></a-entity>
         <a-entity gltf-model={hojas} position="-0.782 0.151 -5.943" rotation="0 39 0" scale="1.2 1.22 1.2"></a-entity>
-        <a-entity static-body gltf-model={arbol} position="-0.752 0 -2.559" rotation="0 80 0" scale="1 1.23 1"></a-entity>
+        <a-entity id="a2" static-body gltf-model={arbol} position="-0.752 0 -2.559" rotation="0 80 0" scale="1 1.23 1"></a-entity>
+        <a-entity id="i2" gltf-model={hojas} position="-0.752 0 -2.559" rotation="0 39 0" scale="1.2 1.22 1.2"></a-entity>
         <a-entity static-body gltf-model={arbol} position="0.66 -0.1 -8.366" rotation="0 -90 0" scale="0.5 0.5 0.5"></a-entity>
         <a-entity gltf-model={hojas} position="0.66 -0.1 -8.366" rotation="0 39 0" scale="1.2 1.22 1.2"></a-entity>
 
@@ -291,9 +266,9 @@ function SesionUno() {
         id="suelo-japones"
         position="0 0.12 0"
         rotation="-90 0 0"
-        width="30"
-        height="30"
-        material="src: #Sand; repeat: 100 100"
+        width="60"
+        height="60"
+        material="src: #Sand; repeat: 140 140"
         static-body></a-plane>
       <a-plane id="agujero" position="-3.8 3.87 8.7" width="10" height="10" material="color:transparent;opacity:0" static-body="sphereRadius:NaN" geometry="" rotation="90 0 0" scale="0.277 0.436 1"></a-plane>
       {/* Paredes transparentes alrededor del agua */}

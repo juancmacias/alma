@@ -56,6 +56,10 @@ function Frame() {
         return llamada(1, ir);
       case 'sesiontres':
         return llamada(2, ir);
+      case 'sesionuno':
+        return llamada(3, ir);
+      case 'sesioncinco':
+        return llamada(4, ir);
       default:
     }
 
