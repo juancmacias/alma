@@ -1,0 +1,141 @@
+{"secciones":[
+    {
+        "idSeccion": 8,
+        "tituloSeccion": "VIII. Espacios y Encuentros. Din\u00e1micas de Trabajo",
+        "apartados": [
+            {
+                "idApartado": 33,
+                "tituloApartado": "Flexibilidad en los espacios de trabajo",
+                "contenidoApartado": "La elecci\u00f3n del lugar de trabajo es tuya. Tan sencillo como eso, ni m\u00e1s ni menos. A menos que tengamos una formaci\u00f3n interna o alg\u00fan compromiso con un cliente, tienes libertad para decidir d\u00f3nde trabajar.",
+                "subapartados": [],
+                "citasApartado": [
+                    {
+                        "idCita": 21,
+                        "contenidoCita": "Mejorar la calidad de vida, pasar m\u00e1s tiempo con la familia, visitar ciudades incre\u00edbles y vivir cerca del mar (...) Estas son las ventajas de trabajar en un equipo donde la autonom\u00eda y la responsabilidad son los valores fundamentales. Da igual donde est\u00e9s, en cualquier sitio se puede aportar valor, aunque siempre echas de menos un sitio donde poder darle un abrazo a los compa\u00f1eros y compartir. Es sanador volver a la ofi de vez en cuando y cargar pilas. (Pablo Sala)"
+                    }
+                ],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 34,
+                "tituloApartado": "Reuniones voluntarias",
+                "contenidoApartado": "No es obligatorio asistir a las reuniones. \u00bfQui\u00e9n desea asistir? \u00bfQui\u00e9n necesita asistir? \u00bfQui\u00e9n no deber\u00eda asistir?",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 35,
+                "tituloApartado": "Reuniones diarias (dailies)",
+                "contenidoApartado": "Cada ma\u00f1ana, en nuestras dailies, de manera as\u00edncrona, explicamos nuestras metas diarias o en qu\u00e9 vamos a poner nuestra energ\u00eda ese d\u00eda. De esa forma, cualquiera puede ofrecerse para dar apoyo, bien desde un consejo, ofrecer su experiencia, etc\u00e9tera. Tambi\u00e9n estos momentos sirven para hacer peticiones al resto del equipo. (Pepe V\u00e1zquez)",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 36,
+                "tituloApartado": "Reuniones semanales para planificaci\u00f3n (Asyncro Weeklies)",
+                "contenidoApartado": "De forma as\u00edncrona, entre el domingo y el martes, compartimos en Slack lo que planeamos hacer durante la semana. Esto es una manera m\u00e1s de difundir informaci\u00f3n en el equipo, consider\u00e1ndonos como un sistema y cuidando la carga de trabajo, entre otras cosas.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 37,
+                "tituloApartado": "Reuniones semanales para alienaci\u00f3n (Syncro Weeklies)",
+                "contenidoApartado": "De forma s\u00edncrona, Cada semana, nos encontramos en una reuni\u00f3n de hasta 1 hora para tener las conversaciones esenciales que nos alineen en relaci\u00f3n a los objetivos y necesidades de la semana.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 38,
+                "tituloApartado": "Reuni\u00f3n de coordinaci\u00f3n para necesidades espec\u00edficas",
+                "contenidoApartado": "Adem\u00e1s, hay otros espacios para coordinarnos con necesidades espec\u00edficas entre miembros del equipo, como en momentos informales, por ejemplo en cafeter\u00eda.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 39,
+                "tituloApartado": "Retrospectivas (reuniones mensuales)",
+                "contenidoApartado": "Son sesiones mensuales de momentos de autoevaluaci\u00f3n y an\u00e1lisis en los que como equipo reflexionamos sobre nuestra manera de trabajar, nuestras interacciones,.... Posteriormente, exploramos nuevas formas de abordar aspectos que creemos que podr\u00edan mejorarse.",
+                "subapartados": [],
+                "citasApartado": [
+                    {
+                        "idCita": 22,
+                        "contenidoCita": "Solemos hacer una retrospectiva al mes, adem\u00e1s de las retrospectivas de cada EDI. No obstante, en numerosas ocasiones hemos llegado a la retrospectiva y nadie la hab\u00eda dise\u00f1ado ni pensado, y al final hemos acabado hablando de todo y de nada. Al igual que cuando explicamos las retrospectivas y sus antipatrones, en Thinking tambi\u00e9n los hemos vivido y sufrido en nuestras carnes. Incluso alguna vez ha ocurrido la \u201cretro fantasma\u201d: la que no ocurre. Tenemos la inspecci\u00f3n y adaptaci\u00f3n muy interiorizada, y a\u00fan as\u00ed, creo que tenemos mucho espacio de mejora en cuanto a las retrospectivas. (Marta Lam)"
+                    }
+                ],
+                "audiovisualesApartado": []
+            },
+            {
+                "idApartado": 40,
+                "tituloApartado": "Espacios de apoyo como equipo (Ser Aut\u00e9nticos Juntos)",
+                "contenidoApartado": "Damos gran importancia a los momentos de ser nosotros mismos y mostrarnos con naturalidad. Durante la pandemia, creamos la cafeter\u00eda virtual, entre otros ejemplos. En ese tiempo, cuidar nuestra conexi\u00f3n como equipo y necesidades personales se volvi\u00f3 esencial. Nos reconocemos con \u0022thinkitos\u0022 (algo parecido a un \u0022te doy mi mano\u0022). Los usamos para expresar gratitud entre nosotros. M\u00e1s all\u00e1 de las tareas, el apoyo mutuo del equipo es nuestro enfoque principal.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": [
+                    {
+                        "idAudiovisual": 5,
+                        "rutaAudiovisual": "https:\/\/thinkingwithyou.notion.site\/image\/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F851ca7dc-427f-4c5e-a6c3-99e044af6d07%2FCaptura_de_Pantalla_2022-10-28_a_las_18.43.26.png?table=block\u0026id=47c4d79a-d1e8-4be9-ac68-7fdaf433db71\u0026spaceId=3410b7f7-de6d-4e56-9c47-246af3b3e7f3\u0026width=2000\u0026userId=\u0026cache=v2",
+                        "pieAudiovisual": null
+                    },
+                    {
+                        "idAudiovisual": 6,
+                        "rutaAudiovisual": "https:\/\/thinkingwithyou.notion.site\/image\/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5e9fd09e-d1ce-4780-82f4-d32ed959574a%2FCaptura_de_Pantalla_2022-10-28_a_las_18.58.02.png?table=block\u0026id=44b87b8b-1919-47d8-a684-84443a6bcf3a\u0026spaceId=3410b7f7-de6d-4e56-9c47-246af3b3e7f3\u0026width=2000\u0026userId=\u0026cache=v2",
+                        "pieAudiovisual": null
+                    }
+                ]
+            },
+            {
+                "idApartado": 41,
+                "tituloApartado": "Viernes Thinking",
+                "contenidoApartado": "Este es nuestro espacio para conectarnos como equipo, o como dice nuestra compa\u00f1era Luz, para \u0022hacer pegamento\u0022. Una vez por semana, discutimos temas relevantes que han surgido durante los d\u00edas previos y requieren ser abordados.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": [
+                    {
+                        "idAudiovisual": 7,
+                        "rutaAudiovisual": "https:\/\/thinkingwithyou.notion.site\/image\/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5efb2edb-4fa4-4409-aa9b-7a553dd4f76d%2FCaptura_de_Pantalla_2022-10-28_a_las_19.48.57.png?table=block\u0026id=61cb2c07-9da0-4e5e-bf24-d785d627e45a\u0026spaceId=3410b7f7-de6d-4e56-9c47-246af3b3e7f3\u0026width=1150\u0026userId=\u0026cache=v2",
+                        "pieAudiovisual": null
+                    }
+                ]
+            },
+            {
+                "idApartado": 42,
+                "tituloApartado": "Retiros trimestrales para reflexi\u00f3n y mejora (\u201cIntensitos with you\u201d)",
+                "contenidoApartado": "Nuestros \u0022Intensitos With You\u0022 (como cari\u00f1osamente lo apodamos) son encuentros trimestrales donde compartimos emociones y conversaciones durante un fin de semana en una Casa Rural. De esta forma, trabajamos en nuestra visi\u00f3n colectiva y en aspectos del negocio. Tambi\u00e9n es una ocasi\u00f3n ideal para fortalecer nuestros lazos como equipo y como individuos.",
+                "subapartados": [],
+                "citasApartado": [],
+                "audiovisualesApartado": [
+                    {
+                        "idAudiovisual": 8,
+                        "rutaAudiovisual": "https:\/\/thinkingwithyou.notion.site\/image\/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F31828f5a-729e-47f4-8627-b494e9702d6d%2FCaptura_de_Pantalla_2022-10-28_a_las_19.52.01.png?table=block\u0026id=b2a6ed7d-eb1a-477c-92e6-a7f5731aacca\u0026spaceId=3410b7f7-de6d-4e56-9c47-246af3b3e7f3\u0026width=960\u0026userId=\u0026cache=v2",
+                        "pieAudiovisual": null
+                    }
+                ]
+            }
+        ],
+        "citas": [],
+        "audiovisuales": []
+    },
+    {
+        "idSeccion": 1,
+        "tituloSeccion": "I. Manifiesto: \u201cVivimos el Cambio\u201d",
+        "apartados": [],
+        "citas": [
+            {
+                "idCita": 1,
+                "contenidoCita": "La constancia del movimiento es lo \u00fanico que se mantiene inalterable: y es que la vida es eso: movimiento.\nEn este ir y venir que nos envuelve, que nos impulsa y que nos frena, buscamos entornos de confianza para desarrollarnos.\nAqu\u00ed es donde se cruzan diferentes trayectorias, diferentes pasados y presentes. Y de pronto nos adaptamos unos a otros: somos l\u00edquidos.\nSomos un equipo y somos m\u00e1s que la suma de cada uno. Nadie nos ganar\u00e1 a ser eso: a ser nosotros mismos.\nCuando nuestras motivaciones se tocan y compartimos (o no) puntos de vista, no nos rompemos: cambiamos, nos transformamos, crecemos.\nAprovechamos las oportunidades desde lo que somos.\nProbamos. Nos equivocamos y aprendemos. Seguimos y dudamos. Confiamos. Compartimos.\nEn definitiva, creamos cultura.\nY cuando la cultura nace de esta manera, sabemos que habr\u00e1 cuidado, generosidad, autonom\u00eda y responsabilidad en nosotros.\nSabemos que viviendo los valores los pondremos al servicio de los dem\u00e1s pero sin esperar nada a cambio, y sin buscar a nadie.\nNos encontramos en el camino y lo exploraremos juntos, como equipo, como personas.\nPorque al fin y al cabo, ahora y m\u00e1s que nunca: It\u0027s all about people."
+            }
+        ],
+        "audiovisuales": [
+            {
+                "idAudiovisual": 1,
+                "rutaAudiovisual": "https:\/\/www.youtube.com\/watch?v=nnPJmJQDx3k",
+                "pieAudiovisual": null
+            }
+        ]
+    }
+]}
