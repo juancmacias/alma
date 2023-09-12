@@ -42,6 +42,7 @@ function SesionUno() {
 
         <img id="sky" src={require('../resources/cielo-azul.jpg')} alt='' />
       </a-assets>
+      
       <Entity
         id="salida_cartel"
         events={{
@@ -288,9 +289,11 @@ function SesionUno() {
       {/* cielo */}
       <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
       {/* CAMARA */}
+      
       <Entity camera kinematic-body="radius:1" look-controls universal-controls position="0 1.6 13.15">
         <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity>
       </Entity>
+      
       <a-sphere id="piedra-2" radius="0.5" position="-11.608 0.737 10.872" material="color:black" scale="3.535 1.145 6.681" rotation="0 39.018 0"></a-sphere>
       <a-sphere id="piedra-6" radius="0.5" position="-11.515 1.568 11.153" material="color:black" scale="1.324 2.367 4.806" rotation="0.63 41.597 93.335"></a-sphere>
       <a-entity id="bambu_5" radius="0.5" position="-6.47 0.46 -10.837" rotation="0 181 0" scale="7.135 8.155 6.915"></a-entity>
