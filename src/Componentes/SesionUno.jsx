@@ -225,7 +225,7 @@ function SesionUno() {
 
 
       {/* Árboles o plantas */}
-      <a-entity id="bambu_1" gltf-model="/static/media/bamboo.555a25ac28b63a969b38.glb" position="-7.899 0.313 -11.587" rotation="0.115 -160.142 -7.162" scale="10.201 8.855 -8.818"></a-entity>
+      <a-entity id="bambu_1" gltf-model={bamboo} position="-7.899 0.313 -11.587" rotation="0.115 -160.142 -7.162" scale="10.201 8.855 -8.818"></a-entity>
       <a-entity id="bambu_2" gltf-model={bamboo} position="0 0.01 -10.293" rotation="0 151 0" scale="5.18 6.14 5.02"></a-entity>
       <a-entity id="bambu_3" gltf-model={bamboo} position="-9.248 0.01 -9.104" rotation="0 181 0" scale="5.18 6.14 5.02"></a-entity>
       <a-entity id="bambu_4" gltf-model={bamboo} position="-8.023 0.01 -13.874" rotation="0 151 0" scale="13.177 9.496 3.309"></a-entity>
@@ -282,7 +282,7 @@ function SesionUno() {
       <a-sky src="#sky" material="" geometry="" scale="-1.31 1 1" rotation="0 0 0"></a-sky>
       {/* CAMARA */}
       <Entity camera kinematic-body="radius:1" look-controls universal-controls position="0 1.6 13.15">
-      <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity>
+        <Entity cursor position="0 0 -0.5" geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.016" material="opacity:0.5;shader:flat;transparent:false;color:blue" scale="0.8 0.8 0.8" raycaster ></Entity>
       </Entity>
       <a-sphere id="piedra-2" radius="0.5" position="-11.608 0.737 10.872" material="color:black" scale="3.535 1.145 6.681" rotation="0 39.018 0"></a-sphere>
       <a-sphere id="piedra-6" radius="0.5" position="-11.515 1.568 11.153" material="color:black"  scale="1.324 2.367 4.806" rotation="0.63 41.597 93.335"></a-sphere>

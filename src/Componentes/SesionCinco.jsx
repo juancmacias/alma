@@ -20,7 +20,7 @@ import puerta from '../obj/construccion/sesioncinco/puerta.glb'
 import esfera from '../obj/construccion/sesioncinco/esfera.glb'
 import sol from '../obj/construccion/sesioncinco/sol.glb'
 import yingyang from '../obj/construccion/sesioncinco/yingyang.glb'
-import manifiesto from '../resources/manifiesto.mp4'
+//import manifiesto from '../resources/manifiesto.mp4'
 import thinkito from '../obj/construccion/sesioncinco/thinkito.glb'
 
 
