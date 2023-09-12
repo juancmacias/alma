@@ -23,7 +23,12 @@
 <img src="https://github.com/juancmacias/alma/assets/126780440/77d4027e-e7e9-4ee3-9e02-abcdfe230d80" width="64" alt="">
 <img src="https://github.com/juancmacias/alma/assets/126780440/0463c5c1-92d9-4ab0-b33b-92703c449931" width="64" alt="">
 <img src="https://github.com/juancmacias/alma/assets/126780440/ebfa9a2f-2660-4504-9d54-f846c52d6388" width="64" alt="">
- <img src="" width="64" alt="">
+<img src="https://github.com/juancmacias/alma/assets/126780440/fd87be9b-25e8-44df-a8dc-8e1fd2185cc8" width="64" alt="">
+<img src="https://github.com/juancmacias/alma/assets/126780440/ef5932c3-3f22-4c42-8419-2083731b0076" width="64" alt=""> 
+<img src="https://github.com/juancmacias/alma/assets/126780440/05547ed6-6951-4b15-b822-85fc52708eb4" width="64" alt="">
+<img src="https://github.com/juancmacias/alma/assets/126780440/fd23160b-f2e2-41d3-864d-f9688e60e47f" width="64" alt="">
+<img src="https://github.com/juancmacias/alma/assets/126780440/0f8fd39a-03a2-4cd4-b45f-0c130c58428e" width="64" alt=""> 
+
 
 <p>Recuerda que tras clonar el repositorio, debes escribir en el directorio del proyecto</p>
 <p>npm install</p>
