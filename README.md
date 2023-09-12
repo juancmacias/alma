@@ -17,7 +17,8 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="64" alt="React"> 
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="64" alt="CSS">
-<img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" width="64" alt="A-frame">
+<img src="https://pbs.twimg.com/profile_images/809318798419525633/wmrHjgdG_400x400.jpg" width="64" alt="A-frame">![apache](https://github.com/juancmacias/alma/assets/126780440/35bf2ce9-b6f5-4590-9745-cb6df4522708)
+
  
 
 <p>Recuerda que tras clonar el repositorio, debes escribir en el directorio del proyecto</p>
